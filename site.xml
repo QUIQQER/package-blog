@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <types>
+        <type
+            type="blog/list"
+            extend="QUI\Blog\BlogList"
+            icon="icon-book"
+            template="blog/list/body.html"
+        />
+
+        <type
+            type="blog/entry"
+            extend="QUI\Blog\Entry"
+            icon="icon-paste"
+            template="blog/entry/body.html"
+        />
+    </types>
+
+</site>
