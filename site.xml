@@ -2,19 +2,8 @@
 <site>
 
     <types>
-        <type
-            type="blog/list"
-            extend="QUI\Blog\BlogList"
-            icon="icon-book"
-            template="blog/list/body.html"
-        />
-
-        <type
-            type="blog/entry"
-            extend="QUI\Blog\Entry"
-            icon="icon-paste"
-            template="blog/entry/body.html"
-        />
+        <type type="blog/list" extend="QUI\Blog\BlogList" icon="icon-book" />
+        <type type="blog/entry" extend="QUI\Blog\Entry" icon="icon-paste" />
     </types>
 
 </site>

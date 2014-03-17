@@ -1,0 +1,106 @@
+
+<div class="sheets hide-on-desktop">
+    <select name="select-sheet" class="hide-on-desktop" onchange="window.location = this.value">
+        {section name=blog_sheets start=0 loop=$pcsg_blog_list_count_sheets}
+            {math
+                assign=num
+                equation="x + y"
+                x=$smarty.section.blog_sheets.index
+                y=1
+            }
+            <option value="{url site=$Site sheet=$num}"
+            {if $num == $pcsg_blog_list_active}
+                selected="selected"
+            {/if}
+            >{locale group="plugin/quiqqer/blog"
+                value="sheet.mobile.option"
+                from=$num
+                max=$pcsg_blog_list_count_sheets
+            }</option>
+        {/section}
+    </select>
+</div>
+
+<div class="sheets hide-on-mobile">
+    {if !isset($smarty.request.sheet) || $pcsg_blog_list_active == 1}
+        <span class="disabled icon-double-angle-left"
+            title="{t}plugin/quiqqer/blog list.first.page{/t}">
+        </span>
+    {else}
+        <a href="{url site=$Site sheet=1}"
+            class="icon-double-angle-left"
+            title="{t}plugin/quiqqer/blog list.first.page{/t}">
+        </a>
+    {/if}
+
+    {if !isset($smarty.request.sheet) || $pcsg_blog_list_active <= 1}
+        <span class="disabled icon-angle-left"
+            title="{t}plugin/quiqqer/blog list.back{/t}">
+        </span>
+    {else}
+        {math
+            assign=backward
+            equation="x - y"
+            x=$pcsg_blog_list_active
+            y=1
+        }
+
+        <a href="{url site=$Site sheet=$backward}"
+            class="icon-angle-left"
+            title="{t}plugin/quiqqer/blog list.back{/t}">
+        </a>
+    {/if}
+
+    {if $pcsg_blog_list_start > 0}
+        <span class="more">...</span>
+    {/if}
+
+    {section name=blog_sheets start=$pcsg_blog_list_sheet_start loop=$pcsg_blog_list_sheet_end}
+        {math
+            assign=num
+            equation="x + y"
+            x=$smarty.section.blog_sheets.index
+            y=1
+        }
+
+        {if $num == $pcsg_blog_list_active}
+            <span class="current">{$num}</span>
+        {else}
+            <a href="{url site=$Site sheet=$num}">{$num}</a>
+        {/if}
+    {/section}
+
+    {if $pcsg_blog_list_more}
+        <span class="more">...</span>
+    {/if}
+
+    {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
+        <span class="disabled icon-angle-right"
+            title="{t}plugin/quiqqer/blog list.next{/t}"
+        >
+        </span>
+    {else}
+        {math
+            assign=forward
+            equation="x + y"
+            x=$pcsg_blog_list_active
+            y=1
+        }
+        <a href="{url site=$Site sheet=$forward}"
+           class="icon-angle-right"
+           title="{t}plugin/quiqqer/blog list.next{/t}"
+        >
+        </a>
+    {/if}
+
+    {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
+        <span class="disabled icon-double-angle-right"
+            title="{t}plugin/quiqqer/blog list.last.page{/t}"
+        ></span>
+    {else}
+        <a href="{url site=$Site sheet=$pcsg_blog_list_count_sheets}"
+            title="{t}plugin/quiqqer/blog list.last.page{/t}"
+            class="icon-double-angle-right"
+        ></a>
+    {/if}
+</div>

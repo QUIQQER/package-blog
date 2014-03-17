@@ -2,7 +2,7 @@
 
 namespace QUI\Blog;
 
-class BlogList extends \QUI\Projects\Site
+class BlogList
 {
 
 }
