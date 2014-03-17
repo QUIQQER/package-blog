@@ -4,7 +4,7 @@
 {foreach from=$pcsg_blog_list_children item=Child}
 {assign var=Child value=$Child->load()}
 
-<article class="nr-blog-list-entry grid-parent grid-100">
+<article class="qui-blog-list-entry">
 
     <h2>
         <a href="{url site=$Child}">
@@ -12,10 +12,10 @@
         </a>
     </h2>
 
-    <p class="nr-blog-list-entry-date">
+    <p class="qui-blog-list-entry-date">
         {user id=$Child->getAttribute('c_user') var=User}
         {t}package/blog list.blog.by{/t}
-        <span class="nr-blog-list-entry-date-author">
+        <span class="qui-blog-list-entry-date-author">
             {if $User->getId() && $User->getAttribute('firstname')}
                 {$User->getAttribute('firstname')}
             {else if $User->getId()}
@@ -32,7 +32,7 @@
         {/if}
     </p>
 
-    <div class="nr-blog-list-entry-content grid-100 grid-parent">
+    <div class="qui-blog-list-entry-content grid-100 grid-parent">
 
         {assign var=bg value=""}
 
@@ -42,13 +42,13 @@
 
         <a href="{url site=$Child}"
            title="{$Child->getAttribute('title')|escape:"html"}"
-           class="nr-blog-list-entry-imagelink hide-on-mobile"
+           class="qui-blog-list-entry-imagelink hide-on-mobile"
            style="background-image: url({$bg})"
         >
             <span>{$Child->getAttribute('title')}</span>
         </a>
 
-        <div class="nr-blog-short grid-75 grid-parent">
+        <div class="qui-blog-list-entry-short grid-75 grid-parent">
             {$Child->getAttribute('short')}
             <a href="{url site=$Child}">
                 {locale group="package/blog" value="list.more"}
