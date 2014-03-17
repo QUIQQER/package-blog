@@ -2,7 +2,8 @@
 {include file=$pcsg_blog_list_sheet_file}
 
 {foreach from=$pcsg_blog_list_children item=Child}
-{assign var=_Child value=$Child->load()}
+{assign var=Child value=$Child->load()}
+
 <article class="nr-blog-list-entry grid-parent grid-100">
 
     <h2>
@@ -13,20 +14,30 @@
 
     <p class="nr-blog-list-entry-date">
         {user id=$Child->getAttribute('c_user') var=User}
-        {t}plugin/quiqqer/blog blog.by{/t}
+        {t}package/blog list.blog.by{/t}
         <span class="nr-blog-list-entry-date-author">
-            {if $User->getId()}{$User->getAttribute('firstname')}{/if}
+            {if $User->getId() && $User->getAttribute('firstname')}
+                {$User->getAttribute('firstname')}
+            {else if $User->getId()}
+                {$User->getname()}
+            {/if}
         </span>
 
-        {t}plugin/quiqqer/blog blog.on{/t} {$Child->getAttribute('pcsg.base.release_from')|date_format:"%d.%m.%Y"}
+        {t}package/blog list.blog.on{/t}
+        {if $Child->getAttribute('release_from') &&
+            $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
+            {$Child->getAttribute('release_from')|date_format:"%d.%m.%Y"}
+        {else}
+            {$Child->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+        {/if}
     </p>
 
     <div class="nr-blog-list-entry-content grid-100 grid-parent">
 
         {assign var=bg value=""}
 
-        {if $Child->getAttribute('image')}
-            {image src=$Child->getAttribute('image') height="100" type="resize" onlysrc=1 assign=bg}
+        {if $Child->getAttribute('image_site')}
+            {image src=$Child->getAttribute('image_site') height="100" type="resize" onlysrc=1 assign=bg}
         {/if}
 
         <a href="{url site=$Child}"
@@ -40,7 +51,7 @@
         <div class="nr-blog-short grid-75 grid-parent">
             {$Child->getAttribute('short')}
             <a href="{url site=$Child}">
-                {locale group="plugin/quiqqer/blog" value="more"}
+                {locale group="package/blog" value="list.more"}
             </a>
         </div>
 

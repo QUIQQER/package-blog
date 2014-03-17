@@ -1,1 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<locales>
+
+    <groups name="package/blog" type="php">
+
+        <!-- blog/list -->
+        <locale name="list.blog.by">
+            <de><![CDATA[von]]></de>
+            <en><![CDATA[by]]></en>
+        </locale>
+
+        <locale name="list.blog.on">
+            <de><![CDATA[am]]></de>
+            <en><![CDATA[on]]></en>
+        </locale>
+
+        <locale name="list.more">
+            <de><![CDATA[mehr]]></de>
+            <en><![CDATA[more]]></en>
+        </locale>
+
+        <!-- blog/entry -->
+        <locale name="entry.blog.by">
+            <de><![CDATA[von]]></de>
+            <en><![CDATA[by]]></en>
+        </locale>
+
+        <locale name="entry.blog.on">
+            <de><![CDATA[am]]></de>
+            <en><![CDATA[on]]></en>
+        </locale>
+
+        <locale name="entry.blog.prev">
+            <de><![CDATA[voriger Beitrag]]></de>
+            <en><![CDATA[previous blogpost]]></en>
+        </locale>
+        <locale name="entry.blog.next">
+            <de><![CDATA[nächster Beitrag]]></de>
+            <en><![CDATA[next blogpost]]></en>
+        </locale>
+
+        <!-- blog sheet -->
+        <locale name="sheet.first.page">
+            <de><![CDATA[Erste Seite]]></de>
+            <en><![CDATA[First page]]></en>
+        </locale>
+        <locale name="sheet.last.page">
+            <de><![CDATA[Letzte Seite]]></de>
+            <en><![CDATA[Last page]]></en>
+        </locale>
+        <locale name="sheet.back">
+            <de><![CDATA[zurück]]></de>
+            <en><![CDATA[back]]></en>
+        </locale>
+        <locale name="sheet.next">
+            <de><![CDATA[vor]]></de>
+            <en><![CDATA[next]]></en>
+        </locale>
+        <locale name="sheet.mobile.option">
+            <de><![CDATA[Seite [from] eins [max]]]></de>
+            <en><![CDATA[page [from] of [max]]]></en>
+        </locale>
+
+    </groups>
+
+</locales>

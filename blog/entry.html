@@ -1,0 +1,49 @@
+
+<article class="blog-entry">
+    <h1>{$Site->getAttribute('title')}</h1>
+
+    <time>
+        {user id=$Site->getAttribute('c_user') var=User}
+        {t}package/blog entry.blog.by{/t}
+        <span class="blog-entry-author">
+            {if $User->getId() && $User->getAttribute('firstname')}
+                {$User->getAttribute('firstname')}
+            {else if $User->getId()}
+                {$User->getname()}
+            {/if}
+        </span>
+
+        {t}package/blog entry.blog.on{/t}
+        {if $Site->getAttribute('release_from') &&
+            $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+            {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
+        {else}
+            {$Site->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+        {/if}
+    </time>
+
+    <div class="blog-entry-content">
+        {$Site->getAttribute('content')}
+    </div>
+
+    {sibling site=$Site type="next" assign=NextSibling}
+    {sibling site=$Site type="prev" assign=PrevSibling}
+
+    <aside>
+        {if $PrevSibling}
+        <a href="{url site=$PrevSibling}" class="blog-entry-prev"
+           title="{$PrevSibling->getAttribute('title')|escape:"html"}"
+        >
+            {t}package/blog entry.blog.prev{/t}
+        </a>
+        {/if}
+
+        {if $NextSibling}
+        <a href="{url site=$NextSibling}" class="blog-entry-next"
+           title="{$NextSibling->getAttribute('title')|escape:"html"}"
+        >
+            {t}package/blog entry.blog.next{/t}
+        </a>
+        {/if}
+    </aside>
+</article>

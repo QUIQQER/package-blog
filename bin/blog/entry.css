@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.blog-entry-next,
+.blog-entry-prev {
+    color: #FFFFFF;
+    background: #42A9D7;
+    padding: 10px 20px;
+    float: left;
+}
+
+.blog-entry-next {
+    float: right;
+}
+
+.blog-entry aside {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.blog-entry time {
+    clear: both;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #527686;
+}

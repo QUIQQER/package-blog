@@ -12,7 +12,7 @@
             {if $num == $pcsg_blog_list_active}
                 selected="selected"
             {/if}
-            >{locale group="plugin/quiqqer/blog"
+            >{locale group="package/blog"
                 value="sheet.mobile.option"
                 from=$num
                 max=$pcsg_blog_list_count_sheets
@@ -24,18 +24,18 @@
 <div class="sheets hide-on-mobile">
     {if !isset($smarty.request.sheet) || $pcsg_blog_list_active == 1}
         <span class="disabled icon-double-angle-left"
-            title="{t}plugin/quiqqer/blog list.first.page{/t}">
+            title="{t}package/blog sheet.first.page{/t}">
         </span>
     {else}
         <a href="{url site=$Site sheet=1}"
             class="icon-double-angle-left"
-            title="{t}plugin/quiqqer/blog list.first.page{/t}">
+            title="{t}package/blog sheet.first.page{/t}">
         </a>
     {/if}
 
     {if !isset($smarty.request.sheet) || $pcsg_blog_list_active <= 1}
         <span class="disabled icon-angle-left"
-            title="{t}plugin/quiqqer/blog list.back{/t}">
+            title="{t}package/blog sheet.back{/t}">
         </span>
     {else}
         {math
@@ -47,7 +47,7 @@
 
         <a href="{url site=$Site sheet=$backward}"
             class="icon-angle-left"
-            title="{t}plugin/quiqqer/blog list.back{/t}">
+            title="{t}package/blog sheet.back{/t}">
         </a>
     {/if}
 
@@ -76,7 +76,7 @@
 
     {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
         <span class="disabled icon-angle-right"
-            title="{t}plugin/quiqqer/blog list.next{/t}"
+            title="{t}package/blog sheet.next{/t}"
         >
         </span>
     {else}
@@ -88,18 +88,18 @@
         }
         <a href="{url site=$Site sheet=$forward}"
            class="icon-angle-right"
-           title="{t}plugin/quiqqer/blog list.next{/t}"
+           title="{t}package/blog sheet.next{/t}"
         >
         </a>
     {/if}
 
     {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
         <span class="disabled icon-double-angle-right"
-            title="{t}plugin/quiqqer/blog list.last.page{/t}"
+            title="{t}package/blog sheet.last.page{/t}"
         ></span>
     {else}
         <a href="{url site=$Site sheet=$pcsg_blog_list_count_sheets}"
-            title="{t}plugin/quiqqer/blog list.last.page{/t}"
+            title="{t}package/blog sheet.last.page{/t}"
             class="icon-double-angle-right"
         ></a>
     {/if}
