@@ -1,5 +1,7 @@
 @CHARSET "UTF-8";
 
+@import "sheet.css";
+
 .nr-blog-list-entry {
     border-bottom: 1px solid #D0D3D3;
     clear: both;
