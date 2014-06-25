@@ -23,18 +23,18 @@
 
 <div class="sheets hide-on-mobile">
     {if !isset($smarty.request.sheet) || $pcsg_blog_list_active == 1}
-        <span class="disabled icon-double-angle-left"
+        <span class="disabled icon-double-angle-left fa fa-angle-double-left"
             title="{t}package/blog sheet.first.page{/t}">
         </span>
     {else}
         <a href="{url site=$Site sheet=1}"
-            class="icon-double-angle-left"
+            class="icon-double-angle-left fa fa-angle-double-left"
             title="{t}package/blog sheet.first.page{/t}">
         </a>
     {/if}
 
     {if !isset($smarty.request.sheet) || $pcsg_blog_list_active <= 1}
-        <span class="disabled icon-angle-left"
+        <span class="disabled icon-angle-left fa fa-angle-left"
             title="{t}package/blog sheet.back{/t}">
         </span>
     {else}
@@ -46,7 +46,7 @@
         }
 
         <a href="{url site=$Site sheet=$backward}"
-            class="icon-angle-left"
+            class="icon-angle-left fa fa-angle-left"
             title="{t}package/blog sheet.back{/t}">
         </a>
     {/if}
@@ -75,7 +75,7 @@
     {/if}
 
     {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
-        <span class="disabled icon-angle-right"
+        <span class="disabled icon-angle-right fa fa-angle-right"
             title="{t}package/blog sheet.next{/t}"
         >
         </span>
@@ -87,20 +87,20 @@
             y=1
         }
         <a href="{url site=$Site sheet=$forward}"
-           class="icon-angle-right"
+           class="icon-angle-right fa fa-angle-right"
            title="{t}package/blog sheet.next{/t}"
         >
         </a>
     {/if}
 
     {if $pcsg_blog_list_active >= $pcsg_blog_list_sheets}
-        <span class="disabled icon-double-angle-right"
+        <span class="disabled icon-double-angle-right fa fa-angle-double-right"
             title="{t}package/blog sheet.last.page{/t}"
         ></span>
     {else}
         <a href="{url site=$Site sheet=$pcsg_blog_list_count_sheets}"
             title="{t}package/blog sheet.last.page{/t}"
-            class="icon-double-angle-right"
+            class="icon-double-angle-right fa fa-angle-double-right"
         ></a>
     {/if}
 </div>

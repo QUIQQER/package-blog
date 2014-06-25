@@ -40,6 +40,7 @@
             {image src=$Child->getAttribute('image_site') height="100" type="resize" onlysrc=1 assign=bg}
         {/if}
 
+        {if $bg}
         <a href="{url site=$Child}"
            title="{$Child->getAttribute('title')|escape:"html"}"
            class="qui-blog-list-entry-imagelink hide-on-mobile"
@@ -47,6 +48,7 @@
         >
             <span>{$Child->getAttribute('title')}</span>
         </a>
+        {/if}
 
         <div class="qui-blog-list-entry-short grid-75 grid-parent">
             {$Child->getAttribute('short')}
