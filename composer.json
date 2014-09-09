@@ -1,6 +1,6 @@
 {
     "name" : "quiqqer/blog",
-    "type" : "quiqqer-plugin",
+    "type" : "quiqqer-library",
     "description" : "Provided a blog system for QUIQQER.",
     "version" : "dev-master",
     "license" : "GPL-2.0+",
