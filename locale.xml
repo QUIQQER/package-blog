@@ -3,6 +3,25 @@
 
     <groups name="package/blog" type="php">
 
+        <!-- site types -->
+        <locale name="admin.types.blog.list">
+            <de><![CDATA[Blog]]></de>
+            <en><![CDATA[Blog]]></en>
+        </locale>
+        <locale name="admin.types.blog.list.desc">
+            <de><![CDATA[Blog Liste]]></de>
+            <en><![CDATA[Blog List]]></en>
+        </locale>
+        <locale name="admin.types.blog.entry">
+            <de><![CDATA[Blog Eintrag]]></de>
+            <en><![CDATA[Blog Entry]]></en>
+        </locale>
+        <locale name="admin.types.blog.entry.desc">
+            <de><![CDATA[Blog Eintrag]]></de>
+            <en><![CDATA[Blog Entry]]></en>
+        </locale>
+
+
         <!-- blog/list -->
         <locale name="list.blog.by">
             <de><![CDATA[von]]></de>

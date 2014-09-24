@@ -2,8 +2,19 @@
 <site>
 
     <types>
-        <type type="blog/list" extend="QUI\Blog\BlogList" icon="icon-book" />
-        <type type="blog/entry" extend="QUI\Blog\Entry" icon="icon-paste" />
+        <type type="blog/list" extend="QUI\Blog\BlogList" icon="icon-book">
+            <locale group="quiqqer/blog" var="admin.types.blog.list" />
+            <desc>
+                <locale group="quiqqer/intranet" var="admin.types.blog.list.desc" />
+            </desc>
+        </type>
+
+        <type type="blog/entry" extend="QUI\Blog\Entry" icon="icon-paste">
+            <locale group="quiqqer/blog" var="admin.types.blog.entry" />
+            <desc>
+                <locale group="quiqqer/intranet" var="admin.types.blog.entry.desc" />
+            </desc>
+        </type>
     </types>
 
 </site>

@@ -1,7 +1,5 @@
 @CHARSET "UTF-8";
 
-@import "sheet.css";
-
 .qui-blog-list-entry {
     background: rgb( 255,255,255 );
     background: rgba( 255,255,255, 0.7 );

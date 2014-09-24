@@ -1,30 +1,43 @@
 
 <article class="blog-entry">
-    <h1>{$Site->getAttribute('title')}</h1>
 
-    <time>
-        {user id=$Site->getAttribute('c_user') var=User}
-        {t}package/blog entry.blog.by{/t}
-        <span class="blog-entry-author">
-            {if $User->getId() && $User->getAttribute('firstname')}
-                {$User->getAttribute('firstname')}
-            {else if $User->getId()}
-                {$User->getname()}
-            {/if}
-        </span>
+    <section class="content-header grid-100 mobile-grid-100">
+        <header>
+            <h1>{$Site->getAttribute('title')}</h1>
 
-        {t}package/blog entry.blog.on{/t}
-        {if $Site->getAttribute('release_from') &&
-            $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
-            {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
-        {else}
-            {$Site->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+            <time>
+                {user id=$Site->getAttribute('c_user') var=User}
+                {t}package/blog entry.blog.by{/t}
+                <span class="blog-entry-author">
+                    {if $User->getId() && $User->getAttribute('firstname')}
+                        {$User->getAttribute('firstname')}
+                    {else if $User->getId()}
+                        {$User->getname()}
+                    {/if}
+                </span>
+
+                {t}package/blog entry.blog.on{/t}
+                {if $Site->getAttribute('release_from') &&
+                    $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+                    {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
+                {else}
+                    {$Site->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+                {/if}
+            </time>
+        </header>
+
+        {if $Site->getAttribute('short')}
+        <div class="content-short">
+            {$Site->getAttribute('short')}
+        </div>
         {/if}
-    </time>
+    </section>
 
-    <div class="blog-entry-content">
+    {if $Site->getAttribute('content')}
+    <section class="blog-entry-content content-body grid-100 mobile-grid-100">
         {$Site->getAttribute('content')}
-    </div>
+    </section>
+    {/if}
 
     {sibling site=$Site type="next" assign=NextSibling}
     {sibling site=$Site type="prev" assign=PrevSibling}
