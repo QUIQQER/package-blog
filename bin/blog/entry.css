@@ -1,5 +1,10 @@
 @CHARSET "UTF-8";
 
+.blog-entry {
+    float: left;
+    width: 100%;
+}
+
 .blog-entry-next,
 .blog-entry-prev {
     color: #FFFFFF;

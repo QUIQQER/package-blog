@@ -1,5 +1,5 @@
 
-<article class="blog-entry">
+<article class="blog-entry grid-100 mobile-grid-100 grid-parent">
 
     <section class="content-header grid-100 mobile-grid-100">
         <header>
@@ -42,7 +42,7 @@
     {sibling site=$Site type="next" assign=NextSibling}
     {sibling site=$Site type="prev" assign=PrevSibling}
 
-    <aside>
+    <aside class="content-body">
         {if $PrevSibling}
         <a href="{url site=$PrevSibling}" class="blog-entry-prev"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
@@ -59,4 +59,5 @@
         </a>
         {/if}
     </aside>
+
 </article>
