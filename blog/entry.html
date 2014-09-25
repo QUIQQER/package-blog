@@ -7,7 +7,7 @@
 
             <time>
                 {user id=$Site->getAttribute('c_user') var=User}
-                {t}package/blog entry.blog.by{/t}
+                {t}quiqqer/blog entry.blog.by{/t}
                 <span class="blog-entry-author">
                     {if $User->getId() && $User->getAttribute('firstname')}
                         {$User->getAttribute('firstname')}
@@ -16,7 +16,7 @@
                     {/if}
                 </span>
 
-                {t}package/blog entry.blog.on{/t}
+                {t}quiqqer/blog entry.blog.on{/t}
                 {if $Site->getAttribute('release_from') &&
                     $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
                     {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
@@ -47,7 +47,7 @@
         <a href="{url site=$PrevSibling}" class="blog-entry-prev"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
         >
-            {t}package/blog entry.blog.prev{/t}
+            {t}quiqqer/blog entry.blog.prev{/t}
         </a>
         {/if}
 
@@ -55,7 +55,7 @@
         <a href="{url site=$NextSibling}" class="blog-entry-next"
            title="{$NextSibling->getAttribute('title')|escape:"html"}"
         >
-            {t}package/blog entry.blog.next{/t}
+            {t}quiqqer/blog entry.blog.next{/t}
         </a>
         {/if}
     </aside>

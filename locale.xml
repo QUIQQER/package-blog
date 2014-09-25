@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
-    <groups name="package/blog" type="php">
+    <groups name="quiqqer/blog" type="php">
 
         <!-- site types -->
         <locale name="admin.types.blog.list">
