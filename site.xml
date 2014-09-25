@@ -7,12 +7,36 @@
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.blog.list.desc" />
             </desc>
+
+            <!-- extra attributes -->
+            <attributes>
+                <attribute>quiqqer.settings.blog.max</attribute>
+            </attributes>
+
+            <!-- list settings -->
+            <settings>
+
+                <category name="blog-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/blog" var="quiqqer.blog.settings.title" />
+                        </title>
+
+                        <input conf="quiqqer.settings.blog.max" type="number">
+                            <text>
+                                <locale group="quiqqer/blog" var="quiqqer.settings.blog.max" />
+                            </text>
+                        </input>
+                    </settings>
+                </category>
+
+            </settings>
         </type>
 
         <type type="blog/entry" extend="QUI\Blog\Entry" icon="icon-paste">
             <locale group="quiqqer/blog" var="admin.types.blog.entry" />
             <desc>
-                <locale group="quiqqer/intranet" var="admin.types.blog.entry.desc" />
+                <locale group="quiqqer/blog" var="admin.types.blog.entry.desc" />
             </desc>
         </type>
     </types>

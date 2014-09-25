@@ -4,8 +4,12 @@
  * Blog List
  */
 
-$max   = 5;
 $start = 0;
+$max   = $Site->getAttribute( 'quiqqer.settings.blog.max' );
+
+if ( !$max ) {
+    $max = 5;
+}
 
 if ( isset( $_REQUEST['sheet'] ) ) {
     $start = ( (int)$_REQUEST['sheet'] - 1 ) * $max;
