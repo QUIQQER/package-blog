@@ -19,12 +19,12 @@
                 <category name="blog-list-settings">
                     <settings>
                         <title>
-                            <locale group="quiqqer/blog" var="quiqqer.blog.settings.title" />
+                            <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.title" />
                         </title>
 
                         <input conf="quiqqer.settings.blog.max" type="number">
                             <text>
-                                <locale group="quiqqer/blog" var="quiqqer.settings.blog.max" />
+                                <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.max" />
                             </text>
                         </input>
                     </settings>

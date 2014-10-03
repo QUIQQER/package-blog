@@ -23,6 +23,15 @@
 
 
         <!-- blog/list -->
+        <locale name="quiqqer.blog.list.settings.title">
+            <de><![CDATA[Blog Listen Einstellungen]]></de>
+            <en><![CDATA[Blog list settings]]></en>
+        </locale>
+        <locale name="quiqqer.blog.list.settings.max">
+            <de><![CDATA[Anzahl Blogbeiträge pro Seite]]></de>
+            <en><![CDATA[Number of blog posts per page]]></en>
+        </locale>
+
         <locale name="list.blog.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>

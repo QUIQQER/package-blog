@@ -1,6 +1,7 @@
 
 <article class="blog-entry grid-100 mobile-grid-100 grid-parent">
 
+    {if $Template->getAttribute('content-header')}
     <section class="content-header grid-100 mobile-grid-100">
         <header>
             <h1>{$Site->getAttribute('title')}</h1>
@@ -32,8 +33,9 @@
         </div>
         {/if}
     </section>
+    {/if}
 
-    {if $Site->getAttribute('content')}
+    {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
     <section class="blog-entry-content content-body grid-100 mobile-grid-100">
         {$Site->getAttribute('content')}
     </section>
