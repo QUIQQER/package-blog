@@ -21,14 +21,14 @@
             {t}quiqqer/blog entry.blog.on{/t}
             {if $Site->getAttribute('release_from') &&
                 $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
-                <time  datetime="{$Site->getAttribute('release_from')|date_format:"c"}"
-                       itemprop="datePublished"
+                <time datetime="{$Site->getAttribute('release_from')|date_format:"c"}"
+                      itemprop="datePublished"
                 >
                 {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
                 </time>
             {else}
-                <time  datetime="{$Site->getAttribute('c_date')|date_format:"c"}"
-                       itemprop="datePublished"
+                <time datetime="{$Site->getAttribute('c_date')|date_format:"c"}"
+                      itemprop="datePublished"
                 >
                 {$Site->getAttribute('c_date')|date_format:"%d.%m.%Y"}
                 </time>
