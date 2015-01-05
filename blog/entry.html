@@ -54,7 +54,7 @@
 
     <aside class="content-body">
         {if $PrevSibling}
-        <a href="{url site=$PrevSibling}" class="blog-entry-prev"
+        <a href="{url site=$PrevSibling}" class="blog-entry-prev qui-button"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
         >
             {t}quiqqer/blog entry.blog.prev{/t}
@@ -62,7 +62,7 @@
         {/if}
 
         {if $NextSibling}
-        <a href="{url site=$NextSibling}" class="blog-entry-next"
+        <a href="{url site=$NextSibling}" class="blog-entry-next qui-button"
            title="{$NextSibling->getAttribute('title')|escape:"html"}"
         >
             {t}quiqqer/blog entry.blog.next{/t}
