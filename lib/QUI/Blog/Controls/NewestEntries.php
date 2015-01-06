@@ -22,9 +22,11 @@ class NewestEntries extends QUI\Control
     {
         // default options
         $this->setAttributes(array(
-            'max'     => 5,
-            'Project' => false,
-            'class'   => 'quiqqer-blog-newestentries'
+            'max'        => 5,
+            'Project'    => false,
+            'class'      => 'quiqqer-blog-newestentries',
+            'dateFormat' => '%d',
+            'dayFormat'  => '%a'
         ));
 
         parent::setAttributes( $attributes );
@@ -54,7 +56,8 @@ class NewestEntries extends QUI\Control
 
         $Engine->assign(array(
             'Rewrite'  => QUI::getRewrite(),
-            'children' => $children
+            'children' => $children,
+            'this'     => $this
         ));
 
         return $Engine->fetch( dirname( __FILE__ ) .'/NewestEntries.html' );
@@ -72,5 +75,4 @@ class NewestEntries extends QUI\Control
 
         return QUI::getProjectManager()->get();
     }
-
 }

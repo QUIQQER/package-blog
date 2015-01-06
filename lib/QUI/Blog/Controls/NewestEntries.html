@@ -8,18 +8,18 @@
         <time datetime="{$Child->getAttribute('release_from')|date_format:"c"}"
               itemprop="datePublished"
         >
-            {$Child->getAttribute('release_from')|date_format:"%a"}
+            {$Child->getAttribute('release_from')|date_format:$this->getAttribute('dayFormat')}
             <strong class="quiqqer-blog-newestentries-entry-day">
-                {$Child->getAttribute('release_from')|date_format:"%d"}
+                {$Child->getAttribute('release_from')|date_format:$this->getAttribute('dateFormat')}
             </strong>
         </time>
     {else}
         <time datetime="{$Child->getAttribute('c_date')|date_format:"c"}"
               itemprop="datePublished"
         >
-            {$Child->getAttribute('c_date')|date_format:"%a"}
+            {$Child->getAttribute('c_date')|date_format:$this->getAttribute('dayFormat')}
             <strong class="quiqqer-blog-newestentries-entry-day">
-                {$Child->getAttribute('c_date')|date_format:"%d"}
+                {$Child->getAttribute('c_date')|date_format:$this->getAttribute('dateFormat')}
             </strong>
         </time>
     {/if}
