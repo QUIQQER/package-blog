@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiqqer>
-    <blocks>
-        <!-- available standard blocks -->
-        <block control="\QUI\Blog\Controls\NewestEntries">
+
+    <bricks>
+        <!-- available standard bricks -->
+        <brick control="\QUI\Blog\Controls\NewestEntries">
             <title>
                 <locale group="quiqqer/blog" var="blog.control.list.title" />
             </title>
             <description>
                 <locale group="quiqqer/blog" var="blog.control.list.description" />
             </description>
-        </block>
-    </blocks>
+        </brick>
+    </bricks>
 
 </quiqqer>

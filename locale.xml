@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
-    <groups name="quiqqer/blog" type="php">
+    <groups name="quiqqer/blog" datatype="php">
 
         <!-- site types -->
         <locale name="admin.types.blog.list">
@@ -90,5 +90,18 @@
         </locale>
 
     </groups>
+
+    <groups name="quiqqer/blog" datatype="php,js">
+        <!-- bricks -->
+        <locale name="blog.control.list.title">
+            <de><![CDATA[Baustein: Blog-Liste]]></de>
+            <en><![CDATA[Brick: Blog-List]]></en>
+        </locale>
+        <locale name="blog.control.list.description">
+            <de><![CDATA[Zeigt die neusten Blog Einträge an.]]></de>
+            <en><![CDATA[Displays the latest blog entries.]]></en>
+        </locale>
+    </groups>
+
 
 </locales>

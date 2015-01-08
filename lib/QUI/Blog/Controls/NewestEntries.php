@@ -62,17 +62,4 @@ class NewestEntries extends QUI\Control
 
         return $Engine->fetch( dirname( __FILE__ ) .'/NewestEntries.html' );
     }
-
-    /**
-     * Return the Project
-     * @return QUI\Projects\Project
-     */
-    protected function _getProject()
-    {
-        if ( $this->getAttribute('Project') ) {
-            return $this->getAttribute('Project');
-        }
-
-        return QUI::getProjectManager()->get();
-    }
 }
