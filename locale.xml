@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
+    <groups name="quiqqer/blog" datatype="php,js">
+        <locale name="package.title">
+            <de><![CDATA[QUIQQER - Blog]]></de>
+            <en><![CDATA[QUIQQER - Blog]]></en>
+        </locale>
+        <locale name="package.description">
+            <de><![CDATA[QUIQQER - Blog Beschreibung]]></de>
+            <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
+        </locale>
+        
+        <!-- bricks -->
+        <locale name="blog.control.list.title">
+            <de><![CDATA[Baustein: Blog-Liste]]></de>
+            <en><![CDATA[Brick: Blog-List]]></en>
+        </locale>
+        <locale name="blog.control.list.description">
+            <de><![CDATA[Zeigt die neusten Blog Einträge an.]]></de>
+            <en><![CDATA[Displays the latest blog entries.]]></en>
+        </locale>
+    </groups>
+
     <groups name="quiqqer/blog" datatype="php">
 
         <!-- site types -->
@@ -88,20 +109,6 @@
             <de><![CDATA[Seite [from] eins [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
-
     </groups>
-
-    <groups name="quiqqer/blog" datatype="php,js">
-        <!-- bricks -->
-        <locale name="blog.control.list.title">
-            <de><![CDATA[Baustein: Blog-Liste]]></de>
-            <en><![CDATA[Brick: Blog-List]]></en>
-        </locale>
-        <locale name="blog.control.list.description">
-            <de><![CDATA[Zeigt die neusten Blog Einträge an.]]></de>
-            <en><![CDATA[Displays the latest blog entries.]]></en>
-        </locale>
-    </groups>
-
 
 </locales>
