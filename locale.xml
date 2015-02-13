@@ -6,11 +6,17 @@
             <de><![CDATA[QUIQQER - Blog]]></de>
             <en><![CDATA[QUIQQER - Blog]]></en>
         </locale>
-        <locale name="package.description">
-            <de><![CDATA[QUIQQER - Blog Beschreibung]]></de>
-            <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
+        <locale name="package.description" html="true">
+            <de><![CDATA[
+                <p>Erstellen Sie auf Ihrer Homepage Ihren eigenen Blog, eine Art Online-Tagebuch.</p>
+                <p>Um einen Blog zu erstellen, fügen Sie in Ihrem Projekt einen Seitentyp „Blog-Liste“ hinzu.</p>
+                <p>Und mit dem Seitentyp „Blog-Eintrag“ verfassen Sie einen neuen Blog-Artikel.</p>
+            ]]></de>
+            <en><![CDATA[
+                QUIQQER - Blog Beschreibung
+            ]]></en>
         </locale>
-        
+
         <!-- bricks -->
         <locale name="blog.control.list.title">
             <de><![CDATA[Baustein: Blog-Liste]]></de>
@@ -26,11 +32,11 @@
 
         <!-- site types -->
         <locale name="admin.types.blog.list">
-            <de><![CDATA[Blog]]></de>
-            <en><![CDATA[Blog]]></en>
+            <de><![CDATA[Blog-Liste]]></de>
+            <en><![CDATA[Blog List]]></en>
         </locale>
         <locale name="admin.types.blog.list.desc">
-            <de><![CDATA[Blog Liste]]></de>
+            <de><![CDATA[Blog-Liste]]></de>
             <en><![CDATA[Blog List]]></en>
         </locale>
         <locale name="admin.types.blog.entry">
