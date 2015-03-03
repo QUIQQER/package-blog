@@ -35,7 +35,7 @@
 
         {if $Site->getAttribute('short')}
         <div class="content-short" itemprop="description">
-            {$Site->getAttribute('short')}
+            {$Site->getAttribute('short')|nl2br}
         </div>
         {/if}
     </section>
