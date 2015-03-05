@@ -54,12 +54,13 @@
                     <time datetime="{$Child->getAttribute('release_from')|date_format:"c"}"
                           itemprop="datePublished"
                     >
-                        {$Child->getAttribute('release_from')|date_format:"%d.%m.%Y"}
+                        {locale_date date=$Child->getAttribute('release_from')}
                     </time>
                 {else}
                     <time datetime="{$Child->getAttribute('c_date')|date_format:"c"}"
-                          itemprop="datePublished">
-                        {$Child->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+                          itemprop="datePublished"
+                    >
+                        {locale_date date=$Child->getAttribute('c_date')}
                     </time>
                 {/if}
 
