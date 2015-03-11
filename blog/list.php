@@ -5,11 +5,9 @@
  */
 
 $ChildrenList = new QUI\Controls\ChildrenList(array(
-    'showSheets'  => true,
-    'showImages'  => true,
-    'showShort'   => true,
-    'showHeader'  => true,
     'showContent' => false,
+    'showCreator' => true,
+    'showTime'    => true,
 
     'Site'  => $Site,
     'where' => array(

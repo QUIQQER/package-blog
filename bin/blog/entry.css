@@ -7,8 +7,6 @@
 
 .blog-entry-next,
 .blog-entry-prev {
-    color: #FFFFFF;
-    background: #42A9D7;
     padding: 10px 20px;
     float: left;
 }
@@ -30,5 +28,4 @@
     font-size: 12px;
     margin-bottom: 20px;
     width: 100%;
-    color: #527686;
 }
