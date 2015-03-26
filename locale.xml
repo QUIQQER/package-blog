@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
-
-    <locale file="de.xml" lang="" />
-
     <groups name="quiqqer/blog" datatype="php,js">
         <locale name="package.title">
             <de><![CDATA[QUIQQER - Blog]]></de>
             <en><![CDATA[QUIQQER - Blog]]></en>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[
-                <p>Erstellen Sie auf Ihrer Homepage Ihren eigenen Blog, eine Art Online-Tagebuch.</p>
+            <de><![CDATA[<p>Erstellen Sie auf Ihrer Homepage Ihren eigenen Blog, eine Art Online-Tagebuch.</p>
                 <p>Um einen Blog zu erstellen, fügen Sie in Ihrem Projekt einen Seitentyp „Blog-Liste“ hinzu.</p>
-                <p>Und mit dem Seitentyp „Blog-Eintrag“ verfassen Sie einen neuen Blog-Artikel.</p>
-            ]]></de>
-            <en><![CDATA[
-                QUIQQER - Blog Beschreibung
-            ]]></en>
+                <p>Und mit dem Seitentyp „Blog-Eintrag“ verfassen Sie einen neuen Blog-Artikel.</p>]]></de>
+            <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
         </locale>
-
-        <!-- bricks -->
         <locale name="blog.control.list.title">
             <de><![CDATA[Baustein: Blog-Liste]]></de>
             <en><![CDATA[Brick: Blog-List]]></en>
@@ -29,10 +20,7 @@
             <en><![CDATA[Displays the latest blog entries.]]></en>
         </locale>
     </groups>
-
     <groups name="quiqqer/blog" datatype="php">
-
-        <!-- site types -->
         <locale name="admin.types.blog.list">
             <de><![CDATA[Blog-Liste]]></de>
             <en><![CDATA[Blog List]]></en>
@@ -49,9 +37,6 @@
             <de><![CDATA[Blog Eintrag]]></de>
             <en><![CDATA[Blog Entry]]></en>
         </locale>
-
-
-        <!-- blog/list -->
         <locale name="quiqqer.blog.list.settings.title">
             <de><![CDATA[Blog Listen Einstellungen]]></de>
             <en><![CDATA[Blog list settings]]></en>
@@ -60,33 +45,26 @@
             <de><![CDATA[Anzahl Blogbeiträge pro Seite]]></de>
             <en><![CDATA[Number of blog posts per page]]></en>
         </locale>
-
         <locale name="list.blog.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
         </locale>
-
         <locale name="list.blog.on">
             <de><![CDATA[am]]></de>
             <en><![CDATA[on]]></en>
         </locale>
-
         <locale name="list.more">
             <de><![CDATA[mehr]]></de>
             <en><![CDATA[more]]></en>
         </locale>
-
-        <!-- blog/entry -->
         <locale name="entry.blog.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
         </locale>
-
         <locale name="entry.blog.on">
             <de><![CDATA[am]]></de>
             <en><![CDATA[on]]></en>
         </locale>
-
         <locale name="entry.blog.prev">
             <de><![CDATA[voriger Beitrag]]></de>
             <en><![CDATA[previous blogpost]]></en>
@@ -95,8 +73,6 @@
             <de><![CDATA[nächster Beitrag]]></de>
             <en><![CDATA[next blogpost]]></en>
         </locale>
-
-        <!-- blog sheet -->
         <locale name="sheet.first.page">
             <de><![CDATA[Erste Seite]]></de>
             <en><![CDATA[First page]]></en>
@@ -118,5 +94,4 @@
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
     </groups>
-
 </locales>
