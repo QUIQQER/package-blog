@@ -19,6 +19,22 @@
             <de><![CDATA[Zeigt die neusten Blog Einträge an.]]></de>
             <en><![CDATA[Displays the latest blog entries.]]></en>
         </locale>
+        <locale name="quiqqerblog:bloglist.title">
+            <de><![CDATA[QUIQQER - Blog-Liste]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqerblog:bloglist.description">
+            <de><![CDATA[Listet alle darunter liegenden Seiten auf.]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqerblog:blogentry.title">
+            <de><![CDATA[QUIQQER - Blog-Eintrag]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqerblog:blogentry.description">
+            <de><![CDATA[Erstellt eine neue Seite für einen Blog-Eintrag]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
     </groups>
     <groups name="quiqqer/blog" datatype="php">
         <locale name="admin.types.blog.list">
