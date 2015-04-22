@@ -7,16 +7,18 @@
         </locale>
         <locale name="package.description" html="true">
             <de><![CDATA[<p>Erstellen Sie auf Ihrer Homepage Ihren eigenen Blog, eine Art Online-Tagebuch.</p>
-                <p>Um einen Blog zu erstellen, fügen Sie in Ihrem Projekt einen Seitentyp „Blog-Liste“ hinzu.</p>
-                <p>Und mit dem Seitentyp „Blog-Eintrag“ verfassen Sie einen neuen Blog-Artikel.</p>]]></de>
+
+<p>Um einen Blog zu erstellen, f&uuml;gen Sie in Ihrem Projekt einen Seitentyp &bdquo;Blogliste&ldquo; hinzu.</p>
+
+<p>Und mit dem Seitentyp &bdquo;Blogeintrag&ldquo; verfassen Sie einen neuen Blogartikel.</p>]]></de>
             <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
         </locale>
         <locale name="blog.control.list.title">
-            <de><![CDATA[Baustein: Blog-Liste]]></de>
+            <de><![CDATA[Baustein: Blogliste]]></de>
             <en><![CDATA[Brick: Blog-List]]></en>
         </locale>
         <locale name="blog.control.list.description">
-            <de><![CDATA[Zeigt die neusten Blog Einträge an.]]></de>
+            <de><![CDATA[Zeigt die neusten Blogeinträge an.]]></de>
             <en><![CDATA[Displays the latest blog entries.]]></en>
         </locale>
         <locale name="quiqqerblog:bloglist.description">
@@ -24,53 +26,53 @@
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqerblog:blogentry.title">
-            <de><![CDATA[QUIQQER - Blog-Eintrag]]></de>
+            <de><![CDATA[QUIQQER - Blogeintrag]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqerblog:blogentry.description">
-            <de><![CDATA[Erstellt eine neue Seite für einen Blog-Eintrag]]></de>
+            <de><![CDATA[Erstellt eine neue Seite für einen Blogeintrag]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqerblog:bloglist.title">
-            <de><![CDATA[QUIQQER - Blog-Liste]]></de>
+            <de><![CDATA[QUIQQER - Blogliste]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/entry.title">
-            <de><![CDATA[QUIQQER - Blog-Eintrag ]]></de>
+            <de><![CDATA[QUIQQER - Blogeintrag ]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/entry.description">
-            <de><![CDATA[Erstellen Sie eine neue Seite, um einen Blog-Eintrag zu verfassen. Die Blog-Einträge werden unter der Blog-Liste angezeigt und aufgelistet.]]></de>
+            <de><![CDATA[Erstellen Sie eine neue Seite, um einen Blogeintrag zu verfassen. Die Blogeinträge werden unter der Blogliste angezeigt und aufgelistet.]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/list.title">
-            <de><![CDATA[QUIQQER - Blog-Liste]]></de>
+            <de><![CDATA[QUIQQER - Blogliste]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/list.description">
-            <de><![CDATA[Legen Sie eine Blog-Liste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
+            <de><![CDATA[Legen Sie eine Blogliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
             <en><![CDATA[]]></en>
         </locale>
     </groups>
     <groups name="quiqqer/blog" datatype="php">
         <locale name="admin.types.blog.list">
-            <de><![CDATA[Blog-Liste]]></de>
+            <de><![CDATA[Blogliste]]></de>
             <en><![CDATA[Blog List]]></en>
         </locale>
         <locale name="admin.types.blog.list.desc">
-            <de><![CDATA[Blog-Liste]]></de>
+            <de><![CDATA[Blogliste]]></de>
             <en><![CDATA[Blog List]]></en>
         </locale>
         <locale name="admin.types.blog.entry">
-            <de><![CDATA[Blog-Eintrag]]></de>
+            <de><![CDATA[Blogeintrag]]></de>
             <en><![CDATA[Blog Entry]]></en>
         </locale>
         <locale name="admin.types.blog.entry.desc">
-            <de><![CDATA[Blog-Eintrag]]></de>
+            <de><![CDATA[Blogeintrag]]></de>
             <en><![CDATA[Blog Entry]]></en>
         </locale>
         <locale name="quiqqer.blog.list.settings.title">
-            <de><![CDATA[Blog Listen Einstellungen]]></de>
+            <de><![CDATA[Bloglisten-Einstellungen]]></de>
             <en><![CDATA[Blog list settings]]></en>
         </locale>
         <locale name="quiqqer.blog.list.settings.max">
@@ -122,7 +124,7 @@
             <en><![CDATA[next]]></en>
         </locale>
         <locale name="sheet.mobile.option">
-            <de><![CDATA[Seite [from] eins [max]]]></de>
+            <de><![CDATA[Seite [from] von [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
     </groups>
