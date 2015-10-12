@@ -16,6 +16,7 @@ class NewestEntries extends QUI\Control
 {
     /**
      * constructor
+     *
      * @param Array $attributes
      */
     public function __construct($attributes = array())
@@ -29,27 +30,28 @@ class NewestEntries extends QUI\Control
             'dayFormat'  => '%a'
         ));
 
-        parent::setAttributes( $attributes );
+        parent::setAttributes($attributes);
 
         $this->addCSSFile(
-            dirname(__FILE__) . '/NewestEntries.css'
+            dirname(__FILE__).'/NewestEntries.css'
         );
     }
 
     /**
      * (non-PHPdoc)
+     *
      * @see \QUI\Control::create()
      */
     public function getBody()
     {
-        $Engine  = QUI::getTemplateManager()->getEngine();
+        $Engine = QUI::getTemplateManager()->getEngine();
         $Project = $this->_getProject();
 
         $children = $Project->getSites(array(
             'where' => array(
                 'type' => 'quiqqer/blog:blog/entry'
             ),
-            'limit' => (int)$this->getAttribute( 'max' ),
+            'limit' => (int)$this->getAttribute('max'),
             'order' => 'release_from DESC'
         ));
 
@@ -60,6 +62,6 @@ class NewestEntries extends QUI\Control
             'this'     => $this
         ));
 
-        return $Engine->fetch( dirname( __FILE__ ) .'/NewestEntries.html' );
+        return $Engine->fetch(dirname(__FILE__).'/NewestEntries.html');
     }
 }
