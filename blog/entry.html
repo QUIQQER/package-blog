@@ -8,12 +8,8 @@
 <article itemscope itemtype="http://schema.org/BlogPosting"
          class="blog-entry grid-100 mobile-grid-100 grid-parent"
 >
-
-    {if $Template->getAttribute('content-header')}
-    <section class="content-header grid-100 mobile-grid-100">
+    <section class="blog-entry-time content-header grid-100 mobile-grid-100">
         <header>
-            <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
-
             {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">
@@ -32,16 +28,9 @@
             </time>
 
         </header>
-
-        {if $Site->getAttribute('short')}
-        <div class="content-short" itemprop="description">
-            {$Site->getAttribute('short')|nl2br}
-        </div>
-        {/if}
     </section>
-    {/if}
 
-    {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
+    {if $Site->getAttribute('content')}
     <section class="blog-entry-content content-body grid-100 mobile-grid-100"
              itemprop="articleBody"
     >
