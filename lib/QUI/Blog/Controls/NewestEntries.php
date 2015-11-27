@@ -33,7 +33,7 @@ class NewestEntries extends QUI\Control
         parent::setAttributes($attributes);
 
         $this->addCSSFile(
-            dirname(__FILE__).'/NewestEntries.css'
+            dirname(__FILE__) . '/NewestEntries.css'
         );
     }
 
@@ -44,7 +44,7 @@ class NewestEntries extends QUI\Control
      */
     public function getBody()
     {
-        $Engine = QUI::getTemplateManager()->getEngine();
+        $Engine  = QUI::getTemplateManager()->getEngine();
         $Project = $this->_getProject();
 
         $children = $Project->getSites(array(
@@ -62,6 +62,6 @@ class NewestEntries extends QUI\Control
             'this'     => $this
         ));
 
-        return $Engine->fetch(dirname(__FILE__).'/NewestEntries.html');
+        return $Engine->fetch(dirname(__FILE__) . '/NewestEntries.html');
     }
 }
