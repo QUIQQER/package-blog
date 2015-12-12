@@ -17,7 +17,7 @@ class NewestEntries extends QUI\Control
     /**
      * constructor
      *
-     * @param Array $attributes
+     * @param array $attributes
      */
     public function __construct($attributes = array())
     {
@@ -30,7 +30,7 @@ class NewestEntries extends QUI\Control
             'dayFormat'  => '%a'
         ));
 
-        parent::setAttributes($attributes);
+        parent::__construct($attributes);
 
         $this->addCSSFile(
             dirname(__FILE__) . '/NewestEntries.css'
@@ -45,7 +45,7 @@ class NewestEntries extends QUI\Control
     public function getBody()
     {
         $Engine  = QUI::getTemplateManager()->getEngine();
-        $Project = $this->_getProject();
+        $Project = $this->getProject();
 
         $children = $Project->getSites(array(
             'where' => array(

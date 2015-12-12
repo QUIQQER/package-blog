@@ -20,7 +20,7 @@ class BlogList
      * @param Integer                 $newId
      * @param \QUI\Projects\Site\Edit $Parent
      */
-    static function onChildCreate($newId, $Parent)
+    public static function onChildCreate($newId, $Parent)
     {
         if ($Parent->getAttribute('type') !== 'quiqqer/blog:blog/list') {
             return;
