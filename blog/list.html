@@ -1,12 +1,12 @@
 
 <div itemscope itemtype="http://schema.org/ItemList">
     {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
-    <section class="content-body grid-100 mobile-grid-100">
+    <section class="content-body grid-100 mobile-grid-100 grid-parent">
         {$Site->getAttribute('content')}
     </section>
     {/if}
 
-    <section class="content-template grid-100 mobile-grid-100">
+    <section class="content-template grid-100 mobile-grid-100 grid-parent">
         {$ChildrenList->create()}
     </section>
 </div>
