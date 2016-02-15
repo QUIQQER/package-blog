@@ -2,7 +2,7 @@
 <site>
 
     <types>
-        <type type="blog/list" extend="QUI\Blog\BlogList" icon="icon-book">
+        <type type="blog/list" extend="QUI\Blog\BlogList" icon="fa fa-book">
             <locale group="quiqqer/blog" var="admin.types.blog.list" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.blog.list.desc" />
@@ -33,7 +33,7 @@
             </settings>
         </type>
 
-        <type type="blog/entry" extend="QUI\Blog\Entry" icon="icon-paste">
+        <type type="blog/entry" extend="QUI\Blog\Entry" icon="fa fa-paste">
             <locale group="quiqqer/blog" var="admin.types.blog.entry" />
             <desc>
                 <locale group="quiqqer/blog" var="admin.types.blog.entry.desc" />
