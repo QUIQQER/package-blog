@@ -14,8 +14,8 @@
             <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
         </locale>
         <locale name="blog.control.list.title">
-            <de><![CDATA[Baustein: Blogliste]]></de>
-            <en><![CDATA[Brick: Blog-List]]></en>
+            <de><![CDATA[Blog: Blogliste]]></de>
+            <en><![CDATA[Blog: Blog-List]]></en>
         </locale>
         <locale name="blog.control.list.description">
             <de><![CDATA[Zeigt die neusten Blogeinträge an.]]></de>
@@ -27,7 +27,7 @@
         </locale>
         <locale name="quiqqerblog:blogentry.title">
             <de><![CDATA[QUIQQER - Blogeintrag]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[QUIQQER Blog Entry ]]></en>
         </locale>
         <locale name="quiqqerblog:blogentry.description">
             <de><![CDATA[Erstellt eine neue Seite für einen Blogeintrag]]></de>
@@ -39,7 +39,7 @@
         </locale>
         <locale name="quiqqer/blog:blog/entry.title">
             <de><![CDATA[QUIQQER - Blogeintrag ]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[QUIQQER Blog Entry]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/entry.description">
             <de><![CDATA[Erstellen Sie eine neue Seite, um einen Blogeintrag zu verfassen. Die Blogeinträge werden unter der Blogliste angezeigt und aufgelistet.]]></de>
