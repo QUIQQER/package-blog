@@ -11,6 +11,9 @@
             <!-- extra attributes -->
             <attributes>
                 <attribute>quiqqer.settings.blog.max</attribute>
+                <attribute>quiqqer.settings.blog.template</attribute>
+                <attribute>quiqqer.settings.blog.showCreator</attribute>
+                <attribute>quiqqer.settings.blog.showTime</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -25,6 +28,33 @@
                         <input conf="quiqqer.settings.blog.max" type="number">
                             <text>
                                 <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.max" />
+                            </text>
+                        </input>
+
+                        <select conf="quiqqer.settings.blog.template">
+                            <text>
+                                <locale group="quiqqer/blog" var="list.template" />
+                            </text>
+                            <option value="childrenlist">
+                                <locale group="quiqqer/blog" var="list.template.childrenList" />
+                            </option>
+                            <option value="longfooter">
+                                <locale group="quiqqer/blog" var="list.template.longFooter" />
+                            </option>
+                            <option value="authortop">
+                                <locale group="quiqqer/blog" var="list.template.authorTop" />
+                            </option>
+                        </select>
+
+                        <input conf="quiqqer.settings.blog.showCreator" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog" var="list.showCreator" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.showTime" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog" var="list.showTime" />
                             </text>
                         </input>
                     </settings>

@@ -6,8 +6,8 @@
 
 $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showContent' => false,
-    'showCreator' => true,
-    'showTime' => true,
+    'showCreator' => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
+    'showTime' => $Site->getAttribute('quiqqer.settings.blog.showTime'),
 
     'Site' => $Site,
     'where' => array(
@@ -15,7 +15,8 @@ $ChildrenList = new QUI\Controls\ChildrenList(array(
     ),
     'limit' => $Site->getAttribute('quiqqer.settings.blog.max'),
     'itemtype' => "http://schema.org/ItemList",
-    'child-itemtype' => "http://schema.org/BlogPosting"
+    'child-itemtype' => "http://schema.org/BlogPosting",
+    'display'        => $Site->getAttribute('quiqqer.settings.blog.template')
 ));
 
 $Engine->assign(array(

@@ -55,7 +55,6 @@ class NewestEntries extends QUI\Control
             'order' => 'release_from DESC'
         ));
 
-
         $Engine->assign(array(
             'Rewrite'  => QUI::getRewrite(),
             'children' => $children,
