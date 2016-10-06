@@ -10,8 +10,8 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute>quiqqer.settings.blog.max</attribute>
                 <attribute>quiqqer.settings.blog.template</attribute>
+                <attribute>quiqqer.settings.blog.max</attribute>
                 <attribute>quiqqer.settings.blog.showCreator</attribute>
                 <attribute>quiqqer.settings.blog.showTime</attribute>
             </attributes>
@@ -24,12 +24,6 @@
                         <title>
                             <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.title" />
                         </title>
-
-                        <input conf="quiqqer.settings.blog.max" type="number">
-                            <text>
-                                <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.max" />
-                            </text>
-                        </input>
 
                         <select conf="quiqqer.settings.blog.template">
                             <text>
@@ -45,6 +39,12 @@
                                 <locale group="quiqqer/blog" var="list.template.authorTop" />
                             </option>
                         </select>
+
+                        <input conf="quiqqer.settings.blog.max" type="number">
+                            <text>
+                                <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.max" />
+                            </text>
+                        </input>
 
                         <input conf="quiqqer.settings.blog.showCreator" type="checkbox">
                             <text>
