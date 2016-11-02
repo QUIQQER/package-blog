@@ -13,14 +13,6 @@
 <p>Und mit dem Seitentyp &bdquo;Blogeintrag&ldquo; verfassen Sie einen neuen Blogartikel.</p>]]></de>
             <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
         </locale>
-        <locale name="blog.control.list.title">
-            <de><![CDATA[Blog: Blogliste]]></de>
-            <en><![CDATA[Blog: Blog-List]]></en>
-        </locale>
-        <locale name="blog.control.list.description">
-            <de><![CDATA[Zeigt die neusten Blogeinträge an.]]></de>
-            <en><![CDATA[Displays the latest blog entries.]]></en>
-        </locale>
         <locale name="quiqqerblog:bloglist.description">
             <de><![CDATA[Listet alle darunter liegenden Seiten auf.]]></de>
             <en><![CDATA[]]></en>
