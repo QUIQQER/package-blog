@@ -6,10 +6,9 @@
 {/if}
 
 <article itemscope itemtype="http://schema.org/BlogPosting"
-         class="blog-entry grid-100 mobile-grid-100 grid-parent"
+         class="blog-entry grid-100 mobile-grid-100 grid-parent content-body"
 >
-    <section class="blog-entry-time content-header grid-100 mobile-grid-100 grid-parent">
-        <header>
+    <section class="blog-entry-time grid-100 mobile-grid-100 grid-parent">
             {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">
@@ -27,11 +26,10 @@
                 {locale_date date=$date}
             </time>
 
-        </header>
     </section>
 
     {if $Site->getAttribute('content')}
-    <section class="blog-entry-content content-body grid-100 mobile-grid-100 grid-parent"
+    <section class="blog-entry-content grid-100 mobile-grid-100 grid-parent"
              itemprop="articleBody"
     >
         {$Site->getAttribute('content')}
@@ -41,7 +39,7 @@
     {sibling site=$Site type="next" assign=NextSibling}
     {sibling site=$Site type="prev" assign=PrevSibling}
 
-    <aside class="content-body">
+    <aside>
         {if $PrevSibling}
         <a href="{url site=$PrevSibling}" class="blog-entry-prev button"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
