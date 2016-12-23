@@ -2,7 +2,7 @@
     "name" : "quiqqer/blog",
     "type" : "quiqqer-module",
     "description" : "Provided a blog system for QUIQQER.",
-    "version" : "dev-master",
+    "version" : "0.9.0",
     "license" : "GPL-2.0+",
 
     "authors" : [{
