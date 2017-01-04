@@ -83,7 +83,7 @@
                 <en><![CDATA[Layout]]></en>
                 <pl><![CDATA[Layout]]></pl>
             </locale>
-            <locale name="list.template.childrenList">
+            <!--<locale name="list.template.childrenList">
                 <de><![CDATA[Standard]]></de>
                 <en><![CDATA[Default]]></en>
                 <pl><![CDATA[Standardowy widok]]></pl>
@@ -97,7 +97,7 @@
                 <de><![CDATA[Autor und Datum oben]]></de>
                 <en><![CDATA[Author and date top]]></en>
                 <pl><![CDATA[Autor i data na górze]]></pl>
-            </locale>
+            </locale>-->
 
             <!-- show author -->
             <locale name="list.showCreator">

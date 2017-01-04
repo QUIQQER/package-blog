@@ -29,14 +29,38 @@
                             <text>
                                 <locale group="quiqqer/blog" var="list.template" />
                             </text>
+                            <option value="standardList">
+                                <locale group="quiqqer/sitetypes" var="list.template.standardList"/>
+                            </option>
+                            <option value="listWithBorder">
+                                <locale group="quiqqer/sitetypes" var="list.template.listWithBorder"/>
+                            </option>
+                            <option value="simpleArticleList">
+                                <locale group="quiqqer/sitetypes" var="list.template.simpleArticleList"/>
+                            </option>
+                            <option value="advancedArticleList">
+                                <locale group="quiqqer/sitetypes" var="list.template.advancedArticleList"/>
+                            </option>
+                            <option value="1er">
+                                <locale group="quiqqer/sitetypes" var="list.template.1er"/>
+                            </option>
+                            <option value="2er">
+                                <locale group="quiqqer/sitetypes" var="list.template.2er"/>
+                            </option>
+                            <option value="3er">
+                                <locale group="quiqqer/sitetypes" var="list.template.3er"/>
+                            </option>
+                            <option value="4er">
+                                <locale group="quiqqer/sitetypes" var="list.template.4er"/>
+                            </option>
                             <option value="childrenlist">
-                                <locale group="quiqqer/blog" var="list.template.childrenList" />
+                                <locale group="quiqqer/sitetypes" var="list.template.childrenList" />
                             </option>
                             <option value="longfooter">
-                                <locale group="quiqqer/blog" var="list.template.longFooter" />
+                                <locale group="quiqqer/sitetypes" var="list.template.longFooter" />
                             </option>
                             <option value="authortop">
-                                <locale group="quiqqer/blog" var="list.template.authorTop" />
+                                <locale group="quiqqer/sitetypes" var="list.template.authorTop" />
                             </option>
                         </select>
 
