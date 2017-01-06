@@ -7,8 +7,8 @@
 $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showContent'    => false,
     'showCreator'    => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
-    'showTime'       => $Site->getAttribute('quiqqer.settings.news.showTime'), // sich endgültig entscheiden:
-    'showDate'       => $Site->getAttribute('quiqqer.settings.news.showTime'), // showDate vs showTime
+    'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
+    'showDate'       => $Site->getAttribute('quiqqer.settings.blog.showDate'),
     'Site'           => $Site,
     'where'          => array(
         'type' => 'quiqqer/blog:blog/entry'

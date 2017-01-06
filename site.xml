@@ -10,10 +10,11 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute>quiqqer.settings.blog.template</attribute>
-                <attribute>quiqqer.settings.blog.max</attribute>
-                <attribute>quiqqer.settings.blog.showCreator</attribute>
-                <attribute>quiqqer.settings.blog.showTime</attribute>
+                <attribute default="childrenList">quiqqer.settings.blog.template</attribute>
+                <attribute default="6">quiqqer.settings.blog.max</attribute>
+                <attribute default="1">quiqqer.settings.blog.showCreator</attribute>
+                <attribute default="1">quiqqer.settings.blog.showDate</attribute>
+                <attribute default="0">quiqqer.settings.blog.showTime</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -29,11 +30,11 @@
                             <text>
                                 <locale group="quiqqer/blog" var="list.template" />
                             </text>
-                            <option value="standardList">
-                                <locale group="quiqqer/sitetypes" var="list.template.standardList"/>
+                            <option value="imageTop">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
                             </option>
-                            <option value="listWithBorder">
-                                <locale group="quiqqer/sitetypes" var="list.template.listWithBorder"/>
+                            <option value="imageTopBorder">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTopBorder"/>
                             </option>
                             <option value="simpleArticleList">
                                 <locale group="quiqqer/sitetypes" var="list.template.simpleArticleList"/>
@@ -53,13 +54,13 @@
                             <option value="4er">
                                 <locale group="quiqqer/sitetypes" var="list.template.4er"/>
                             </option>
-                            <option value="childrenlist">
+                            <option value="childrenList">
                                 <locale group="quiqqer/sitetypes" var="list.template.childrenList" />
                             </option>
-                            <option value="longfooter">
+                            <option value="longFooter">
                                 <locale group="quiqqer/sitetypes" var="list.template.longFooter" />
                             </option>
-                            <option value="authortop">
+                            <option value="authorTop">
                                 <locale group="quiqqer/sitetypes" var="list.template.authorTop" />
                             </option>
                         </select>
@@ -76,9 +77,16 @@
                             </text>
                         </input>
 
+                        <input conf="quiqqer.settings.blog.showDate" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showDate" />
+                            </text>
+                        </input>
                         <input conf="quiqqer.settings.blog.showTime" type="checkbox">
                             <text>
-                                <locale group="quiqqer/blog" var="list.showTime" />
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showTime" />
                             </text>
                         </input>
                     </settings>
