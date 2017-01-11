@@ -12,6 +12,8 @@
             <attributes>
                 <attribute default="childrenList">quiqqer.settings.blog.template</attribute>
                 <attribute default="6">quiqqer.settings.blog.max</attribute>
+                <attribute default="1">quiqqer.settings.blog.showImages</attribute>
+                <attribute default="1">quiqqer.settings.blog.showShort</attribute>
                 <attribute default="1">quiqqer.settings.blog.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.blog.showDate</attribute>
                 <attribute default="0">quiqqer.settings.blog.showTime</attribute>
@@ -71,9 +73,24 @@
                             </text>
                         </input>
 
+                        <input conf="quiqqer.settings.blog.showImages" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showImages" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.showShort" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showShort" />
+                            </text>
+                        </input>
+
                         <input conf="quiqqer.settings.blog.showCreator" type="checkbox">
                             <text>
-                                <locale group="quiqqer/blog" var="list.showCreator" />
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showCreator" />
                             </text>
                         </input>
 

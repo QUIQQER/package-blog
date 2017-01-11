@@ -6,6 +6,8 @@
 
 $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showContent'    => false,
+    'showImages'     => $Site->getAttribute('quiqqer.settings.blog.showImages'),
+    'showShort'      => $Site->getAttribute('quiqqer.settings.blog.showShort'),
     'showCreator'    => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
     'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
     'showDate'       => $Site->getAttribute('quiqqer.settings.blog.showDate'),
@@ -14,8 +16,9 @@ $ChildrenList = new QUI\Controls\ChildrenList(array(
         'type' => 'quiqqer/blog:blog/entry'
     ),
     'limit'          => $Site->getAttribute('quiqqer.settings.blog.max'),
-    'itemtype'       => "http://schema.org/ItemList",
-    'child-itemtype' => "http://schema.org/BlogPosting",
+    'itemtype'       => 'http://schema.org/Blog',
+    'child-itemtype' => 'http://schema.org/BlogPosting',
+    'child-itemprop' => 'blogPost',
     'display'        => $Site->getAttribute('quiqqer.settings.blog.template')
 ));
 
