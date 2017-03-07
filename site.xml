@@ -117,6 +117,95 @@
             <desc>
                 <locale group="quiqqer/blog" var="admin.types.blog.entry.desc" />
             </desc>
+
+            <attributes>
+                <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
+                <!--<attribute default="disqus">quiqqer.settings.blog.entry.comments.type</attribute>
+                <attribute default="disqus">quiqqer.settings.blog.entry.comments.disqus.link</attribute>
+
+                <attribute default="disqus">quiqqer.settings.blog.entry.comments.fb.appId</attribute>
+                <attribute default="disqus">quiqqer.settings.blog.entry.comments.fb.numberOfPosts</attribute>
+                <attribute default="disqus">quiqqer.settings.blog.entry.comments.fb.appVer</attribute>-->
+            </attributes>
+
+            <settings>
+                <category name="blog-entry-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/blog" var="quiqqer.blog.entry.settings.title" />
+                        </title>
+
+                        <select conf="quiqqer.settings.blog.entry.comments">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments" />
+                            </text>
+                            <option value="enable">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.enable" />
+                            </option>
+                            <option value="disable">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.disable" />
+                            </option>
+                        </select>
+
+                        <!--<select conf="quiqqer.settings.blog.entry.comments.type">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.type" />
+                            </text>
+                            <option value="disqus">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.type.disqus" />
+                            </option>
+                            <option value="facebook">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.type.facebook" />
+                            </option>
+                        </select>
+
+                        &lt;!&ndash; disqus &ndash;&gt;
+                        <input conf="quiqqer.settings.blog.entry.comments.disqus.link">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.disqus.link"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.disqus.link.desc"/>
+                            </description>
+                        </input>
+
+
+                        &lt;!&ndash; facebook &ndash;&gt;
+                        <input conf="quiqqer.settings.blog.entry.comments.fb.appId">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.fb.appId"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.fb.appId.desc"/>
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.entry.comments.fb.numberOfPosts" type="number">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.fb.numberOfPosts"/>
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.entry.comments.fb.appVer">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.comments.fb.appVer"/>
+                            </text>
+                        </input>-->
+                    </settings>
+                </category>
+            </settings>
         </type>
     </types>
 

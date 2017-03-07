@@ -161,5 +161,96 @@
             <de><![CDATA[Seite [from] von [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
+
+        <!-- blog entry settings -->
+        <locale name="quiqqer.blog.entry.settings.title">
+            <de><![CDATA[Blogeintrag-Einstellungen]]></de>
+            <en><![CDATA[Blog entry settings]]></en>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.comments">
+            <de><![CDATA[Kommentare]]></de>
+            <en><![CDATA[Disable]]></en>
+        </locale>
+            <locale name="quiqqer.settings.blog.entry.comments.enable">
+                <de><![CDATA[Einschalten]]></de>
+                <en><![CDATA[Enable]]></en>
+            </locale>
+            <locale name="quiqqer.settings.blog.entry.comments.disable">
+                <de><![CDATA[Ausschalten]]></de>
+                <en><![CDATA[Disable]]></en>
+            </locale>
+
+
+        <!-- project blog comment settings -->
+        <locale name="blog.settings.category">
+            <de><![CDATA[Blog Kommentare]]></de>
+            <en><![CDATA[Blog comments]]></en>
+        </locale>
+
+        <!-- project blog comment settings: general -->
+        <locale name="blog.settings.general.title">
+            <de><![CDATA[Allgemeine Einstellungen]]></de>
+            <en><![CDATA[General settings]]></en>
+        </locale>
+        <locale name="blog.settings.general.enableComments">
+            <de><![CDATA[Kommentarfunktion einschalten?]]></de>
+            <en><![CDATA[Enable comments?]]></en>
+        </locale>
+
+        <locale name="blog.settings.general.type">
+            <de><![CDATA[Typ]]></de>
+            <en><![CDATA[Type]]></en>
+        </locale>
+            <locale name="blog.settings.general.type.disqus">
+                <de><![CDATA[Disqus]]></de>
+                <en><![CDATA[Disqus]]></en>
+            </locale>
+            <locale name="blog.settings.general.type.facebook">
+                <de><![CDATA[Facebook]]></de>
+                <en><![CDATA[Facebook]]></en>
+            </locale>
+
+        <!-- project blog comment settings: disqus -->
+        <locale name="blog.settings.disqus.title">
+            <de><![CDATA[Disqus]]></de>
+            <en><![CDATA[Disqus]]></en>
+        </locale>
+        <locale name="blog.settings.disqus.link">
+            <de><![CDATA[Disqus Link]]></de>
+            <en><![CDATA[Disqus link]]></en>
+        </locale>
+            <locale name="blog.settings.disqus.link.desc" html="true">
+                <de><![CDATA[Registrieren Sie sich bei Disqus und
+                        fügen Sie hier Ihren persönlichen Link ein. <br />
+                             https://disqus.com]]></de>
+                <en><![CDATA[Register by Disqus and paste your unique disqus URL. <br />
+                             https://disqus.com]]></en>
+            </locale>
+
+        <!-- project blog comment settings: facebook -->
+        <locale name="blog.settings.facebook.title">
+            <de><![CDATA[Disqus]]></de>
+            <en><![CDATA[Disqus]]></en>
+        </locale>
+        <locale name="blog.settings.facebook.appId">
+            <de><![CDATA[Facebook App ID]]></de>
+            <en><![CDATA[Facebook App ID]]></en>
+        </locale>
+        <locale name="blog.settings.facebook.appId.desc" html="true">
+            <de><![CDATA[Registrieren Sie sich bei Facebook Developers, erstellen Sie eine Kommentarapp und
+                        fügen Sie hier die App ID ein. <br />
+                             https://developers.facebook.com]]></de>
+            <en><![CDATA[Register by Facebook Developers, create your Comment App and paste the App ID. <br />
+                             https://developers.facebook.com]]></en>
+        </locale>
+
+        <locale name="blog.settings.facebook.numberOfPosts">
+            <de><![CDATA[Anzahl der Kommentare]]></de>
+            <en><![CDATA[Number of Posts]]></en>
+        </locale>
+        <locale name="blog.settings.facebook.apiVer">
+            <de><![CDATA[API Version]]></de>
+            <en><![CDATA[API version]]></en>
+        </locale>
     </groups>
 </locales>
