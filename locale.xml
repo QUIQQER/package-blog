@@ -229,8 +229,8 @@
 
         <!-- project blog comment settings: facebook -->
         <locale name="blog.settings.facebook.title">
-            <de><![CDATA[Disqus]]></de>
-            <en><![CDATA[Disqus]]></en>
+            <de><![CDATA[Facebook]]></de>
+            <en><![CDATA[Facebook]]></en>
         </locale>
         <locale name="blog.settings.facebook.appId">
             <de><![CDATA[Facebook App ID]]></de>
