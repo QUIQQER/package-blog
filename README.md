@@ -9,7 +9,10 @@ Blog Funktionalität für das QUIQQER System
 
 Die Blog-Liste kann auch über RSS aboniert werden.
 
-
+Features
+--------
++ Globale Kommentarfunktion für Disqus und Facebook
++ Kommentare können auf einzelnen Seite ausgeschaltet werden
 
 ### Hinweis
 

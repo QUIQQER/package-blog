@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <project>
+
+        <settings>
+            <config>
+                <section name="blog.settings.general">
+                    <conf name="enableComments">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="type">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                </section>
+
+                <section name="blog.settings.disqus">
+                    <conf name="link">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                </section>
+
+                <section name="blog.settings.facebook">
+                    <conf name="appId">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="numberOfPosts">
+                        <type><![CDATA[number]]></type>
+                    </conf>
+                    <conf name="apiVer">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                </section>
+            </config>
+
+            <window>
+                <categories>
+                    <category name="blog">
+                        <text>
+                            <locale group="quiqqer/blog"
+                                    var="blog.settings.category"/>
+                        </text>
+                        <icon>fa fa-comments-o</icon>
+
+                        <!-- general -->
+                        <settings title="blog.settings.general" name="blog.settings.general">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.general.title"/>
+                                </text>
+                            </title>
+
+                            <input conf="blog.settings.general.enableComments" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.general.enableComments"/>
+                                </text>
+                            </input>
+
+                            <select conf="blog.settings.general.type">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.general.type"/>
+                                </text>
+                                <option value="disqus">
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.general.type.disqus"/>
+                                </option>
+                                <option value="facebook">
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.general.type.facebook"/>
+                                </option>
+                            </select>
+
+                        </settings>
+
+                        <!-- disqus -->
+                        <settings title="blog.settings.disqus" name="blog.settings.disqus">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.disqus.title"/>
+                                </text>
+                            </title>
+                            <input conf="blog.settings.disqus.link">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.disqus.link"/>
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.disqus.link.desc"/>
+                                </description>
+                            </input>
+                        </settings>
+
+                        <!-- facebook -->
+                        <settings title="blog.settings.facebook" name="blog.settings.facebook">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.facebook.title"/>
+                                </text>
+                            </title>
+
+                            <input conf="blog.settings.facebook.appId">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.facebook.appId"/>
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.facebook.appId.desc"/>
+                                </description>
+                            </input>
+
+                            <input conf="blog.settings.facebook.numberOfPosts" type="number">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.facebook.numberOfPosts"/>
+                                </text>
+                            </input>
+
+                            <input conf="blog.settings.facebook.apiVer">
+                                <text>
+                                    <locale group="quiqqer/blog"
+                                            var="blog.settings.facebook.apiVer"/>
+                                </text>
+                            </input>
+                        </settings>
+                    </category>
+                </categories>
+
+            </window>
+        </settings>
+
+    </project>
+</quiqqer>
