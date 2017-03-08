@@ -237,20 +237,16 @@
             <en><![CDATA[Facebook App ID]]></en>
         </locale>
         <locale name="blog.settings.facebook.appId.desc" html="true">
-            <de><![CDATA[Registrieren Sie sich bei Facebook Developers, erstellen Sie eine Kommentarapp und
-                        fügen Sie hier die App ID ein. <br />
+            <de><![CDATA[Registrieren Sie sich bei Facebook Developers, erstellen Sie eine neue App und
+                        fügen Sie hier die App ID ein.<br />
                              https://developers.facebook.com]]></de>
-            <en><![CDATA[Register by Facebook Developers, create your Comment App and paste the App ID. <br />
+            <en><![CDATA[Register by Facebook Developers, create a new App and paste the App ID here.<br />
                              https://developers.facebook.com]]></en>
         </locale>
 
         <locale name="blog.settings.facebook.numberOfPosts">
             <de><![CDATA[Anzahl der Kommentare]]></de>
             <en><![CDATA[Number of Posts]]></en>
-        </locale>
-        <locale name="blog.settings.facebook.apiVer">
-            <de><![CDATA[API Version]]></de>
-            <en><![CDATA[API version]]></en>
         </locale>
     </groups>
 </locales>

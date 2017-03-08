@@ -97,13 +97,13 @@
 
           js     = d.createElement(s);
           js.id  = id;
-          js.src = "//connect.facebook.net/{$fbLangParam}/sdk.js#xfbml=1&version={$apiVer}&appId={$appId}";
+          js.src = "//connect.facebook.net/{$fbLangParam}/sdk.js#xfbml=1&version=v2.8&appId={$appId}";
 
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="fb-comments"
-             data-href="{$baserUrl}"
+             data-href="{$url}"
              data-numposts="{$numberOfPosts}"
              data-width="100%">
          </div>
