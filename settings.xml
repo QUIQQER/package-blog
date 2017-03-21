@@ -26,9 +26,6 @@
                     <conf name="numberOfPosts">
                         <type><![CDATA[number]]></type>
                     </conf>
-                    <conf name="apiVer">
-                        <type><![CDATA[string]]></type>
-                    </conf>
                 </section>
             </config>
 
@@ -121,12 +118,6 @@
                                 </text>
                             </input>
 
-                            <input conf="blog.settings.facebook.apiVer">
-                                <text>
-                                    <locale group="quiqqer/blog"
-                                            var="blog.settings.facebook.apiVer"/>
-                                </text>
-                            </input>
                         </settings>
                     </category>
                 </categories>

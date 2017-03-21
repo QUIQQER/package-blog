@@ -30,7 +30,6 @@ if ($Project->getConfig('blog.settings.facebook.numberOfPosts')) {
 $Engine->assign(array(
     'comments'       => $comments,
     'type'           => $type,
-    'baserUrl'       => $baseUrl,
     'url'            => $url,
     'pageIdentifier' => $pageIdentifier,
     'disqusLink'     => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',

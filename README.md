@@ -1,22 +1,20 @@
-# QUIQQER Blog Package
+
+QUIQQER Blog
+========
 
 Blog Funktionalität für das QUIQQER System
 
-## Seitentypen
+Paketname:
 
-+ Blog-Liste
-+ Blog-Eintrag
-
-Die Blog-Liste kann auch über RSS aboniert werden.
+    quiqqer/blog
 
 Features
 --------
-+ Globale Kommentarfunktion für Disqus und Facebook
-+ Kommentare können auf einzelnen Seite ausgeschaltet werden
 
-### Hinweis
+- Globale Kommentarfunktion für Disqus und Facebook
+- Kommentare können auf einzelnen Seiten ausgeschaltet werden
+- Seitentypen
+    - Blog-Liste
+    - Blog-Eintrag
 
-Altes CMS System Migration:
-
-blog/entry zu quiqqer/blog:blog/entry
-blog/list zu quiqqer/blog:blog/list
+Die Blog-Liste kann auch über RSS abonniert werden.
