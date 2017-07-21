@@ -13,6 +13,7 @@
                 <attribute default="childrenList">quiqqer.settings.blog.template</attribute>
                 <attribute default="6">quiqqer.settings.blog.max</attribute>
                 <attribute default="1">quiqqer.settings.blog.showImages</attribute>
+                <attribute default="1">quiqqer.settings.blog.showHeader</attribute>
                 <attribute default="1">quiqqer.settings.blog.showShort</attribute>
                 <attribute default="1">quiqqer.settings.blog.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.blog.showDate</attribute>
@@ -32,6 +33,9 @@
                             <text>
                                 <locale group="quiqqer/blog" var="list.template" />
                             </text>
+                            <option value="cardRows">
+                                <locale group="quiqqer/sitetypes" var="list.template.cardRows"/>
+                            </option>
                             <option value="imageTop">
                                 <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
                             </option>

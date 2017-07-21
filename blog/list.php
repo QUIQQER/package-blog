@@ -7,6 +7,7 @@
 $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showContent'    => false,
     'showImages'     => $Site->getAttribute('quiqqer.settings.blog.showImages'),
+    'showHeader'     => $Site->getAttribute('quiqqer.settings.blog.showHeader'),
     'showShort'      => $Site->getAttribute('quiqqer.settings.blog.showShort'),
     'showCreator'    => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
     'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
