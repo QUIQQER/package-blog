@@ -124,6 +124,7 @@
 
             <attributes>
                 <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
+                <attribute default="1">quiqqer.settings.blog.entry.dateAndCreator</attribute>
             </attributes>
 
             <settings>
@@ -145,6 +146,30 @@
                             <option value="disable">
                                 <locale group="quiqqer/blog"
                                         var="quiqqer.settings.blog.entry.comments.disable" />
+                            </option>
+                        </select>
+
+                        <select conf="quiqqer.settings.blog.entry.dateAndCreator">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.dateAndCreator" />
+                            </text>
+
+                            <option value="showAll">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.dateAndCreator.showAll"/>
+                            </option>
+                            <option value="showCreator">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.dateAndCreator.showCreator"/>
+                            </option>
+                            <option value="showDate">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.dateAndCreator.showDate"/>
+                            </option>
+                            <option value="hide">
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.entry.dateAndCreator.hide"/>
                             </option>
                         </select>
 

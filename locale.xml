@@ -180,6 +180,32 @@
                 <en><![CDATA[Disable]]></en>
             </locale>
 
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator">
+            <de><![CDATA[Autor und Datum]]></de>
+            <en><![CDATA[Author & date]]></en>
+            <pl><![CDATA[Autor i data]]></pl>
+        </locale>
+            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showAll">
+                <de><![CDATA[Autor und Datum anzeigen]]></de>
+                <en><![CDATA[Show author & date]]></en>
+                <pl><![CDATA[Pokaż autora i datę]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showCreator">
+                <de><![CDATA[Nur Autor anzeigen]]></de>
+                <en><![CDATA[Show only author]]></en>
+                <pl><![CDATA[Pokaż tylko autora]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showDate">
+                <de><![CDATA[Nur Datum anzeigen]]></de>
+                <en><![CDATA[Show only date]]></en>
+                <pl><![CDATA[Pokaż tylko datę]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.blog.entry.dateAndCreator.hide">
+                <de><![CDATA[Ausgeblendet]]></de>
+                <en><![CDATA[Hide]]></en>
+                <pl><![CDATA[Wyłącz]]></pl>
+            </locale>
+
 
         <!-- project blog comment settings -->
         <locale name="blog.settings.category">
