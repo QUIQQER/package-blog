@@ -1,3 +1,4 @@
+![QUIQQER Blog](bin/Readme.jpg)
 
 QUIQQER Blog
 ========
