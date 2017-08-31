@@ -6,9 +6,12 @@
 {/if}
 
 <article itemscope itemtype="http://schema.org/BlogPosting"
-         class="blog-entry grid-100 mobile-grid-100 grid-parent content-body"
+         class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent content-body"
 >
-    <section class="blog-entry-time grid-100 mobile-grid-100 grid-parent">
+
+    {if $enableDateAndCreator}
+    <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
+        {if $showCreator}
             {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">
@@ -18,15 +21,21 @@
                     {$User->getname()}
                 {/if}
             </span>
+        {/if}
 
-            {t}quiqqer/blog entry.blog.on{/t}
-            <time datetime="{$date|date_format:"c"}"
-                  itemprop="datePublished"
-            >
-                {locale_date date=$date}
-            </time>
+        {if $showDate}
+            <span class="blog-entry-time">
+                {t}quiqqer/blog entry.blog.on{/t}
+                <time datetime="{$date|date_format:"c"}"
+                      itemprop="datePublished"
+                >
+                    {locale_date date=$date}
+                </time>
+            </span>
+        {/if}
 
     </section>
+    {/if}
 
     {if $Site->getAttribute('content')}
     <section class="blog-entry-content grid-100 mobile-grid-100 grid-parent"

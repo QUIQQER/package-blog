@@ -1,5 +1,29 @@
 <?php
 
+/**
+ * autor and date
+ */
+
+// default
+$enableDateAndCreator = true;
+$showCreator          = true;
+$showDate             = true;
+
+switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
+    case 'showCreator':
+        $showDate = false; // hide date
+        break;
+    case 'showDate':
+        $showCreator = false; // hide author
+        break;
+    case 'hide':
+        $enableDateAndCreator = false; // disable date and author
+        break;
+}
+
+/**
+ * comments
+ */
 $Request = QUI::getRequest();
 $baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
 $url     = $baseUrl . $_SERVER['REQUEST_URI'];
@@ -28,13 +52,16 @@ if ($Project->getConfig('blog.settings.facebook.numberOfPosts')) {
 }
 
 $Engine->assign(array(
-    'comments'       => $comments,
-    'type'           => $type,
-    'url'            => $url,
-    'pageIdentifier' => $pageIdentifier,
-    'disqusLink'     => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
-    'fbLangParam'    => $fbLangParam,
-    'numberOfPosts'  => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
-    'apiVer'         => $Project->getConfig('blog.settings.facebook.apiVer'),
-    'appId'          => $Project->getConfig('blog.settings.facebook.appId')
+    'enableDateAndCreator' => $enableDateAndCreator,
+    'showCreator'          => $showCreator,
+    'showDate'             => $showDate,
+    'comments'             => $comments,
+    'type'                 => $type,
+    'url'                  => $url,
+    'pageIdentifier'       => $pageIdentifier,
+    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
+    'fbLangParam'          => $fbLangParam,
+    'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
+    'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
+    'appId'                => $Project->getConfig('blog.settings.facebook.appId')
 ));

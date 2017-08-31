@@ -15,6 +15,11 @@
     float: right;
 }
 
+.blog-entry-date-and-author {
+    margin-bottom: 20px;
+}
+
+
 .blog-entry aside {
     clear: both;
     float: left;
@@ -22,10 +27,7 @@
     margin-top: 30px;
 }
 
-.blog-entry time {
-    clear: both;
-    float: left;
+.blog-entry-time {
     font-size: 12px;
-    margin-bottom: 20px;
-    width: 100%;
+    display: block;
 }
