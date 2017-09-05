@@ -6,44 +6,50 @@
             <en><![CDATA[QUIQQER - Blog]]></en>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[<p>Erstellen Sie auf Ihrer Homepage Ihren eigenen Blog, eine Art Online-Tagebuch.</p>
-
-<p>Um einen Blog zu erstellen, f&uuml;gen Sie in Ihrem Projekt einen Seitentyp &bdquo;Blogliste&ldquo; hinzu.</p>
-
-<p>Und mit dem Seitentyp &bdquo;Blogeintrag&ldquo; verfassen Sie einen neuen Blogartikel.</p>]]></de>
-            <en><![CDATA[QUIQQER - Blog Beschreibung]]></en>
+            <de><![CDATA[
+            Erstellen Sie Ihr eigenes Online-Tagebuch.<br />
+            Mit den zur Verfügung gestellten Seitentypen ist das Verwalten und Erstellen Ihres eigenen Blogs kein Problem mehr.
+            ]]></de>
+            <en><![CDATA[
+            Create your own online diary.<br />
+            With the provided page types, managing and creating your own blog is no longer a problem.
+            ]]></en>
         </locale>
         <locale name="quiqqerblog:bloglist.description">
             <de><![CDATA[Listet alle darunter liegenden Seiten auf.]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[Lists all underlying pages.]]></en>
         </locale>
         <locale name="quiqqerblog:blogentry.title">
             <de><![CDATA[QUIQQER - Blogeintrag]]></de>
-            <en><![CDATA[QUIQQER Blog Entry ]]></en>
+            <en><![CDATA[QUIQQER - Blog entry]]></en>
         </locale>
         <locale name="quiqqerblog:blogentry.description">
             <de><![CDATA[Erstellt eine neue Seite für einen Blogeintrag]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[Creates a new page for a blog entry]]></en>
         </locale>
         <locale name="quiqqerblog:bloglist.title">
             <de><![CDATA[QUIQQER - Blogliste]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[QUIQQER - Blog list]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/entry.title">
             <de><![CDATA[QUIQQER - Blogeintrag ]]></de>
-            <en><![CDATA[QUIQQER Blog Entry]]></en>
+            <en><![CDATA[QUIQQER - Blog Entry]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/entry.description">
-            <de><![CDATA[Erstellen Sie eine neue Seite, um einen Blogeintrag zu verfassen. Die Blogeinträge werden unter der Blogliste angezeigt und aufgelistet.]]></de>
-            <en><![CDATA[]]></en>
+            <de><![CDATA[
+            Erstellen Sie eine neue Seite, um einen Blogeintrag zu verfassen. Die Blogeinträge werden unter der Blogliste angezeigt und aufgelistet.
+            ]]></de>
+            <en><![CDATA[
+            Create a new page to create a blog entry. The blog entries are displayed under the blog list and listed.
+            ]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/list.title">
             <de><![CDATA[QUIQQER - Blogliste]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[QUIQQER - Blog list]]></en>
         </locale>
         <locale name="quiqqer/blog:blog/list.description">
             <de><![CDATA[Legen Sie eine Blogliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[Create a bloglist. All pages below are listed.]]></en>
         </locale>
 
     </groups>
@@ -71,47 +77,47 @@
             <en><![CDATA[Blog list settings]]></en>
         </locale>
 
-            <!-- max site -->
-            <locale name="quiqqer.blog.list.settings.max">
-                <de><![CDATA[Anzahl Blogbeiträge pro Seite]]></de>
-                <en><![CDATA[Number of blog posts per page]]></en>
-            </locale>
+        <!-- max site -->
+        <locale name="quiqqer.blog.list.settings.max">
+            <de><![CDATA[Anzahl Blogbeiträge pro Seite]]></de>
+            <en><![CDATA[Number of blog posts per page]]></en>
+        </locale>
 
-            <!-- Blog template -->
-            <locale name="list.template">
-                <de><![CDATA[Layout]]></de>
-                <en><![CDATA[Layout]]></en>
-                <pl><![CDATA[Layout]]></pl>
-            </locale>
-            <!--<locale name="list.template.childrenList">
-                <de><![CDATA[Standard]]></de>
-                <en><![CDATA[Default]]></en>
-                <pl><![CDATA[Standardowy widok]]></pl>
-            </locale>
-            <locale name="list.template.longFooter">
-                <de><![CDATA[Langes Footer]]></de>
-                <en><![CDATA[Long footer]]></en>
-                <pl><![CDATA[Dłuższą stopka]]></pl>
-            </locale>
-            <locale name="list.template.authorTop">
-                <de><![CDATA[Autor und Datum oben]]></de>
-                <en><![CDATA[Author and date top]]></en>
-                <pl><![CDATA[Autor i data na górze]]></pl>
-            </locale>-->
+        <!-- Blog template -->
+        <locale name="list.template">
+            <de><![CDATA[Layout]]></de>
+            <en><![CDATA[Layout]]></en>
+            <pl><![CDATA[Layout]]></pl>
+        </locale>
+        <!--<locale name="list.template.childrenList">
+            <de><![CDATA[Standard]]></de>
+            <en><![CDATA[Default]]></en>
+            <pl><![CDATA[Standardowy widok]]></pl>
+        </locale>
+        <locale name="list.template.longFooter">
+            <de><![CDATA[Langes Footer]]></de>
+            <en><![CDATA[Long footer]]></en>
+            <pl><![CDATA[Dłuższą stopka]]></pl>
+        </locale>
+        <locale name="list.template.authorTop">
+            <de><![CDATA[Autor und Datum oben]]></de>
+            <en><![CDATA[Author and date top]]></en>
+            <pl><![CDATA[Autor i data na górze]]></pl>
+        </locale>-->
 
-            <!-- show author -->
-            <locale name="list.showCreator">
-                <de><![CDATA[Autor anzeigen]]></de>
-                <en><![CDATA[Show author]]></en>
-                <pl><![CDATA[Pokaż autora]]></pl>
-            </locale>
+        <!-- show author -->
+        <locale name="list.showCreator">
+            <de><![CDATA[Autor anzeigen]]></de>
+            <en><![CDATA[Show author]]></en>
+            <pl><![CDATA[Pokaż autora]]></pl>
+        </locale>
 
-            <!-- show date -->
-            <locale name="list.showTime">
-                <de><![CDATA[Datum anzeigen]]></de>
-                <en><![CDATA[Show date]]></en>
-                <pl><![CDATA[Pokaż datę]]></pl>
-            </locale>
+        <!-- show date -->
+        <locale name="list.showTime">
+            <de><![CDATA[Datum anzeigen]]></de>
+            <en><![CDATA[Show date]]></en>
+            <pl><![CDATA[Pokaż datę]]></pl>
+        </locale>
 
         <locale name="list.blog.by">
             <de><![CDATA[von]]></de>
@@ -171,40 +177,40 @@
             <de><![CDATA[Kommentare]]></de>
             <en><![CDATA[Disable]]></en>
         </locale>
-            <locale name="quiqqer.settings.blog.entry.comments.enable">
-                <de><![CDATA[Einschalten]]></de>
-                <en><![CDATA[Enable]]></en>
-            </locale>
-            <locale name="quiqqer.settings.blog.entry.comments.disable">
-                <de><![CDATA[Ausschalten]]></de>
-                <en><![CDATA[Disable]]></en>
-            </locale>
+        <locale name="quiqqer.settings.blog.entry.comments.enable">
+            <de><![CDATA[Einschalten]]></de>
+            <en><![CDATA[Enable]]></en>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.comments.disable">
+            <de><![CDATA[Ausschalten]]></de>
+            <en><![CDATA[Disable]]></en>
+        </locale>
 
         <locale name="quiqqer.settings.blog.entry.dateAndCreator">
             <de><![CDATA[Autor und Datum]]></de>
             <en><![CDATA[Author & date]]></en>
             <pl><![CDATA[Autor i data]]></pl>
         </locale>
-            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showAll">
-                <de><![CDATA[Autor und Datum anzeigen]]></de>
-                <en><![CDATA[Show author & date]]></en>
-                <pl><![CDATA[Pokaż autora i datę]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showCreator">
-                <de><![CDATA[Nur Autor anzeigen]]></de>
-                <en><![CDATA[Show only author]]></en>
-                <pl><![CDATA[Pokaż tylko autora]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.blog.entry.dateAndCreator.showDate">
-                <de><![CDATA[Nur Datum anzeigen]]></de>
-                <en><![CDATA[Show only date]]></en>
-                <pl><![CDATA[Pokaż tylko datę]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.blog.entry.dateAndCreator.hide">
-                <de><![CDATA[Ausgeblendet]]></de>
-                <en><![CDATA[Hide]]></en>
-                <pl><![CDATA[Wyłącz]]></pl>
-            </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showAll">
+            <de><![CDATA[Autor und Datum anzeigen]]></de>
+            <en><![CDATA[Show author & date]]></en>
+            <pl><![CDATA[Pokaż autora i datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showCreator">
+            <de><![CDATA[Nur Autor anzeigen]]></de>
+            <en><![CDATA[Show only author]]></en>
+            <pl><![CDATA[Pokaż tylko autora]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showDate">
+            <de><![CDATA[Nur Datum anzeigen]]></de>
+            <en><![CDATA[Show only date]]></en>
+            <pl><![CDATA[Pokaż tylko datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.hide">
+            <de><![CDATA[Ausgeblendet]]></de>
+            <en><![CDATA[Hide]]></en>
+            <pl><![CDATA[Wyłącz]]></pl>
+        </locale>
 
 
         <!-- project blog comment settings -->
@@ -227,14 +233,14 @@
             <de><![CDATA[Typ]]></de>
             <en><![CDATA[Type]]></en>
         </locale>
-            <locale name="blog.settings.general.type.disqus">
-                <de><![CDATA[Disqus]]></de>
-                <en><![CDATA[Disqus]]></en>
-            </locale>
-            <locale name="blog.settings.general.type.facebook">
-                <de><![CDATA[Facebook]]></de>
-                <en><![CDATA[Facebook]]></en>
-            </locale>
+        <locale name="blog.settings.general.type.disqus">
+            <de><![CDATA[Disqus]]></de>
+            <en><![CDATA[Disqus]]></en>
+        </locale>
+        <locale name="blog.settings.general.type.facebook">
+            <de><![CDATA[Facebook]]></de>
+            <en><![CDATA[Facebook]]></en>
+        </locale>
 
         <!-- project blog comment settings: disqus -->
         <locale name="blog.settings.disqus.title">
@@ -245,13 +251,16 @@
             <de><![CDATA[Disqus Link]]></de>
             <en><![CDATA[Disqus link]]></en>
         </locale>
-            <locale name="blog.settings.disqus.link.desc" html="true">
-                <de><![CDATA[Registrieren Sie sich bei Disqus und
-                        fügen Sie hier Ihren persönlichen Link ein. <br />
-                             https://disqus.com]]></de>
-                <en><![CDATA[Register by Disqus and paste your unique disqus URL. <br />
-                             https://disqus.com]]></en>
-            </locale>
+        <locale name="blog.settings.disqus.link.desc" html="true">
+            <de><![CDATA[
+            Registrieren Sie sich bei Disqus und fügen Sie hier Ihren persönlichen Link ein. <br />
+            https://disqus.com
+            ]]></de>
+            <en><![CDATA[
+            Register by Disqus and paste your unique disqus URL. <br />
+            https://disqus.com
+            ]]></en>
+        </locale>
 
         <!-- project blog comment settings: facebook -->
         <locale name="blog.settings.facebook.title">
@@ -263,11 +272,15 @@
             <en><![CDATA[Facebook App ID]]></en>
         </locale>
         <locale name="blog.settings.facebook.appId.desc" html="true">
-            <de><![CDATA[Registrieren Sie sich bei Facebook Developers, erstellen Sie eine neue App und
-                        fügen Sie hier die App ID ein.<br />
-                             https://developers.facebook.com]]></de>
-            <en><![CDATA[Register by Facebook Developers, create a new App and paste the App ID here.<br />
-                             https://developers.facebook.com]]></en>
+            <de><![CDATA[
+            Registrieren Sie sich bei Facebook Developers, erstellen Sie eine neue App und
+            fügen Sie hier die App ID ein.<br />
+            https://developers.facebook.com
+            ]]></de>
+            <en><![CDATA[
+            Register by Facebook Developers, create a new App and paste the App ID here.<br />
+            https://developers.facebook.com
+            ]]></en>
         </locale>
 
         <locale name="blog.settings.facebook.numberOfPosts">

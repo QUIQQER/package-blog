@@ -18,7 +18,7 @@ Features
     - Blog-Liste
     - Blog-Eintrag
 
-Die Blog-Liste kann auch über RSS abonniert werden.
+In Verbindung mit dem [Feed-Modul](https://dev.quiqqer.com/quiqqer/package-feed) kann der Blog auch als RSS / Atom angeboten werden.
 
 Support
 -------
