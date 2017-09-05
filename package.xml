@@ -1,0 +1,29 @@
+<quiqqer>
+    <package>
+        <title>
+            <locale group="quiqqer/blog" var="package.title"/>
+        </title>
+
+        <description>
+            <locale group="quiqqer/blog" var="package.title"/>
+        </description>
+
+        <image src="URL_OPT_DIR/quiqqer/blog/bin/Logo.jpg"/>
+
+        <!--<preview>-->
+        <!--<image src="URL_OPT_DIR/quiqqer/blog"/>-->
+        <!--</preview>-->
+
+        <support>
+            <email>support@pcsg.de</email>
+            <forum>https://community.quiqqer.com</forum>
+            <source>https://dev.quiqqer.com/quiqqer/package-blog/tree/master</source>
+            <issues>https://dev.quiqqer.com/quiqqer/package-blog/issues</issues>
+        </support>
+
+        <copyright>
+            <name>PCSG - Computer & Internet Service OHG</name>
+            <license>GPL-2.0+</license>
+        </copyright>
+    </package>
+</quiqqer>
