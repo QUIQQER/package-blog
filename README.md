@@ -3,30 +3,32 @@
 QUIQQER Blog
 ========
 
-Blog Funktionalität für das QUIQQER System
+Create your own online diary. With the provided page types, managing and creating your own blog is no longer a problem.
 
-Paketname:
+Package name:
 
     quiqqer/blog
 
 Features
 --------
 
-- Globale Kommentarfunktion für Disqus und Facebook
-- Kommentare können auf einzelnen Seiten ausgeschaltet werden
-- Seitentypen
-    - Blog-Liste
-    - Blog-Eintrag
+- Global commentary for Disqus and Facebook
+- Comments can be turned off on individual pages
+- Site types:
+    - Blog list
+    - Blog entry
 
-In Verbindung mit dem [Feed-Modul](https://dev.quiqqer.com/quiqqer/package-feed) kann der Blog auch als RSS / Atom angeboten werden.
+In conjunction with the [feed module](https://dev.quiqqer.com/quiqqer/package-feed), the blog can also be offered as RSS / Atom.
 
 Support
 -------
 
-Falls Sie Fehler gefunden, Wünsche oder Verbesserungsvorschläge haben, 
-können Sie uns gern per Mail an support@pcsg.de darüber informieren.  
-Wir werden versuchen auf Ihre Wünsche einzugehen bzw. diese an die zuständigen Entwickler 
-des Projektes weiterleiten.
+If you have found errors, wishes or suggestions for improvement,
+you can contact us by email at support@pcsg.de.
+
+We will try to meet your needs or send them to the responsible developers
+of the project.
+
 
 License
 -------
