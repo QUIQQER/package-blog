@@ -18,7 +18,7 @@ Features
     - Blog list
     - Blog entry
 
-In conjunction with the [feed module](https://dev.quiqqer.com/quiqqer/package-feed), the blog can also be offered as RSS / Atom.
+In combination with the [feed module](https://dev.quiqqer.com/quiqqer/package-feed), the blog can also be offered as RSS / Atom.
 
 Support
 -------
