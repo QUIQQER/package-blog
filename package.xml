@@ -5,7 +5,7 @@
         </title>
 
         <description>
-            <locale group="quiqqer/blog" var="package.title"/>
+            <locale group="quiqqer/blog" var="package.description"/>
         </description>
 
         <image src="URL_OPT_DIR/quiqqer/blog/bin/Logo.jpg"/>
@@ -22,7 +22,7 @@
         </support>
 
         <copyright>
-            <name>PCSG - Computer & Internet Service OHG</name>
+            <name><![CDATA[PCSG - Computer & Internet Service OHG]]></name>
             <license>GPL-2.0+</license>
         </copyright>
     </package>
