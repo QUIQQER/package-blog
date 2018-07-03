@@ -181,6 +181,9 @@
                             <text>
                                 <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.text" />
                             </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.description" />
+                            </description>
                         </input>
                     </settings>
                 </category>
