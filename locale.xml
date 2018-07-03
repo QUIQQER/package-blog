@@ -303,6 +303,10 @@
             <de><![CDATA[Keine weiteren Blog-Einträge anzeigen]]></de>
             <en><![CDATA[Don't show more blog-entries]]></en>
         </locale>
+        <locale name="blog.settings.entries.more.disabled.description">
+            <de><![CDATA[Es wird keine Navigation für weitere Blog-Einträge unter diesem Blog-Eintrag angezeigt.]]></de>
+            <en><![CDATA[No navigation for more blog-entries will be shown below this blog-entry.]]></en>
+        </locale>
 
         <locale name="blog.settings.entries.more.amount.text">
             <de><![CDATA[Anzahl weiterer blog-entries]]></de>
