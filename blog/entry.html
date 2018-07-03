@@ -45,7 +45,7 @@
     </section>
     {/if}
 
-    {if $Site->getAttribute('quiqqer.settings.blog.entry.showMore')}
+    {if !$Site->getAttribute('quiqqer.settings.blog.entry.hideMore')}
         <hr>
 
         <aside class="blog-entry-nav">

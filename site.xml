@@ -128,7 +128,7 @@
             <attributes>
                 <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
                 <attribute default="1">quiqqer.settings.blog.entry.dateAndCreator</attribute>
-                <attribute default="1">quiqqer.settings.blog.entry.showMore</attribute>
+                <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
             </attributes>
 
             <settings>
@@ -177,9 +177,9 @@
                             </option>
                         </select>
 
-                        <input conf="quiqqer.settings.blog.entry.showMore" type="checkbox">
+                        <input conf="quiqqer.settings.blog.entry.hideMore" type="checkbox">
                             <text>
-                                <locale group="quiqqer/blog" var="blog.settings.entries.more.enabled.text" />
+                                <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.text" />
                             </text>
                         </input>
                     </settings>
