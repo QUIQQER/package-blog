@@ -2,7 +2,7 @@
   "name": "quiqqer/blog",
   "type": "quiqqer-module",
   "description": "Create your own online diary. With the provided page types, managing and creating your own blog is no longer a problem.",
-  "version": "dev-dev",
+  "version": "dev-master",
   "license": "GPL-2.0+",
   "authors": [
     {
