@@ -28,11 +28,6 @@
                 </section>
 
                 <section name="blog.settings.entries.more">
-                    <conf name="enabled">
-                        <type><![CDATA[boolean]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-
                     <conf name="amount">
                         <type><![CDATA[int]]></type>
                         <defaultvalue>2</defaultvalue>
@@ -156,12 +151,6 @@
                                     <locale group="quiqqer/blog" var="blog.settings.entries.more.title"/>
                                 </text>
                             </title>
-
-                            <input conf="blog.settings.entries.more.enabled" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/blog" var="blog.settings.entries.more.enabled.text"/>
-                                </text>
-                            </input>
 
                             <input conf="blog.settings.entries.more.amount" type="number">
                                 <text>
