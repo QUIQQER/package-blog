@@ -51,6 +51,21 @@ if ($Project->getConfig('blog.settings.facebook.numberOfPosts')) {
     $numberOfPosts = $Project->getConfig('blog.settings.facebook.numberOfPosts');
 }
 
+
+/**
+ * More blog entries
+ */
+$amountOfSiblings    = $Project->getConfig('blog.settings.entries.more.amount');
+$moreEntriesShowDate = $Project->getConfig('blog.settings.entries.more.show_date');
+$moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time');
+
+$previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
+$nextSiblings     = $Site->nextSiblings($amountOfSiblings);
+
+
+$Project->getConfig();
+
+
 $Engine->assign(array(
     'enableDateAndCreator' => $enableDateAndCreator,
     'showCreator'          => $showCreator,
@@ -63,5 +78,9 @@ $Engine->assign(array(
     'fbLangParam'          => $fbLangParam,
     'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
     'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
-    'appId'                => $Project->getConfig('blog.settings.facebook.appId')
+    'appId'                => $Project->getConfig('blog.settings.facebook.appId'),
+    'moreEntriesShowDate'  => $moreEntriesShowDate,
+    'moreEntriesShowTime'  => $moreEntriesShowTime,
+    'previousSiblings'     => $previousSiblings,
+    'nextSiblings'         => $nextSiblings,
 ));
