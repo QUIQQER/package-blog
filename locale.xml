@@ -299,6 +299,11 @@
             <en><![CDATA[More Blog-Entries]]></en>
         </locale>
 
+        <locale name="blog.settings.entries.more.enabled.text">
+            <de><![CDATA[Weitere Blog-Einträge anzeigen]]></de>
+            <en><![CDATA[Show more blog-entries]]></en>
+        </locale>
+
         <locale name="blog.settings.entries.more.amount.text">
             <de><![CDATA[Anzahl weiterer blog-entries]]></de>
             <en><![CDATA[Amount of more blog-entries]]></en>
