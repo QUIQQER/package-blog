@@ -10,9 +10,12 @@
 
         <image src="URL_OPT_DIR/quiqqer/blog/bin/Logo.jpg"/>
 
-        <!--<preview>-->
-        <!--<image src="URL_OPT_DIR/quiqqer/blog"/>-->
-        <!--</preview>-->
+        <preview>
+            <image src="URL_OPT_DIR/quiqqer/blog/bin/images/preview/1.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/blog/bin/images/preview/2.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/blog/bin/images/preview/3.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/blog/bin/images/preview/4.jpg"/>
+        </preview>
 
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
