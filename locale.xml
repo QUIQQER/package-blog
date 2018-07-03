@@ -299,9 +299,9 @@
             <en><![CDATA[More Blog-Entries]]></en>
         </locale>
 
-        <locale name="blog.settings.entries.more.enabled.text">
-            <de><![CDATA[Weitere Blog-Einträge anzeigen]]></de>
-            <en><![CDATA[Show more blog-entries]]></en>
+        <locale name="blog.settings.entries.more.disabled.text">
+            <de><![CDATA[Keine weiteren Blog-Einträge anzeigen]]></de>
+            <en><![CDATA[Don't show more blog-entries]]></en>
         </locale>
 
         <locale name="blog.settings.entries.more.amount.text">
