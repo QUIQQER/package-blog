@@ -31,3 +31,32 @@
     font-size: 12px;
     display: block;
 }
+
+
+
+
+.blog-entry-nav {
+    margin-top: 48px;
+}
+
+.blog-entry-nav-title {
+    margin-bottom: 5px;
+}
+
+.blog-entry-nav-list {
+    padding: 0;
+    list-style: none;
+}
+
+.blog-entry-nav-list li {
+    padding: 0;
+    margin-bottom: 5px !important;
+}
+
+.blog-entry-nav-active {
+    font-weight: bolder;
+}
+
+.blog-entry-nav-bullet {
+    margin-right: 5px;
+}

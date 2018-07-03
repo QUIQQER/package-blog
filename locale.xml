@@ -212,7 +212,6 @@
             <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
-
         <!-- project blog comment settings -->
         <locale name="blog.settings.category">
             <de><![CDATA[Blog Kommentare]]></de>
@@ -286,6 +285,44 @@
         <locale name="blog.settings.facebook.numberOfPosts">
             <de><![CDATA[Anzahl der Kommentare]]></de>
             <en><![CDATA[Number of Posts]]></en>
+        </locale>
+
+
+
+        <locale name="blog.settings.entries">
+            <de><![CDATA[Blog-Einträge]]></de>
+            <en><![CDATA[Blog-Entries]]></en>
+        </locale>
+
+        <locale name="blog.settings.entries.more.title">
+            <de><![CDATA[Weitere Blog-Einträge]]></de>
+            <en><![CDATA[More Blog-Entries]]></en>
+        </locale>
+
+        <locale name="blog.settings.entries.more.amount.text">
+            <de><![CDATA[Anzahl weiterer blog-entries]]></de>
+            <en><![CDATA[Amount of more blog-entries]]></en>
+        </locale>
+        <locale name="blog.settings.entries.more.amount.description">
+            <de><![CDATA[Die Anzahl weiterer Blog-Einträge, die unten auf der Seite vor und nach der aktuellen Nachricht angezeigt werden.]]></de>
+            <en><![CDATA[The amount of more blog-entries that are displayed on the bottom of the page before and after the current blog-entry.]]></en>
+        </locale>
+
+        <locale name="blog.settings.entries.more.show_date.text">
+            <de><![CDATA[Datum vor dem Blog-Eintrag anzeigen]]></de>
+            <en><![CDATA[Show date before the blog-entry]]></en>
+        </locale>
+
+        <locale name="blog.settings.entries.more.show_time.text">
+            <de><![CDATA[Uhrzeit vor dem Blog-Eintrag anzeigen]]></de>
+            <en><![CDATA[Show time before the blog-entry]]></en>
+        </locale>
+
+
+
+        <locale name="blog.entries.more.nav.title">
+            <de><![CDATA[Weitere Blog-Einträge:]]></de>
+            <en><![CDATA[More Blog-Entries:]]></en>
         </locale>
     </groups>
 </locales>

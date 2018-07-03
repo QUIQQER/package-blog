@@ -45,25 +45,64 @@
     </section>
     {/if}
 
-    {sibling site=$Site type="next" assign=NextSibling}
-    {sibling site=$Site type="prev" assign=PrevSibling}
+    <hr>
 
-    <aside>
-        {if $PrevSibling}
-        <a href="{url site=$PrevSibling}" class="blog-entry-prev button"
-           title="{$PrevSibling->getAttribute('title')|escape:"html"}"
-        >
-            {t}quiqqer/blog entry.blog.prev{/t}
-        </a>
-        {/if}
+    <aside class="blog-entry-nav">
+        <div class="blog-entry-nav-title">
+            {t}quiqqer/blog blog.entries.more.nav.title{/t}
+        </div>
+        <ol class="blog-entry-nav-list">
+            {foreach from=$previousSiblings item=prevSibling}
+                <li>
+                    <a href="{url site=$prevSibling}"
+                       title="{$prevSibling->getAttribute('title')|escape:" html"}"
+                    >
+                        <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                        {if $moreEntriesShowDate}
+                            {locale_date date=$prevSibling->getAttribute('release_from')} –
+                        {/if}
 
-        {if $NextSibling}
-        <a href="{url site=$NextSibling}" class="blog-entry-next button"
-           title="{$NextSibling->getAttribute('title')|escape:"html"}"
-        >
-            {t}quiqqer/blog entry.blog.next{/t}
-        </a>
-        {/if}
+                        {if $moreEntriesShowTime}
+                            {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                        {/if}
+
+                        {$prevSibling->getAttribute('title')}
+                    </a>
+                </li>
+            {/foreach}
+
+            <li class="blog-entry-nav-active">
+                <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                {if $moreEntriesShowDate}
+                    {locale_date date=$Site->getAttribute('release_from')} –
+                {/if}
+
+                {if $moreEntriesShowTime}
+                    {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
+                {/if}
+
+                {$Site->getAttribute('title')}
+            </li>
+
+            {foreach from=$nextSiblings item=nextSibling}
+                <li>
+                    <a href="{url site=$nextSibling}"
+                       title="{$nextSibling->getAttribute('title')|escape:" html"}"
+                    >
+                        <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                        {if $moreEntriesShowDate}
+                            {locale_date date=$nextSibling->getAttribute('release_from')} –
+                        {/if}
+
+                        {if $moreEntriesShowTime}
+                            {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                        {/if}
+
+                        {$nextSibling->getAttribute('title')}
+                    </a>
+                </li>
+            {/foreach}
+        </ol>
     </aside>
 
 </article>
