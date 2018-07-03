@@ -56,8 +56,12 @@ if ($Project->getConfig('blog.settings.facebook.numberOfPosts')) {
  * More blog entries
  */
 $amountOfSiblings    = $Project->getConfig('blog.settings.entries.more.amount');
+
 $moreEntriesShowDate = $Project->getConfig('blog.settings.entries.more.show_date');
 $moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time');
+
+$showMoreEntries = $Project->getConfig('blog.settings.entries.more.enabled');
+
 
 $previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
 $nextSiblings     = $Site->nextSiblings($amountOfSiblings);
@@ -79,6 +83,7 @@ $Engine->assign(array(
     'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
     'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
     'appId'                => $Project->getConfig('blog.settings.facebook.appId'),
+    'showMoreEntries'      => $showMoreEntries,
     'moreEntriesShowDate'  => $moreEntriesShowDate,
     'moreEntriesShowTime'  => $moreEntriesShowTime,
     'previousSiblings'     => $previousSiblings,
