@@ -4,6 +4,17 @@
  * Blog List
  */
 
+/**
+ * Which pages should be listed?
+ * "children": List direct children only (default)
+ * "all": List all blog entries from this project
+ */
+$byType = false;
+
+if ($Site->getAttribute('quiqqer.settings.blog.sitesToDisplay') == 'all') {
+    $byType = 'quiqqer/blog:blog/entry';
+}
+
 $ChildrenList = new QUI\Controls\ChildrenList([
     'showContent'    => false,
     'showImages'     => $Site->getAttribute('quiqqer.settings.blog.showImages'),
@@ -13,7 +24,7 @@ $ChildrenList = new QUI\Controls\ChildrenList([
     'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
     'showDate'       => $Site->getAttribute('quiqqer.settings.blog.showDate'),
     'Site'           => $Site,
-    'byType'         => 'quiqqer/blog:blog/entry',
+    'byType'         => $byType,
     'where'          => [
         'type' => 'quiqqer/blog:blog/entry'
     ],

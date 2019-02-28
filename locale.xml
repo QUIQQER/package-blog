@@ -83,27 +83,26 @@
             <en><![CDATA[Number of blog posts per page]]></en>
         </locale>
 
+        <!-- sites to display -->
+        <locale name="list.template.sitesToDisplay">
+            <de><![CDATA[Welche Seiten sollen aufgelistet werden?]]></de>
+            <en><![CDATA[Which sites should be listed?]]></en>
+        </locale>
+        <locale name="list.template.sitesToDisplay.children">
+            <de><![CDATA[Nur Kinder auflisten]]></de>
+            <en><![CDATA[List children only]]></en>
+        </locale>
+        <locale name="list.template.sitesToDisplay.all">
+            <de><![CDATA[Alle Blogbeiträge aus diesem Projekt auflisten]]></de>
+            <en><![CDATA[List all blog entries from this project]]></en>
+        </locale>
+
         <!-- Blog template -->
         <locale name="list.template">
             <de><![CDATA[Layout]]></de>
             <en><![CDATA[Layout]]></en>
             <pl><![CDATA[Layout]]></pl>
         </locale>
-        <!--<locale name="list.template.childrenList">
-            <de><![CDATA[Standard]]></de>
-            <en><![CDATA[Default]]></en>
-            <pl><![CDATA[Standardowy widok]]></pl>
-        </locale>
-        <locale name="list.template.longFooter">
-            <de><![CDATA[Langes Footer]]></de>
-            <en><![CDATA[Long footer]]></en>
-            <pl><![CDATA[Dłuższą stopka]]></pl>
-        </locale>
-        <locale name="list.template.authorTop">
-            <de><![CDATA[Autor und Datum oben]]></de>
-            <en><![CDATA[Author and date top]]></en>
-            <pl><![CDATA[Autor i data na górze]]></pl>
-        </locale>-->
 
         <!-- show author -->
         <locale name="list.showCreator">

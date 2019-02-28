@@ -11,6 +11,7 @@
             <!-- extra attributes -->
             <attributes>
                 <attribute default="childrenList">quiqqer.settings.blog.template</attribute>
+                <attribute default="children">quiqqer.settings.blog.sitesToDisplay</attribute>
                 <attribute default="6">quiqqer.settings.blog.max</attribute>
                 <attribute default="1">quiqqer.settings.blog.showImages</attribute>
                 <attribute default="1">quiqqer.settings.blog.showHeader</attribute>
@@ -28,6 +29,18 @@
                         <title>
                             <locale group="quiqqer/blog" var="quiqqer.blog.list.settings.title" />
                         </title>
+
+                        <select conf="quiqqer.settings.blog.sitesToDisplay">
+                            <text>
+                                <locale group="quiqqer/blog" var="list.template.sitesToDisplay" />
+                            </text>
+                            <option value="children">
+                                <locale group="quiqqer/blog" var="list.template.sitesToDisplay.children"/>
+                            </option>
+                            <option value="all">
+                                <locale group="quiqqer/blog" var="list.template.sitesToDisplay.all"/>
+                            </option>
+                        </select>
 
                         <select conf="quiqqer.settings.blog.template">
                             <text>
