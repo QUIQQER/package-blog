@@ -4,7 +4,7 @@
  * Blog List
  */
 
-$ChildrenList = new QUI\Controls\ChildrenList(array(
+$ChildrenList = new QUI\Controls\ChildrenList([
     'showContent'    => false,
     'showImages'     => $Site->getAttribute('quiqqer.settings.blog.showImages'),
     'showHeader'     => $Site->getAttribute('quiqqer.settings.blog.showHeader'),
@@ -13,16 +13,17 @@ $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
     'showDate'       => $Site->getAttribute('quiqqer.settings.blog.showDate'),
     'Site'           => $Site,
-    'where'          => array(
+    'byType'         => 'quiqqer/blog:blog/entry',
+    'where'          => [
         'type' => 'quiqqer/blog:blog/entry'
-    ),
+    ],
     'limit'          => $Site->getAttribute('quiqqer.settings.blog.max'),
     'itemtype'       => 'http://schema.org/Blog',
     'child-itemtype' => 'http://schema.org/BlogPosting',
     'child-itemprop' => 'blogPost',
     'display'        => $Site->getAttribute('quiqqer.settings.blog.template')
-));
+]);
 
-$Engine->assign(array(
+$Engine->assign([
     'ChildrenList' => $ChildrenList
-));
+]);
