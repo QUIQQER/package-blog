@@ -11,7 +11,6 @@ namespace QUI\Blog;
  *
  * @author www.pcsg.de (Henning Leutz)
  */
-
 class BlogList
 {
     /**
