@@ -4,6 +4,12 @@
  * Blog List
  */
 
+if (isset($_REQUEST['sheet'])
+    && \is_numeric($_REQUEST['sheet'])
+    && (int)$_REQUEST['sheet'] > 1) {
+    $Site->setAttribute('meta.robots', 'noindex,follow');
+}
+
 /**
  * Which pages should be listed?
  * "children": List direct children only (default)

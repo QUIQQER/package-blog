@@ -25,14 +25,14 @@ switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
  * comments
  */
 $Request = QUI::getRequest();
-$baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
-$url     = $baseUrl . $_SERVER['REQUEST_URI'];
+$baseUrl = $Request->getScheme().'://'.$Request->getHttpHost().$Request->getBasePath();
+$url     = $baseUrl.$_SERVER['REQUEST_URI'];
 
-$fbLangParam = $Site->getProject()->getLang() . '_';
+$fbLangParam = $Site->getProject()->getLang().'_';
 $fbLangParam .= strtoupper($Site->getProject()->getLang());
 
-$pageIdentifier = $Site->getProject()->getName() . '-';
-$pageIdentifier .= $Site->getProject()->getLang() . '-';
+$pageIdentifier = $Site->getProject()->getName().'-';
+$pageIdentifier .= $Site->getProject()->getLang().'-';
 $pageIdentifier .= $Site->getId();
 
 // disable comments on one page
@@ -55,7 +55,7 @@ if ($Project->getConfig('blog.settings.facebook.numberOfPosts')) {
 /**
  * More blog entries
  */
-$amountOfSiblings    = $Project->getConfig('blog.settings.entries.more.amount');
+$amountOfSiblings = $Project->getConfig('blog.settings.entries.more.amount');
 
 $moreEntriesShowDate = $Project->getConfig('blog.settings.entries.more.show_date');
 $moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time');
@@ -65,7 +65,7 @@ $nextSiblings     = $Site->nextSiblings($amountOfSiblings);
 
 $Project->getConfig();
 
-$Engine->assign(array(
+$Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
     'showCreator'          => $showCreator,
     'showDate'             => $showDate,
@@ -73,7 +73,7 @@ $Engine->assign(array(
     'type'                 => $type,
     'url'                  => $url,
     'pageIdentifier'       => $pageIdentifier,
-    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
+    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link').'/embed.js',
     'fbLangParam'          => $fbLangParam,
     'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
     'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
@@ -82,4 +82,4 @@ $Engine->assign(array(
     'moreEntriesShowTime'  => $moreEntriesShowTime,
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
-));
+]);
