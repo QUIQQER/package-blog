@@ -45,6 +45,34 @@ $ChildrenList = new QUI\Controls\ChildrenList([
     'display'        => $Site->getAttribute('quiqqer.settings.blog.template')
 ]);
 
+
+$ChildrenList->addEvent('onMetaList', function (
+    QUI\Controls\ChildrenList $ChildrenList,
+    QUI\Interfaces\Projects\Site $Site,
+    QUI\Controls\Utils\MetaList $MetaList
+) {
+    $MetaList->add('headline', $Site->getAttribute('title'));
+    $MetaList->add('datePublished', $Site->getAttribute('release_from'));
+
+    // author
+    $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+    $MetaList->add('author', $User->getName());
+
+    // image
+    $image = $Site->getAttribute('image_site');
+
+    if (\strpos($image, 'fa-') !== false) {
+        $image = '';
+    }
+
+    if (MediaUtils::isMediaUrl($image)) {
+        $Image = MediaUtils::getImageByUrl($image);
+        $image = $Image->getSizeCacheUrl();
+    }
+
+    $MetaList->add('image', $image);
+});
+
 $Engine->assign([
     'ChildrenList' => $ChildrenList
 ]);
