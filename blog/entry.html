@@ -8,11 +8,15 @@
 <article itemscope itemtype="http://schema.org/BlogPosting"
          class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent content-body"
 >
-
+    {user id=$Site->getAttribute('c_user') var=User}
+    <meta itemprop="datePublished" content="{$date|date_format:'c'}"/>
+    <meta itemprop="headline" content="{$Site->getAttribute('title')}"/>
+    <meta itemprop="author" content="{$User->getname()}"/>
+    <meta itemprop="image" content="{image src=$Site->getAttribute('image_site') onlysrc=true}"/>
+    
     {if $enableDateAndCreator}
     <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
-            {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">
                 {if $User->getId() && $User->getAttribute('firstname')}
@@ -26,9 +30,7 @@
         {if $showDate}
             <span class="blog-entry-time">
                 {t}quiqqer/blog entry.blog.on{/t}
-                <time datetime="{$date|date_format:"c"}"
-                      itemprop="datePublished"
-                >
+                <time datetime="{$date|date_format:'c'}">
                     {locale_date date=$date}
                 </time>
             </span>
@@ -56,7 +58,7 @@
                 {foreach from=$previousSiblings item=prevSibling}
                     <li>
                         <a href="{url site=$prevSibling}"
-                           title="{$prevSibling->getAttribute('title')|escape:" html"}"
+                           title="{$prevSibling->getAttribute('title')|escape:'html'}"
                         >
                             <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
                             {if $moreEntriesShowDate}
@@ -88,7 +90,7 @@
                 {foreach from=$nextSiblings item=nextSibling}
                     <li>
                         <a href="{url site=$nextSibling}"
-                           title="{$nextSibling->getAttribute('title')|escape:" html"}"
+                           title="{$nextSibling->getAttribute('title')|escape:'html'}"
                         >
                             <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
                             {if $moreEntriesShowDate}
