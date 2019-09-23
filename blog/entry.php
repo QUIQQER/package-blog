@@ -1,5 +1,7 @@
 <?php
 
+use QUI\Projects\Media\Utils as MediaUtils;
+
 /**
  * autor and date
  */
