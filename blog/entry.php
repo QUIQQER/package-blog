@@ -65,6 +65,49 @@ $nextSiblings     = $Site->nextSiblings($amountOfSiblings);
 
 $Project->getConfig();
 
+
+// Meta
+$MetaList = new QUI\Controls\Utils\MetaList();
+$MetaList->add('headline', $Site->getAttribute('title'));
+$MetaList->add('datePublished', $Site->getAttribute('release_from'));
+$MetaList->add('dateModified', $Site->getAttribute('e_date'));
+$MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
+
+// author
+$User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+$MetaList->add('author', $User->getName());
+
+// publisher
+$Publisher = new QUI\Controls\Utils\MetaList\Publisher();
+$Publisher->importFromProject($Site->getProject());
+$MetaList->add('publisher', $Publisher);
+
+// image
+$image = $Site->getAttribute('image_site');
+
+if (\strpos($image, 'fa-') !== false) {
+    $image = '';
+}
+
+if (MediaUtils::isMediaUrl($image)) {
+    try {
+        $Image = MediaUtils::getImageByUrl($image);
+        $image = $Image->getSizeCacheUrl();
+    } catch (QUI\Exception $Exception) {
+    }
+}
+
+// use default
+if (empty($image)) {
+    try {
+        $image = $Site->getProject()->getMedia()->getPlaceholderImage()->getSizeCacheUrl();
+    } catch (QUI\Exception $Exception) {
+    }
+}
+
+$MetaList->add('image', $image);
+
+
 $Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
     'showCreator'          => $showCreator,
@@ -82,4 +125,5 @@ $Engine->assign([
     'moreEntriesShowTime'  => $moreEntriesShowTime,
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
+    'MetaList'             => $MetaList
 ]);

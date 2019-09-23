@@ -8,11 +8,7 @@
 <article itemscope itemtype="http://schema.org/BlogPosting"
          class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent content-body"
 >
-    {user id=$Site->getAttribute('c_user') var=User}
-    <meta itemprop="datePublished" content="{$date|date_format:'c'}"/>
-    <meta itemprop="headline" content="{$Site->getAttribute('title')}"/>
-    <meta itemprop="author" content="{$User->getname()}"/>
-    <meta itemprop="image" content="{image src=$Site->getAttribute('image_site') onlysrc=true}"/>
+    {$MetaList->create()}
     
     {if $enableDateAndCreator}
     <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
