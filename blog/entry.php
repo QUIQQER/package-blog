@@ -27,14 +27,14 @@ switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
  * comments
  */
 $Request = QUI::getRequest();
-$baseUrl = $Request->getScheme().'://'.$Request->getHttpHost().$Request->getBasePath();
-$url     = $baseUrl.$_SERVER['REQUEST_URI'];
+$baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
+$url     = $baseUrl . $_SERVER['REQUEST_URI'];
 
-$fbLangParam = $Site->getProject()->getLang().'_';
+$fbLangParam = $Site->getProject()->getLang() . '_';
 $fbLangParam .= strtoupper($Site->getProject()->getLang());
 
-$pageIdentifier = $Site->getProject()->getName().'-';
-$pageIdentifier .= $Site->getProject()->getLang().'-';
+$pageIdentifier = $Site->getProject()->getName() . '-';
+$pageIdentifier .= $Site->getProject()->getLang() . '-';
 $pageIdentifier .= $Site->getId();
 
 // disable comments on one page
@@ -102,7 +102,11 @@ if (MediaUtils::isMediaUrl($image)) {
 // use default
 if (empty($image)) {
     try {
-        $image = $Site->getProject()->getMedia()->getPlaceholderImage()->getSizeCacheUrl();
+        $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
+
+        if ($Placeholder) {
+            $image = $Placeholder->getSizeCacheUrl();
+        }
     } catch (QUI\Exception $Exception) {
     }
 }
@@ -118,7 +122,7 @@ $Engine->assign([
     'type'                 => $type,
     'url'                  => $url,
     'pageIdentifier'       => $pageIdentifier,
-    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link').'/embed.js',
+    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
     'fbLangParam'          => $fbLangParam,
     'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
     'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
