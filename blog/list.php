@@ -85,7 +85,6 @@ $ChildrenList->addEvent('onMetaList', function (
             if ($Placeholder) {
                 $image = $Placeholder->getSizeCacheUrl();
             }
-
         } catch (QUI\Exception $Exception) {
         }
     }
