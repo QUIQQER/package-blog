@@ -9,7 +9,7 @@
          class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent content-body"
 >
     {$MetaList->create()}
-    
+
     {if $enableDateAndCreator}
     <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
@@ -58,14 +58,20 @@
                         >
                             <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
                             {if $moreEntriesShowDate}
+                                <span class="blog-entry-nav-date">
                                 {locale_date date=$prevSibling->getAttribute('release_from')} –
+                                </span>
                             {/if}
 
                             {if $moreEntriesShowTime}
+                                <span class="blog-entry-nav-time">
                                 {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                                </span>
                             {/if}
 
+                            <span class="blog-entry-nav-title">
                             {$prevSibling->getAttribute('title')}
+                            </span>
                         </a>
                     </li>
                 {/foreach}
@@ -73,14 +79,20 @@
                 <li class="blog-entry-nav-active">
                     <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
                     {if $moreEntriesShowDate}
+                        <span class="blog-entry-nav-date">
                         {locale_date date=$Site->getAttribute('release_from')} –
+                        </span>
                     {/if}
 
                     {if $moreEntriesShowTime}
+                        <span class="blog-entry-nav-time">
                         {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
+                        </span>
                     {/if}
 
-                    {$Site->getAttribute('title')}
+                    <span class="blog-entry-nav-title">
+                        {$Site->getAttribute('title')}
+                    </span>
                 </li>
 
                 {foreach from=$nextSiblings item=nextSibling}
@@ -90,14 +102,20 @@
                         >
                             <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
                             {if $moreEntriesShowDate}
+                                <span class="blog-entry-nav-date">
                                 {locale_date date=$nextSibling->getAttribute('release_from')} –
+                                </span>
                             {/if}
 
                             {if $moreEntriesShowTime}
+                                <span class="blog-entry-nav-time">
                                 {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                                </span>
                             {/if}
 
+                            <span class="blog-entry-nav-title">
                             {$nextSibling->getAttribute('title')}
+                            </span>
                         </a>
                     </li>
                 {/foreach}
