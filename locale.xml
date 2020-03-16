@@ -85,7 +85,7 @@
 
         <!-- hide page content on sub pages (if sheet / pagination active) -->
         <locale name="quiqqer.settings.blog.hidePageContentIfPaginationActive">
-            <de><![CDATA[Seiteninhalt nur auf der erster Seite anzeigen]]></de>
+            <de><![CDATA[Seiteninhalt nur auf der ersten Seite anzeigen]]></de>
             <en><![CDATA[Display page content only on the first page]]></en>
         </locale>
         <locale name="quiqqer.settings.blog.hidePageContentIfPaginationActive.desc">
