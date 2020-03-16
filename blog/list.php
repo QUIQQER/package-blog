@@ -15,6 +15,12 @@ if (isset($_REQUEST['sheet'])
     $Site->setAttribute('meta.robots', 'noindex,follow');
 }
 
+$showPageContent = true;
+if (isset($_REQUEST['sheet']) &&
+    $Site->getAttribute('quiqqer.settings.blog.hidePageContentIfPaginationActive') ) {
+    $showPageContent = false;
+}
+
 /**
  * Which pages should be listed?
  * "children": List direct children only (default)
@@ -93,5 +99,6 @@ $ChildrenList->addEvent('onMetaList', function (
 });
 
 $Engine->assign([
-    'ChildrenList' => $ChildrenList
+    'ChildrenList'    => $ChildrenList,
+    'showPageContent' => $showPageContent
 ]);

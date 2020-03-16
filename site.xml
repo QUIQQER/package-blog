@@ -19,6 +19,7 @@
                 <attribute default="1">quiqqer.settings.blog.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.blog.showDate</attribute>
                 <attribute default="0">quiqqer.settings.blog.showTime</attribute>
+                <attribute default="0">quiqqer.settings.blog.hidePageContentIfPaginationActive</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -125,6 +126,17 @@
                                 <locale group="quiqqer/sitetypes"
                                         var="quiqqer.sitetypes.list.settings.showTime" />
                             </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.hidePageContentIfPaginationActive" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.hidePageContentIfPaginationActive" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog"
+                                        var="quiqqer.settings.blog.hidePageContentIfPaginationActive.desc" />
+                            </description>
                         </input>
                     </settings>
                 </category>

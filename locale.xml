@@ -83,6 +83,16 @@
             <en><![CDATA[Number of blog posts per page]]></en>
         </locale>
 
+        <!-- hide page content on sub pages (if sheet / pagination active) -->
+        <locale name="quiqqer.settings.blog.hidePageContentIfPaginationActive">
+            <de><![CDATA[Seiteninhalt nur auf der erster Seite anzeigen]]></de>
+            <en><![CDATA[Display page content only on the first page]]></en>
+        </locale>
+        <locale name="quiqqer.settings.blog.hidePageContentIfPaginationActive.desc">
+            <de><![CDATA[Der Inhalt der Seite wird nur auf der ersten Seite angezeigt. Auf weiteren Seiten mit Blogeinträgen wird der Inhalt ausgeblendet. Die Einstellung ist dann empfehlenswert, wenn der Inhalt relativ lang ist.]]></de>
+            <en><![CDATA[The content of the page is only displayed on the first page. On further pages with blog entries the content is hidden. This setting is recommended if the content is relatively long.]]></en>
+        </locale>
+
         <!-- sites to display -->
         <locale name="list.template.sitesToDisplay">
             <de><![CDATA[Welche Seiten sollen aufgelistet werden?]]></de>
