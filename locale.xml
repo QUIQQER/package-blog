@@ -93,6 +93,38 @@
             <en><![CDATA[The content of the page is only displayed on the first page. On further pages with blog entries the content is hidden. This setting is recommended if the content is relatively long.]]></en>
         </locale>
 
+        <!-- date and author -->
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator">
+            <de><![CDATA[Autor und Datum]]></de>
+            <en><![CDATA[Author & date]]></en>
+            <pl><![CDATA[Autor i data]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.default">
+            <de><![CDATA[Standardeinstellung übernehmen]]></de>
+            <en><![CDATA[Default settings]]></en>
+            <pl><![CDATA[Zastosuj ustawienia domyslne]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showAll">
+            <de><![CDATA[Autor und Datum anzeigen]]></de>
+            <en><![CDATA[Show author & date]]></en>
+            <pl><![CDATA[Pokaż autora i datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showCreator">
+            <de><![CDATA[Nur Autor anzeigen]]></de>
+            <en><![CDATA[Show only author]]></en>
+            <pl><![CDATA[Pokaż tylko autora]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.showDate">
+            <de><![CDATA[Nur Datum anzeigen]]></de>
+            <en><![CDATA[Show only date]]></en>
+            <pl><![CDATA[Pokaż tylko datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.hide">
+            <de><![CDATA[Ausgeblendet]]></de>
+            <en><![CDATA[Hide]]></en>
+            <pl><![CDATA[Wyłącz]]></pl>
+        </locale>
+
         <!-- sites to display -->
         <locale name="list.template.sitesToDisplay">
             <de><![CDATA[Welche Seiten sollen aufgelistet werden?]]></de>
@@ -200,24 +232,29 @@
             <en><![CDATA[Author & date]]></en>
             <pl><![CDATA[Autor i data]]></pl>
         </locale>
+        <locale name="quiqqer.settings.blog.entry.dateAndCreator.default">
+            <de><![CDATA[Standard Einstellung übernehmen]]></de>
+            <en><![CDATA[Apply default setting]]></en>
+            <pl><![CDATA[Zastosuj ustawienie domyślne]]></pl>
+        </locale>
         <locale name="quiqqer.settings.blog.entry.dateAndCreator.showAll">
             <de><![CDATA[Autor und Datum anzeigen]]></de>
             <en><![CDATA[Show author & date]]></en>
             <pl><![CDATA[Pokaż autora i datę]]></pl>
         </locale>
         <locale name="quiqqer.settings.blog.entry.dateAndCreator.showCreator">
-            <de><![CDATA[Nur Autor anzeigen]]></de>
-            <en><![CDATA[Show only author]]></en>
-            <pl><![CDATA[Pokaż tylko autora]]></pl>
+            <de><![CDATA[Autor anzeigen]]></de>
+            <en><![CDATA[Show author]]></en>
+            <pl><![CDATA[Pokaż autora]]></pl>
         </locale>
         <locale name="quiqqer.settings.blog.entry.dateAndCreator.showDate">
-            <de><![CDATA[Nur Datum anzeigen]]></de>
-            <en><![CDATA[Show only date]]></en>
-            <pl><![CDATA[Pokaż tylko datę]]></pl>
+            <de><![CDATA[Datum anzeigen]]></de>
+            <en><![CDATA[Show date]]></en>
+            <pl><![CDATA[Pokaż datę]]></pl>
         </locale>
         <locale name="quiqqer.settings.blog.entry.dateAndCreator.hide">
             <de><![CDATA[Ausgeblendet]]></de>
-            <en><![CDATA[Hide]]></en>
+            <en><![CDATA[Disabled]]></en>
             <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
@@ -317,13 +354,31 @@
             <en><![CDATA[No navigation for more blog-entries will be shown below this blog-entry.]]></en>
         </locale>
 
+        <locale name="blog.settings.entry.title">
+            <de><![CDATA[Blog-Eintrag]]></de>
+            <en><![CDATA[Blog entry]]></en>
+        </locale>
+        <locale name="blog.settings.entry.showCreator.text">
+            <de><![CDATA[Autor anzeigen]]></de>
+            <en><![CDATA[Show creator]]></en>
+        </locale>
+        <locale name="blog.settings.entry.showDate.text">
+            <de><![CDATA[Datum anzeigen]]></de>
+            <en><![CDATA[Show date]]></en>
+        </locale>
+
         <locale name="blog.settings.entries.more.amount.text">
-            <de><![CDATA[Anzahl weiterer blog-entries]]></de>
+            <de><![CDATA[Anzahl weiteren Blog-Einträgen]]></de>
             <en><![CDATA[Amount of more blog-entries]]></en>
         </locale>
         <locale name="blog.settings.entries.more.amount.description">
             <de><![CDATA[Die Anzahl weiterer Blog-Einträge, die unten auf der Seite vor und nach der aktuellen Nachricht angezeigt werden.]]></de>
             <en><![CDATA[The amount of more blog-entries that are displayed on the bottom of the page before and after the current blog-entry.]]></en>
+        </locale>
+
+        <locale name="blog.settings.entries.more.show_creator.text">
+            <de><![CDATA[Autor anzeigen]]></de>
+            <en><![CDATA[Show creator]]></en>
         </locale>
 
         <locale name="blog.settings.entries.more.show_date.text">

@@ -27,10 +27,24 @@
                     </conf>
                 </section>
 
+                <section name="blog.settings.entry">
+                    <conf name="showCreator">
+                        <type><![CDATA[boolean]]></type>
+                    </conf>
+                    <conf name="showDate">
+                        <type><![CDATA[boolean]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                </section>
+
                 <section name="blog.settings.entries.more">
                     <conf name="amount">
                         <type><![CDATA[int]]></type>
                         <defaultvalue>2</defaultvalue>
+                    </conf>
+
+                    <conf name="show_creator">
+                        <type><![CDATA[boolean]]></type>
                     </conf>
 
                     <conf name="show_date">
@@ -144,6 +158,26 @@
                         </text>
                         <icon>fa fa-book</icon>
 
+                        <!-- blog entry -->
+                        <settings title="blog.settings.entry" name="blog.settings.entry">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entry.title"/>
+                                </text>
+                            </title>
+
+                            <input conf="blog.settings.entry.showCreator" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entry.showCreator.text"/>
+                                </text>
+                            </input>
+                            <input conf="blog.settings.entry.showDate" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entry.showDate.text"/>
+                                </text>
+                            </input>
+                        </settings>
+
                         <!-- more entries -->
                         <settings title="blog.settings.entries.more" name="blog.settings.entries.more">
                             <title>
@@ -159,6 +193,12 @@
                                 <description>
                                     <locale group="quiqqer/blog" var="blog.settings.entries.more.amount.description"/>
                                 </description>
+                            </input>
+
+                            <input conf="blog.settings.entries.more.show_creator" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entries.more.show_creator.text"/>
+                                </text>
                             </input>
 
                             <input conf="blog.settings.entries.more.show_date" type="checkbox">

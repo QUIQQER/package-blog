@@ -8,33 +8,50 @@ use QUI\Projects\Media\Utils as MediaUtils;
 
 // default
 $enableDateAndCreator = true;
-$showCreator          = true;
-$showDate             = true;
+$showCreator          = false;
+$showDate             = false;
+
+if ($Project->getConfig('blog.settings.entry.showCreator')) {
+    $showCreator = $Project->getConfig('blog.settings.entry.showCreator');
+}
+
+if ($Project->getConfig('blog.settings.entry.showDate')) {
+    $showDate = $Project->getConfig('blog.settings.entry.showDate');
+}
 
 switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
     case 'showCreator':
-        $showDate = false; // hide date
+        // hide date
+        $showCreator = true;
+        $showDate    = false;
         break;
     case 'showDate':
-        $showCreator = false; // hide author
+        // hide author
+        $showDate    = true;
+        $showCreator = false;
         break;
     case 'hide':
-        $enableDateAndCreator = false; // disable date and author
+        // disable date and author
+        $enableDateAndCreator = false;
         break;
+}
+
+if (!$showCreator && !$showDate) {
+    $enableDateAndCreator = false;
 }
 
 /**
  * comments
  */
 $Request = QUI::getRequest();
-$baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
-$url     = $baseUrl . $_SERVER['REQUEST_URI'];
+$baseUrl = $Request->getScheme().'://'.$Request->getHttpHost().$Request->getBasePath();
+$url     = $baseUrl.$_SERVER['REQUEST_URI'];
 
-$fbLangParam = $Site->getProject()->getLang() . '_';
+$fbLangParam = $Site->getProject()->getLang().'_';
 $fbLangParam .= strtoupper($Site->getProject()->getLang());
 
-$pageIdentifier = $Site->getProject()->getName() . '-';
-$pageIdentifier .= $Site->getProject()->getLang() . '-';
+$pageIdentifier = $Site->getProject()->getName().'-';
+$pageIdentifier .= $Site->getProject()->getLang().'-';
 $pageIdentifier .= $Site->getId();
 
 // disable comments on one page
@@ -122,7 +139,7 @@ $Engine->assign([
     'type'                 => $type,
     'url'                  => $url,
     'pageIdentifier'       => $pageIdentifier,
-    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
+    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link').'/embed.js',
     'fbLangParam'          => $fbLangParam,
     'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
     'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
