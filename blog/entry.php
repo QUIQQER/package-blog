@@ -78,6 +78,7 @@ $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 // author
 $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
 $MetaList->add('author', $User->getName());
+$Engine->assign('author', $User->getName());
 
 // publisher
 $Publisher = new QUI\Controls\Utils\MetaList\Publisher();

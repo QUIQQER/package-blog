@@ -15,10 +15,10 @@
         {if $showCreator}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">
-                {if $User->getId() && $User->getAttribute('firstname')}
-                    {$User->getAttribute('firstname')}
+                {if !empty($author)}
+                    {$author}
                 {else if $User->getId()}
-                    {$User->getname()}
+                    {$User->getName()}
                 {/if}
             </span>
         {/if}
