@@ -12,6 +12,21 @@
                 <locale group="quiqqer/blog" var="blog.control.author.description"/>
             </description>
 
+            <settings>
+                <setting name="guest" type="checkbox">
+                    <locale group="quiqqer/blog" var="blog.control.author.guest"/>
+<!--                    <description>-->
+<!--                        <locale group="quiqqer/blog" var="blog.control.author.guest-description"/>-->
+<!--                    </description>-->
+                </setting>
+                <setting name="guestFirstName" type="text">
+                    <locale group="quiqqer/blog" var="blog.control.author.guest-firstName"/>
+                </setting>
+                <setting name="guestLastName" type="text">
+                    <locale group="quiqqer/blog" var="blog.control.author.guest-firstName"/>
+                </setting>
+            </settings>
+
         </brick>
 
     </bricks>

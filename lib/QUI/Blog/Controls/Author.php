@@ -49,6 +49,12 @@ class Author extends QUI\Control
         $userName  = $User->getName();
         $UserImage = $User->getAvatar();
 
+        if ($this->getAttribute("guest")) {
+            $firstName = $this->getAttribute("guestFirstName");
+            $lastName  = $this->getAttribute("guestLastName");
+            $userName  = $firstName . ' ' . $lastName;
+        }
+
         $Engine->assign([
             'authorName'  => $userName,
             'AuthorImage' => $UserImage
