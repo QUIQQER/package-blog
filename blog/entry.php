@@ -151,6 +151,3 @@ $Engine->assign([
     'nextSiblings'         => $nextSiblings,
     'MetaList'             => $MetaList
 ]);
-
-$Author = new \QUI\Blog\Controls\Author();
-$Author->getBody();
