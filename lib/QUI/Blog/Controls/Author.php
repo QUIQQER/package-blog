@@ -45,9 +45,10 @@ class Author extends QUI\Control
         }
 
         // author
-        $User      = QUI::getUsers()->get($Site->getAttribute('c_user'));
-        $userName  = $User->getName();
-        $UserImage = $User->getAvatar()->getAttribute("url");
+        $User              = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $userName          = $User->getName();
+        $UserImage         = $User->getAvatar()->getAttribute("url");
+        $authorDescription = $this->getAttribute('content');
 
         if ($this->getAttribute("guest")) {
             $firstName = $this->getAttribute("guestFirstName");
@@ -58,8 +59,9 @@ class Author extends QUI\Control
         }
 
         $Engine->assign([
-            'authorName'  => $userName,
-            'AuthorImage' => $UserImage
+            'AuthorImage'       => $UserImage,
+            'authorName'        => $userName,
+            'authorDescription' => $authorDescription
         ]);
 
         return $Engine->fetch(dirname(__FILE__) . '/Author.html');
