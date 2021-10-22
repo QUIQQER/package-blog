@@ -23,13 +23,6 @@ class Author extends QUI\Control
      */
     public function __construct($attributes = [])
     {
-        // default options
-        $this->setAttributes([
-            'avatar' => false,
-            'firstName'     => false,
-            'lastName' => false,
-        ]);
-
         parent::__construct($attributes);
 
         $this->addCSSFile(

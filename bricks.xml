@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <bricks>
+
+        <!--    author    -->
+        <brick control="\QUI\Blog\Controls\Author">
+
+            <title>
+                <locale group="quiqqer/blog" var="blog.control.author.title"/>
+            </title>
+            <description>
+                <locale group="quiqqer/blog" var="blog.control.author.description"/>
+            </description>
+
+        </brick>
+
+    </bricks>
+</quiqqer>

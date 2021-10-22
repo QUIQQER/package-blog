@@ -397,5 +397,15 @@
             <de><![CDATA[Weitere Blog-Einträge:]]></de>
             <en><![CDATA[More Blog-Entries:]]></en>
         </locale>
+
+        <!--    author    -->
+        <locale name="blog.control.author.title">
+            <de><![CDATA[Blog: Autor]]></de>
+            <en><![CDATA[Blog: Author]]></en>
+        </locale>
+        <locale name="blog.control.author.description">
+            <de><![CDATA[Abschnitt, der den Autor eines bestimmten Eintrags anzeigt]]></de>
+            <en><![CDATA[Section showing the author of a given entry]]></en>
+        </locale>
     </groups>
 </locales>
