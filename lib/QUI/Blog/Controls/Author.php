@@ -37,13 +37,41 @@ class Author extends QUI\Control
      */
     public function getBody()
     {
-        $Engine        = QUI::getTemplateManager()->getEngine();
+        $Engine = QUI::getTemplateManager()->getEngine();
+        $Site   = $this->getSite();
 
-//        $Engine->assign([
-//            'this' => $this,
-//            'html' => $html
-//        ]);
+        if ($Site->getAttribute("type") !== 'quiqqer/blog:blog/entry') {
+            return '';
+        }
+
+        // author
+        $User      = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $userName  = $User->getName();
+        $UserImage = $User->getAvatar();
+
+        $Engine->assign([
+            'authorName'  => $userName,
+            'AuthorImage' => $UserImage
+        ]);
 
         return $Engine->fetch(dirname(__FILE__) . '/Author.html');
+    }
+
+    /**
+     * @return mixed|QUI\Projects\Site
+     *
+     * @throws QUI\Exception
+     */
+    protected function getSite()
+    {
+        if ($this->getAttribute('Site')) {
+            return $this->getAttribute('Site');
+        }
+
+        $Site = QUI::getRewrite()->getSite();
+
+        $this->setAttribute('Site', $Site);
+
+        return $Site;
     }
 }
