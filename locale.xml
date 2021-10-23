@@ -52,6 +52,20 @@
             <en><![CDATA[Create a bloglist. All pages below are listed.]]></en>
         </locale>
 
+        <!--    site    -->
+        <locale name="site.settings.guestAuthor.title">
+            <de><![CDATA[Blog - Gastautor]]></de>
+            <en><![CDATA[Blog - Guest autor]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.text">
+            <de><![CDATA[Gastdaten verwenden]]></de>
+            <en><![CDATA[Use guest data]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.description">
+            <de><![CDATA[Autorendaten werden geändert]]></de>
+            <en><![CDATA[Author data will be changed]]></en>
+        </locale>
+
     </groups>
     <groups name="quiqqer/blog" datatype="php">
         <locale name="admin.types.blog.list">
