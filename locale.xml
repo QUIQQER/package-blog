@@ -391,41 +391,9 @@
             <en><![CDATA[Show time before the blog-entry]]></en>
         </locale>
 
-
-
         <locale name="blog.entries.more.nav.title">
             <de><![CDATA[Weitere Blog-Einträge:]]></de>
             <en><![CDATA[More Blog-Entries:]]></en>
-        </locale>
-
-        <!--    author    -->
-        <locale name="blog.control.author.title">
-            <de><![CDATA[Blog: Autor]]></de>
-            <en><![CDATA[Blog: Author]]></en>
-        </locale>
-        <locale name="blog.control.author.description">
-            <de><![CDATA[Abschnitt, der den Autor eines bestimmten Eintrags anzeigt]]></de>
-            <en><![CDATA[Section showing the author of a given entry]]></en>
-        </locale>
-        <locale name="blog.author.guest">
-            <de><![CDATA[Den Gastnamen verwenden]]></de>
-            <en><![CDATA[Use the guest name]]></en>
-        </locale>
-        <locale name="blog.author.guest-firstName">
-            <de><![CDATA[Vorname]]></de>
-            <en><![CDATA[First name]]></en>
-        </locale>
-        <locale name="blog.author.guest-firstName">
-            <de><![CDATA[Nachname]]></de>
-            <en><![CDATA[Last name]]></en>
-        </locale>
-        <locale name="blog.author.guest.guestImage">
-            <de><![CDATA[Gastbild]]></de>
-            <en><![CDATA[Avatar]]></en>
-        </locale>
-        <locale name="blog.author.additionalInfo">
-            <de><![CDATA[Zusätzliche Information]]></de>
-            <en><![CDATA[Additional info]]></en>
         </locale>
     </groups>
 </locales>
