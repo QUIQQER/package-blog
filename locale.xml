@@ -421,7 +421,11 @@
         </locale>
         <locale name="blog.author.guest.guestImage">
             <de><![CDATA[Gastbild]]></de>
-            <en><![CDATA[Guest image]]></en>
+            <en><![CDATA[Avatar]]></en>
+        </locale>
+        <locale name="blog.author.additionalInfo">
+            <de><![CDATA[Zusätzliche Information]]></de>
+            <en><![CDATA[Additional info]]></en>
         </locale>
     </groups>
 </locales>

@@ -29,6 +29,9 @@
                     <locale group="quiqqer/blog"
                             var="blog.author.guest.image"/>
                 </setting>
+                <setting name="guestAdditionalInfo" type="text">
+                    <locale group="quiqqer/blog" var="blog.author.additionalInfo"/>
+                </setting>
             </settings>
 
         </brick>

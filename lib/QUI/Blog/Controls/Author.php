@@ -50,6 +50,12 @@ class Author extends QUI\Control
         $UserImage         = $User->getAvatar()->getAttribute("url");
         $authorDescription = $this->getAttribute('content');
 
+        $authorAdditionalInfo = '';
+
+        if ($this->getAttribute('guestAdditionalInfo') !== null) {
+            $authorAdditionalInfo = $this->getAttribute('guestAdditionalInfo');
+        }
+
         if ($this->getAttribute("guest")) {
             $firstName = $this->getAttribute("guestFirstName");
             $lastName  = $this->getAttribute("guestLastName");
@@ -61,7 +67,8 @@ class Author extends QUI\Control
         $Engine->assign([
             'AuthorImage'       => $UserImage,
             'authorName'        => $userName,
-            'authorDescription' => $authorDescription
+            'authorDescription' => $authorDescription,
+            'authorAdditionalInfo' => $authorAdditionalInfo
         ]);
 
         return $Engine->fetch(dirname(__FILE__) . '/Author.html');
