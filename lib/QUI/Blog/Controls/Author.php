@@ -50,8 +50,7 @@ class Author extends QUI\Control
         $UserImage = $User->getAvatar()->getAttribute("url");
 
         if ($Site->getAttribute('quiqqer.settings.guestAuthor')) {
-
-            $userName = $Site->getAttribute('quiqqer.settings.guestAuthor.name');
+            $userName  = $Site->getAttribute('quiqqer.settings.guestAuthor.name');
             $UserImage = $Site->getAttribute('quiqqer.settings.guestAuthor.avatar');
 
             if ($Site->getAttribute('quiqqer.settings.guestAuthor.list')) {
