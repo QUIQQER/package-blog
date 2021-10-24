@@ -53,18 +53,22 @@
         </locale>
 
         <!--    site    -->
-        <locale name="site.settings.guestAuthor.title">
+        <locale name="site.settings.entry.guestAuthor.title">
             <de><![CDATA[Blog - Gastautor]]></de>
             <en><![CDATA[Blog - Guest autor]]></en>
         </locale>
-        <locale name="site.settings.guestAuthor.text">
+        <locale name="site.settings.entry.guestAuthor">
             <de><![CDATA[Gastdaten verwenden]]></de>
             <en><![CDATA[Use guest data]]></en>
         </locale>
-        <locale name="site.settings.guestAuthor.description">
+        <locale name="site.settings.entry.guestAuthor.description">
             <de><![CDATA[Autorendaten werden geändert]]></de>
             <en><![CDATA[Author data will be changed]]></en>
         </locale>
+<!--        <locale name="site.settings.guestAuthor.guests">-->
+<!--            <de><![CDATA[Gästeliste]]></de>-->
+<!--            <en><![CDATA[Guests list]]></en>-->
+<!--        </locale>-->
 
     </groups>
     <groups name="quiqqer/blog" datatype="php">
@@ -83,6 +87,14 @@
         <locale name="admin.types.blog.entry.desc">
             <de><![CDATA[Blogeintrag]]></de>
             <en><![CDATA[Blog Entry]]></en>
+        </locale>
+        <locale name="admin.types.guest.settings.desc">
+            <de><![CDATA[Gast Einstellungen]]></de>
+            <en><![CDATA[Guest Settings]]></en>
+        </locale>
+        <locale name="admin.types.guest.settings.desc">
+            <de><![CDATA[Gast Einstellungen]]></de>
+            <en><![CDATA[Guest Settings]]></en>
         </locale>
 
         <!-- Blog list settings -->

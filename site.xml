@@ -154,6 +154,7 @@
                 <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
                 <attribute default="">quiqqer.settings.blog.entry.dateAndCreator</attribute>
                 <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
+                <attribute default="0">quiqqer.settings.guestAuthor</attribute>
             </attributes>
 
             <settings>
@@ -213,6 +214,23 @@
                             </text>
                             <description>
                                 <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.description" />
+                            </description>
+                        </input>
+                    </settings>
+                </category>
+
+                <category name="site.settings.entry.guestAuthor">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.title" />
+                        </title>
+
+                        <input conf="quiqqer.settings.guestAuthor" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.description" />
                             </description>
                         </input>
                     </settings>
