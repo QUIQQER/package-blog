@@ -20,7 +20,6 @@
                 <attribute default="1">quiqqer.settings.blog.showDate</attribute>
                 <attribute default="0">quiqqer.settings.blog.showTime</attribute>
                 <attribute default="0">quiqqer.settings.blog.hidePageContentIfPaginationActive</attribute>
-                <attribute default="0">quiqqer.settings.site.guest</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -214,24 +213,6 @@
                             </text>
                             <description>
                                 <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.description" />
-                            </description>
-                        </input>
-                    </settings>
-                </category>
-
-                <!--     Guest author setting          -->
-                <category name="blog-site-guestAuthor">
-                    <settings>
-                        <title>
-                            <locale group="quiqqer/blog" var="site.settings.guestAuthor.title" />
-                        </title>
-
-                        <input conf="quiqqer.settings.site.guest" type="checkbox">
-                            <text>
-                                <locale group="quiqqer/blog" var="site.settings.guestAuthor.text" />
-                            </text>
-                            <description>
-                                <locale group="quiqqer/blog" var="site.settings.guestAuthor.description" />
                             </description>
                         </input>
                     </settings>
