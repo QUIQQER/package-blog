@@ -1,0 +1,24 @@
+.quiqqer-blog-author {
+    display: flex;
+}
+
+/* Column style*/
+
+.style-column {
+    flex-direction: column;
+    text-align: center;
+}
+
+.style-column  .quiqqer-blog-author-image img{
+    width: 100px;
+}
+
+/* Row style*/
+
+.style-row {
+    flex-direction: row;
+}
+
+.style-row  .quiqqer-blog-author-image img{
+    width: 50px;
+}
