@@ -14,9 +14,16 @@
 
             <settings>
 
-<!--                <setting name="guest" type="checkbox">-->
-<!--                    <locale group="quiqqer/blog" var="blog.author.guest"/>-->
-<!--                </setting>-->
+                <setting name="author-style" type="select">
+                    <locale group="quiqqer/blog" var="brick.control.setting.author-style"/>
+
+                    <option value="style-row" selected="selected" default="1">
+                        <locale group="quiqqer/blog" var="brick.control.setting.author-style-row"/>
+                    </option>
+                    <option value="style-column">
+                        <locale group="quiqqer/blog" var="brick.control.setting.author-style-column"/>
+                    </option>
+                </setting>
 
             </settings>
         </brick>

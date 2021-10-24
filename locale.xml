@@ -52,6 +52,20 @@
             <en><![CDATA[Create a bloglist. All pages below are listed.]]></en>
         </locale>
 
+        <!--    author    -->
+        <locale name="brick.control.setting.author-style">
+            <de><![CDATA[Datenstil des Autors]]></de>
+            <en><![CDATA[Author data style]]></en>
+        </locale>
+        <locale name="brick.control.setting.author-style-row">
+            <de><![CDATA[Zeilenstil]]></de>
+            <en><![CDATA[Row style]]></en>
+        </locale>
+        <locale name="brick.control.setting.author-style-column">
+            <de><![CDATA[Spaltenstil]]></de>
+            <en><![CDATA[Column style]]></en>
+        </locale>
+
         <!--    site    -->
         <locale name="site.settings.entry.guestAuthor.title">
             <de><![CDATA[Blog - Gastautor]]></de>

@@ -39,6 +39,11 @@ class Author extends QUI\Control
     {
         $Engine = QUI::getTemplateManager()->getEngine();
         $Site   = $this->getSite();
+        $style  = 'style-row';
+
+        if ($this->getAttribute('author-style') !== null) {
+            $style = $this->getAttribute('author-style');
+        }
 
         if ($Site->getAttribute("type") !== 'quiqqer/blog:blog/entry') {
             return '';
@@ -64,6 +69,7 @@ class Author extends QUI\Control
         $Engine->assign([
             'AuthorImage' => $UserImage,
             'authorName'  => $userName,
+            'style'       => $style
         ]);
 
         return $Engine->fetch(dirname(__FILE__) . '/Author.html');
