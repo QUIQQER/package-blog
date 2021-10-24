@@ -45,16 +45,23 @@ class Author extends QUI\Control
         }
 
         // author
-        $User              = QUI::getUsers()->get($Site->getAttribute('c_user'));
-        $userName          = $User->getName();
-        $UserImage         = $User->getAvatar()->getAttribute("url");
+        $User      = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $userName  = $User->getName();
+        $UserImage = $User->getAvatar()->getAttribute("url");
 
-        var_dump($Site->getAttribute('quiqqer.settings.guestAuthor'));
-        var_dump($Site->getAttribute('quiqqer.settings.guestAuthor.list'));
+        if ($Site->getAttribute('quiqqer.settings.guestAuthor')) {
+
+            if ($Site->getAttribute('quiqqer.settings.guestAuthor.list')) {
+                $list = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.guestAuthor.list'));
+
+                $userName  = $list->getName();
+                $UserImage = $list->getAvatar()->getAttribute("url");
+            }
+        }
 
         $Engine->assign([
-            'AuthorImage'       => $UserImage,
-            'authorName'        => $userName,
+            'AuthorImage' => $UserImage,
+            'authorName'  => $userName,
         ]);
 
         return $Engine->fetch(dirname(__FILE__) . '/Author.html');
