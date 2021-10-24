@@ -51,6 +51,8 @@ class Author extends QUI\Control
 
         if ($Site->getAttribute('quiqqer.settings.guestAuthor')) {
 
+            $userName = $Site->getAttribute('quiqqer.settings.guestAuthor.name');
+
             if ($Site->getAttribute('quiqqer.settings.guestAuthor.list')) {
                 $list = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.guestAuthor.list'));
 

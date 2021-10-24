@@ -69,6 +69,10 @@
             <de><![CDATA[Gästeliste]]></de>
             <en><![CDATA[Guests list]]></en>
         </locale>
+        <locale name="site.settings.entry.guestAuthor.name">
+            <de><![CDATA[Name der Gäste]]></de>
+            <en><![CDATA[Guests name]]></en>
+        </locale>
 
     </groups>
     <groups name="quiqqer/blog" datatype="php">
