@@ -49,6 +49,15 @@ class Author extends QUI\Control
         $userName          = $User->getName();
         $UserImage         = $User->getAvatar()->getAttribute("url");
 
+//        echo $Site->getAttribute('quiqqer.settings.site.guest');
+//        echo $Site->getAttribute('quiqqer.settings.site.guests');
+//        echo $Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator');
+//        echo $Site->getAttribute('quiqqer.settings.blog.entry.comments');
+//        echo $Site->getAttribute('quiqqer.settings.blog.entry.hideMore');
+        var_dump($Site->getAttribute('quiqqer.settings.guestAuthor'));
+        var_dump($Site->getAttribute('quiqqer.settings.guestAuthor.list'));
+//        print_r($this);
+
         $Engine->assign([
             'AuthorImage'       => $UserImage,
             'authorName'        => $userName,

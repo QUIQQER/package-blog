@@ -155,6 +155,7 @@
                 <attribute default="">quiqqer.settings.blog.entry.dateAndCreator</attribute>
                 <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
                 <attribute default="0">quiqqer.settings.guestAuthor</attribute>
+                <attribute default="0">quiqqer.settings.guestAuthor.list</attribute>
             </attributes>
 
             <settings>
@@ -233,6 +234,13 @@
                                 <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.description" />
                             </description>
                         </input>
+
+                        <input conf="quiqqer.settings.guestAuthor.list" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.list" />
+                            </text>
+                        </input>
+
                     </settings>
                 </category>
             </settings>

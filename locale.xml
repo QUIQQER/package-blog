@@ -65,10 +65,10 @@
             <de><![CDATA[Autorendaten werden geändert]]></de>
             <en><![CDATA[Author data will be changed]]></en>
         </locale>
-<!--        <locale name="site.settings.guestAuthor.guests">-->
-<!--            <de><![CDATA[Gästeliste]]></de>-->
-<!--            <en><![CDATA[Guests list]]></en>-->
-<!--        </locale>-->
+        <locale name="site.settings.entry.guestAuthor.list">
+            <de><![CDATA[Gästeliste]]></de>
+            <en><![CDATA[Guests list]]></en>
+        </locale>
 
     </groups>
     <groups name="quiqqer/blog" datatype="php">
