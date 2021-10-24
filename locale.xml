@@ -73,6 +73,10 @@
             <de><![CDATA[Name der Gäste]]></de>
             <en><![CDATA[Guests name]]></en>
         </locale>
+        <locale name="site.settings.entry.guestAuthor.avatar">
+            <de><![CDATA[Gästebild]]></de>
+            <en><![CDATA[Guests image]]></en>
+        </locale>
 
     </groups>
     <groups name="quiqqer/blog" datatype="php">

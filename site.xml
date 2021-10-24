@@ -157,6 +157,7 @@
                 <attribute default="0">quiqqer.settings.guestAuthor</attribute>
                 <attribute default="0">quiqqer.settings.guestAuthor.list</attribute>
                 <attribute default="">quiqqer.settings.guestAuthor.name</attribute>
+                <attribute default="">quiqqer.settings.guestAuthor.avatar</attribute>
             </attributes>
 
             <settings>
@@ -245,6 +246,12 @@
                         <input conf="quiqqer.settings.guestAuthor.name" type="text">
                             <text>
                                 <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.name" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.guestAuthor.avatar" type="text" class="media-image">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.avatar" />
                             </text>
                         </input>
 
