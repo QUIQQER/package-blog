@@ -24,10 +24,6 @@ class Author extends QUI\Control
     public function __construct($attributes = [])
     {
         parent::__construct($attributes);
-
-        $this->addCSSFile(
-            dirname(__FILE__) . '/Author.css'
-        );
     }
 
     /**
@@ -39,14 +35,25 @@ class Author extends QUI\Control
     {
         $Engine = QUI::getTemplateManager()->getEngine();
         $Site   = $this->getSite();
-        $style  = 'style-row';
-
-        if ($this->getAttribute('author-style') !== null) {
-            $style = $this->getAttribute('author-style');
-        }
 
         if ($Site->getAttribute("type") !== 'quiqqer/blog:blog/entry') {
             return '';
+        }
+
+        switch ($this->getAttribute('author-style')) {
+            case 'largeImageLeft':
+                $html = '/Author.largeImageLeft.html';
+                $css  = '/Author.largeImageLeft.css';
+                break;
+            case 'smallImageLeft':
+                $html = '/Author.smallImageLeft.html';
+                $css  = '/Author.smallImageLeft.css';
+                break;
+            case 'largeImageTop':
+            default:
+                $html = '/Author.largeImageTop.html';
+                $css  = '/Author.largeImageTop.css';
+                break;
         }
 
         // author
@@ -69,10 +76,13 @@ class Author extends QUI\Control
         $Engine->assign([
             'AuthorImage' => $UserImage,
             'authorName'  => $userName,
-            'style'       => $style
         ]);
 
-        return $Engine->fetch(dirname(__FILE__) . '/Author.html');
+        $this->addCSSFile(
+            dirname(__FILE__) . $css
+        );
+
+        return $Engine->fetch(dirname(__FILE__) . $html);
     }
 
     /**

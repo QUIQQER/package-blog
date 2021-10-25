@@ -15,13 +15,16 @@
             <settings>
 
                 <setting name="author-style" type="select">
-                    <locale group="quiqqer/blog" var="brick.control.setting.author-style"/>
+                    <locale group="quiqqer/blog" var="brick.control.setting.author.template"/>
 
-                    <option value="style-row" selected="selected" default="1">
-                        <locale group="quiqqer/blog" var="brick.control.setting.author-style-row"/>
+                    <option value="largeImageTop" selected="selected" default="1">
+                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.largeImageTop"/>
                     </option>
-                    <option value="style-column">
-                        <locale group="quiqqer/blog" var="brick.control.setting.author-style-column"/>
+                    <option value="largeImageLeft">
+                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.largeImageLeft"/>
+                    </option>
+                    <option value="smallImageLeft">
+                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.smallImageLeft"/>
                     </option>
                 </setting>
 
