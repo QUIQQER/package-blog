@@ -61,12 +61,12 @@ class Author extends QUI\Control
         $userName  = $User->getName();
         $UserImage = $User->getAvatar()->getAttribute("url");
 
-        if ($Site->getAttribute('quiqqer.settings.guestAuthor')) {
-            $userName  = $Site->getAttribute('quiqqer.settings.guestAuthor.name');
-            $UserImage = $Site->getAttribute('quiqqer.settings.guestAuthor.avatar');
+        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor')) {
+            $userName  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
+            $UserImage = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
 
-            if ($Site->getAttribute('quiqqer.settings.guestAuthor.list')) {
-                $list = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.guestAuthor.list'));
+            if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.list')) {
+                $list = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.blog.guestAuthor.list'));
 
                 $userName  = $list->getName();
                 $UserImage = $list->getAvatar()->getAttribute("url");
