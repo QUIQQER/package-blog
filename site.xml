@@ -154,8 +154,8 @@
                 <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
                 <attribute default="">quiqqer.settings.blog.entry.dateAndCreator</attribute>
                 <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
-                <attribute default="0">quiqqer.settings.blog.guestAuthor</attribute>
-                <attribute default="0">quiqqer.settings.blog.guestAuthor.list</attribute>
+                <attribute default="0">quiqqer.settings.blog.guestAuthor.enable</attribute>
+                <attribute default="0">quiqqer.settings.blog.guestAuthor.quiqqerUser</attribute>
                 <attribute default="">quiqqer.settings.blog.guestAuthor.name</attribute>
                 <attribute default="">quiqqer.settings.blog.guestAuthor.avatar</attribute>
             </attributes>
@@ -228,19 +228,22 @@
                             <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.title" />
                         </title>
 
-                        <input conf="quiqqer.settings.blog.guestAuthor" type="checkbox">
+                        <input conf="quiqqer.settings.blog.guestAuthor.enable" type="checkbox">
                             <text>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor" />
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable" />
                             </text>
                             <description>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.description" />
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable.description" />
                             </description>
                         </input>
 
-                        <input conf="quiqqer.settings.blog.guestAuthor.list" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
+                        <input conf="quiqqer.settings.blog.guestAuthor.quiqqerUser" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
                             <text>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.list" />
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.quiqqerUser" />
                             </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.quiqqerUser.description" />
+                            </description>
                         </input>
 
                         <input conf="quiqqer.settings.blog.guestAuthor.name" type="text">

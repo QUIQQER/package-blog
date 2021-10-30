@@ -2,29 +2,29 @@
 <quiqqer>
     <bricks>
 
-        <!--    author    -->
+        <!-- author -->
         <brick control="\QUI\Blog\Controls\Author">
 
             <title>
-                <locale group="quiqqer/blog" var="blog.control.author.title"/>
+                <locale group="quiqqer/blog" var="brick.author.title"/>
             </title>
             <description>
-                <locale group="quiqqer/blog" var="blog.control.author.description"/>
+                <locale group="quiqqer/blog" var="brick.author.description"/>
             </description>
 
             <settings>
 
-                <setting name="author-style" type="select">
-                    <locale group="quiqqer/blog" var="brick.control.setting.author.template"/>
+                <setting name="template" type="select">
+                    <locale group="quiqqer/blog" var="brick.setting.author.template"/>
 
-                    <option value="largeImageTop" selected="selected" default="1">
-                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.largeImageTop"/>
+                    <option value="largeImageTop" selected="selected">
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.largeImageTop"/>
                     </option>
                     <option value="largeImageLeft">
-                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.largeImageLeft"/>
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.largeImageLeft"/>
                     </option>
                     <option value="smallImageLeft">
-                        <locale group="quiqqer/blog" var="brick.control.setting.author.template.smallImageLeft"/>
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.smallImageLeft"/>
                     </option>
                 </setting>
 

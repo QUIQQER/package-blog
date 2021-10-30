@@ -1,15 +1,11 @@
-<div class="quiqqer-blog-author">
-
-    <div class="quiqqer-blog-author-image">
-        {image src=$AuthorImage width=50 height=50 loading="lazy"}
+<div class="quiqqer-blog-control-author-template__smallImageLeft">
+    <div class="quiqqer-blog-control-author-image">
+        {image src=$AuthorImage width="80" height="80" loading="lazy"}
     </div>
 
-    <div>
-        <div class="quiqqer-blog-author-authorName"> {$authorName} </div>
+    <span class="quiqqer-blog-control-author-name">{$authorName}</span>
 
-        <div class="quiqqer-blog-author-authorShortDescription">
-
-        </div>
-    </div>
-
+    {if $shortDesc}
+        <div class="quiqqer-blog-control-author-short">{$shortDesc}</div>
+    {/if}
 </div>

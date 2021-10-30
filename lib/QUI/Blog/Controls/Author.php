@@ -7,6 +7,7 @@
 namespace QUI\Blog\Controls;
 
 use QUI;
+use QUI\Exception;
 
 /**
  * Class Author
@@ -23,6 +24,14 @@ class Author extends QUI\Control
      */
     public function __construct($attributes = [])
     {
+        // default options
+        $this->setAttributes([
+            'class'    => 'quiqqer-blog-control-author',
+            'template' => 'largeImageTop' // template
+        ]);
+
+        $this->addCSSFile(dirname(__FILE__).'/Author.css');
+
         parent::__construct($attributes);
     }
 
@@ -40,49 +49,113 @@ class Author extends QUI\Control
             return '';
         }
 
-        switch ($this->getAttribute('author-style')) {
+        switch ($this->getAttribute('template')) {
             case 'largeImageLeft':
                 $html = '/Author.largeImageLeft.html';
-                $css  = '/Author.largeImageLeft.css';
                 break;
+
             case 'smallImageLeft':
                 $html = '/Author.smallImageLeft.html';
-                $css  = '/Author.smallImageLeft.css';
                 break;
+
             case 'largeImageTop':
             default:
                 $html = '/Author.largeImageTop.html';
-                $css  = '/Author.largeImageTop.css';
                 break;
         }
 
-        // author
-        $User      = QUI::getUsers()->get($Site->getAttribute('c_user'));
-        $userName  = $User->getName();
-        $UserImage = $User->getAvatar()->getAttribute("url");
+        try {
+            $authorData = $this->getAuthorData();
+        } catch (Exception $Exception) {
+            QUI\System\Log::addInfo($Exception->getMessage());
 
-        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor')) {
-            $userName  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
-            $UserImage = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
-
-            if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.list')) {
-                $list = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.blog.guestAuthor.list'));
-
-                $userName  = $list->getName();
-                $UserImage = $list->getAvatar()->getAttribute("url");
-            }
+            $authorData = [
+                'name' => false,
+                'Image' => false
+            ];
         }
 
         $Engine->assign([
-            'AuthorImage' => $UserImage,
-            'authorName'  => $userName,
+            'this'        => $this,
+            'authorName'  => $authorData['name'],
+            'AuthorImage' => $authorData['Image'],
+            'shortDesc'   => false // todo implement user short description
         ]);
 
-        $this->addCSSFile(
-            dirname(__FILE__) . $css
-        );
+        $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__).$html));
 
-        return $Engine->fetch(dirname(__FILE__) . $html);
+        return $Engine->fetch(dirname(__FILE__).$html);
+    }
+
+    /**
+     * @return array|bool
+     *  'name' => string
+     *  'Image' => Object
+     *
+     * @throws Exception
+     * @throws QUI\Users\Exception
+     */
+    private function getAuthorData()
+    {
+        $Site = $this->getSite();
+
+        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.enable')) {
+            $data = $this->getGuestUserData();
+
+            if ($data) {
+                return $data;
+            }
+        }
+
+        $User  = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $name  = $User->getName();
+        $Image = $User->getAvatar()->getAttribute("url");
+
+        return [
+            'name'  => $name,
+            'Image' => $Image
+        ];
+    }
+
+
+    /**
+     * Get data for guest author
+     *
+     * @return array|bool
+     *  'name' => string
+     *  'Image' => Object
+     *
+     * @throws QUI\Exception
+     * @throws QUI\Users\Exception
+     */
+    protected function getGuestUserData()
+    {
+        $Site = $this->getSite();
+
+        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser')) {
+            $QuiqqerUser = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser'));
+
+            try {
+                return [
+                    'name'  => $QuiqqerUser->getName(),
+                    'Image' => $QuiqqerUser->getAvatar()->getAttribute("url")
+                ];
+            } catch (Exception $Exception) {
+                QUI\System\Log::addInfo($Exception->getMessage());
+            }
+        }
+
+        $name  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
+        $Image = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
+
+        if (!$name) {
+            return false;
+        }
+
+        return [
+            'name'  => $name,
+            'Image' => $Image
+        ];
     }
 
     /**
