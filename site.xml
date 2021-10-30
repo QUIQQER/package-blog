@@ -155,9 +155,9 @@
                 <attribute default="">quiqqer.settings.blog.entry.dateAndCreator</attribute>
                 <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
                 <attribute default="0">quiqqer.settings.blog.guestAuthor.enable</attribute>
-                <attribute default="0">quiqqer.settings.blog.guestAuthor.quiqqerUser</attribute>
-                <attribute default="">quiqqer.settings.blog.guestAuthor.name</attribute>
-                <attribute default="">quiqqer.settings.blog.guestAuthor.avatar</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.quiqqerUser</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.name</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.avatar</attribute>
             </attributes>
 
             <settings>

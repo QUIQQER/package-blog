@@ -51,16 +51,16 @@ class Author extends QUI\Control
 
         switch ($this->getAttribute('template')) {
             case 'largeImageLeft':
-                $html = '/Author.largeImageLeft.html';
+                $html = '/Author.LargeImageLeft.html';
                 break;
 
             case 'smallImageLeft':
-                $html = '/Author.smallImageLeft.html';
+                $html = '/Author.SmallImageLeft.html';
                 break;
 
             case 'largeImageTop':
             default:
-                $html = '/Author.largeImageTop.html';
+                $html = '/Author.LargeImageTop.html';
                 break;
         }
 
