@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains \QUI\Bricks\Controls\TextAndImageMultiple
+ * This file contains \QUI\Bricks\Controls\Author
  */
 
 namespace QUI\Blog\Controls;
@@ -84,10 +84,12 @@ class Author extends QUI\Control
 
         $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__).$html));
 
-        return $Engine->fetch(dirname(__FILE__).$html);
+        return $Engine->fetch(dirname(__FILE__).'/Author.html');
     }
 
     /**
+     * Get blog entry author data
+     *
      * @return array|bool
      *  'name' => string
      *  'Image' => Object
@@ -100,7 +102,7 @@ class Author extends QUI\Control
         $Site = $this->getSite();
 
         if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.enable')) {
-            $data = $this->getGuestUserData();
+            $data = $this->getGuestAuthorData();
 
             if ($data) {
                 return $data;
@@ -128,7 +130,7 @@ class Author extends QUI\Control
      * @throws QUI\Exception
      * @throws QUI\Users\Exception
      */
-    protected function getGuestUserData()
+    protected function getGuestAuthorData()
     {
         $Site = $this->getSite();
 
