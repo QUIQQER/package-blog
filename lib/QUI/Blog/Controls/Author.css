@@ -22,6 +22,7 @@
 .quiqqer-blog-control-author-template__largeImageLeft .quiqqer-blog-control-author-image {
     margin-right: var(--spacing, 1em);
     width: 120px;
+    flex-shrink: 0;
 }
 
 .quiqqer-blog-control-author-template__largeImageLeft .quiqqer-blog-control-author-image img {
@@ -34,6 +35,7 @@
 .quiqqer-blog-control-author-template__smallImageLeft {
     display: flex;
     align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .quiqqer-blog-control-author-template__smallImageLeft .quiqqer-blog-control-author-image {
