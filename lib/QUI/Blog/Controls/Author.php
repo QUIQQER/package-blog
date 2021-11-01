@@ -70,16 +70,16 @@ class Author extends QUI\Control
             QUI\System\Log::addInfo($Exception->getMessage());
 
             $authorData = [
-                'name' => false,
-                'Image' => false
+                'name'     => false,
+                'imageUrl' => false
             ];
         }
 
         $Engine->assign([
-            'this'        => $this,
-            'authorName'  => $authorData['name'],
-            'AuthorImage' => $authorData['Image'],
-            'shortDesc'   => false // todo implement user short description
+            'this'           => $this,
+            'authorName'     => $authorData['name'],
+            'authorImageUrl' => $authorData['imageUrl'],
+            'shortDesc'      => false // todo implement user short description
         ]);
 
         $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__).$html));
@@ -88,11 +88,11 @@ class Author extends QUI\Control
     }
 
     /**
-     * Get blog entry author data
+     * Get author data for blog entry
      *
      * @return array|bool
-     *  'name' => string
-     *  'Image' => Object
+     *  'name'     => string
+     *  'imageUrl' => string
      *
      * @throws Exception
      * @throws QUI\Users\Exception
@@ -109,23 +109,23 @@ class Author extends QUI\Control
             }
         }
 
-        $User  = QUI::getUsers()->get($Site->getAttribute('c_user'));
-        $name  = $User->getName();
-        $Image = $User->getAvatar()->getAttribute("url");
+        $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $name = $User->getName();
+        $url  = $User->getAvatar()->getAttribute("url");
 
         return [
-            'name'  => $name,
-            'Image' => $Image
+            'name'     => $name,
+            'imageUrl' => $url
         ];
     }
 
 
     /**
-     * Get data for guest author
+     * Get guest author data
      *
      * @return array|bool
-     *  'name' => string
-     *  'Image' => Object
+     *  'name'     => string
+     *  'imageUrl' => string
      *
      * @throws QUI\Exception
      * @throws QUI\Users\Exception
@@ -139,24 +139,24 @@ class Author extends QUI\Control
 
             try {
                 return [
-                    'name'  => $QuiqqerUser->getName(),
-                    'Image' => $QuiqqerUser->getAvatar()->getAttribute("url")
+                    'name'     => $QuiqqerUser->getName(),
+                    'imageUrl' => $QuiqqerUser->getAvatar()->getAttribute("url")
                 ];
             } catch (Exception $Exception) {
                 QUI\System\Log::addInfo($Exception->getMessage());
             }
         }
 
-        $name  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
-        $Image = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
+        $name = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
+        $src  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
 
         if (!$name) {
             return false;
         }
 
         return [
-            'name'  => $name,
-            'Image' => $Image
+            'name'     => $name,
+            'imageUrl' => $src
         ];
     }
 
