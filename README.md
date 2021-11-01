@@ -15,10 +15,13 @@ Features
 - Global commentary for Disqus and Facebook
 - Comments can be turned off on individual pages
 - Site types:
-    - Blog list
-    - Blog entry
+  - Blog list
+  - Blog entry
+- Write blog entries as guest author
 
 In combination with the [feed module](https://dev.quiqqer.com/quiqqer/package-feed), the blog can also be offered as RSS / Atom.
+
+You can use [QUIQQER Interview module](https://dev.quiqqer.com/quiqqer/interview) to extend blog entry with an interviewee.
 
 Support
 -------
