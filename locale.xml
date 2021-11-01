@@ -52,6 +52,62 @@
             <en><![CDATA[Create a bloglist. All pages below are listed.]]></en>
         </locale>
 
+        <!-- brick author-->
+        <locale name="brick.author.title">
+            <de><![CDATA[Blog: Autor]]></de>
+            <en><![CDATA[Blog: Author]]></en>
+        </locale>
+        <locale name="brick.author.description">
+            <de><![CDATA[Zeigt den Autor des Blogbeiträges. Wenn der Baustein nicht auf einer Seite vom Typ "Blog Beitrag" platziert wird, wird kein Autor angezeigt.]]></de>
+            <en><![CDATA[Shows the author of the blog post. If the brick is not placed on a page of type "Blog post", no author is displayed.]]></en>
+        </locale>
+        <locale name="brick.setting.author.template">
+            <de><![CDATA[Vorlage]]></de>
+            <en><![CDATA[Template]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.largeImageTop">
+            <de><![CDATA[Großes Bild oben]]></de>
+            <en><![CDATA[Large image on top]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.largeImageLeft">
+            <de><![CDATA[Großes Bild links]]></de>
+            <en><![CDATA[Large image on left]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.smallImageLeft">
+            <de><![CDATA[Kleines Bild links]]></de>
+            <en><![CDATA[Small image on left]]></en>
+        </locale>
+
+        <!-- guest author -->
+        <locale name="site.settings.entry.guestAuthor.title">
+            <de><![CDATA[Gastautor]]></de>
+            <en><![CDATA[Guest author]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.enable">
+            <de><![CDATA[Gastautor verwenden]]></de>
+            <en><![CDATA[Use guest author]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.enable.description">
+            <de><![CDATA[Wenn die Option aktiviert ist, wird der Gastautor als der Blogeintrag-Autor angezeigt.]]></de>
+            <en><![CDATA[If the option is enabled, the guest author will be displayed as the blog entry author.]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.quiqqerUser">
+            <de><![CDATA[Benutzer (falls im System existeirt)]]></de>
+            <en><![CDATA[User (if exists in the system)]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.quiqqerUser.description">
+            <de><![CDATA[Wenn kein Benutzer im System existeirt, dann bitte unten die Einstellungen "Name" und "Benutezrbild" korrekt setzen.]]></de>
+            <en><![CDATA[If no user exists in the system, then please set the "Name" and "User image" settings correctly below.]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.name">
+            <de><![CDATA[Name]]></de>
+            <en><![CDATA[Name]]></en>
+        </locale>
+        <locale name="site.settings.entry.guestAuthor.avatar">
+            <de><![CDATA[Benutezrbild]]></de>
+            <en><![CDATA[User image]]></en>
+        </locale>
+
     </groups>
     <groups name="quiqqer/blog" datatype="php">
         <locale name="admin.types.blog.list">
@@ -390,8 +446,6 @@
             <de><![CDATA[Uhrzeit vor dem Blog-Eintrag anzeigen]]></de>
             <en><![CDATA[Show time before the blog-entry]]></en>
         </locale>
-
-
 
         <locale name="blog.entries.more.nav.title">
             <de><![CDATA[Weitere Blog-Einträge:]]></de>

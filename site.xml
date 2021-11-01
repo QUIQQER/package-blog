@@ -154,6 +154,10 @@
                 <attribute default="enable">quiqqer.settings.blog.entry.comments</attribute>
                 <attribute default="">quiqqer.settings.blog.entry.dateAndCreator</attribute>
                 <attribute default="0">quiqqer.settings.blog.entry.hideMore</attribute>
+                <attribute default="0">quiqqer.settings.blog.guestAuthor.enable</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.quiqqerUser</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.name</attribute>
+                <attribute>quiqqer.settings.blog.guestAuthor.avatar</attribute>
             </attributes>
 
             <settings>
@@ -215,6 +219,45 @@
                                 <locale group="quiqqer/blog" var="blog.settings.entries.more.disabled.description" />
                             </description>
                         </input>
+                    </settings>
+                </category>
+
+                <category name="site.settings.entry.blog.guestAuthor">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.title" />
+                        </title>
+
+                        <input conf="quiqqer.settings.blog.guestAuthor.enable" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable.description" />
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.guestAuthor.quiqqerUser" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.quiqqerUser" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.quiqqerUser.description" />
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.guestAuthor.name" type="text">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.name" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.blog.guestAuthor.avatar" type="text" class="media-image">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.avatar" />
+                            </text>
+                        </input>
+
                     </settings>
                 </category>
             </settings>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <bricks>
+
+        <!-- author -->
+        <brick control="\QUI\Blog\Controls\Author">
+
+            <title>
+                <locale group="quiqqer/blog" var="brick.author.title"/>
+            </title>
+            <description>
+                <locale group="quiqqer/blog" var="brick.author.description"/>
+            </description>
+
+            <settings>
+
+                <setting name="template" type="select">
+                    <locale group="quiqqer/blog" var="brick.setting.author.template"/>
+
+                    <option value="largeImageTop" selected="selected">
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.largeImageTop"/>
+                    </option>
+                    <option value="largeImageLeft">
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.largeImageLeft"/>
+                    </option>
+                    <option value="smallImageLeft">
+                        <locale group="quiqqer/blog" var="brick.setting.author.template.smallImageLeft"/>
+                    </option>
+                </setting>
+
+            </settings>
+        </brick>
+    </bricks>
+</quiqqer>
