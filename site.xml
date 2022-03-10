@@ -2,7 +2,7 @@
 <site>
 
     <types>
-        <type type="blog/list" extend="QUI\Blog\BlogList" icon="fa fa-book">
+        <type type="blog/list" extend="QUI\Blog\BlogList" icon="fa fa-book" child-type="quiqqer/blog:blog/entry">
             <locale group="quiqqer/blog" var="admin.types.blog.list" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.blog.list.desc" />
