@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains \QUI\Bricks\Controls\Author
+ * This file contains \QUI\Blog\Controls\Author
  */
 
 namespace QUI\Blog\Controls;
