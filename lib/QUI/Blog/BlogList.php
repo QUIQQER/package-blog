@@ -30,7 +30,6 @@ class BlogList
 
         $Site->setAttribute('nav_hide', 1);
         $Site->setAttribute('release_from', date('Y-m-d H:i:s'));
-        $Site->setAttribute('type', 'quiqqer/blog:blog/entry');
         $Site->save();
     }
 }
