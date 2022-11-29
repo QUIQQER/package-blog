@@ -14,13 +14,7 @@
     <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
             {t}quiqqer/blog entry.blog.by{/t}
-            <span class="blog-entry-author"  itemprop="author">
-               {if !empty($author)}
-                    {$author}
-                {else if $User->getId()}
-                    {$User->getName()}
-                {/if}
-            </span>
+            <span class="blog-entry-author"  itemprop="author">{$author}</span>
         {/if}
 
         {if $showDate}
