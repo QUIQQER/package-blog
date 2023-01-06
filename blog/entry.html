@@ -29,6 +29,12 @@
     </section>
     {/if}
 
+    {if $Site->getAttribute('short')}
+    <section class="blog-entry-short">
+        <p class="text-lead">{$Site->getAttribute('short')}</p>
+    </section>
+    {/if}
+
     {if $Site->getAttribute('content')}
     <section class="blog-entry-content grid-100 mobile-grid-100 grid-parent"
              itemprop="articleBody"
