@@ -17,6 +17,12 @@
             <span class="blog-entry-author"  itemprop="author">{$author}</span>
         {/if}
 
+        {if $showTitle and $Site->getAttribute('title')}
+        <section class="blog-entry-short">
+            <p class="text-lead">{$Site->getAttribute('title')}</p>
+        </section>
+        {/if}
+
         {if $showDate}
             <span class="blog-entry-time">
                 {t}quiqqer/blog entry.blog.on{/t}
@@ -29,10 +35,10 @@
     </section>
     {/if}
 
-    {if $Site->getAttribute('short')}
-    <section class="blog-entry-short">
-        <p class="text-lead">{$Site->getAttribute('short')}</p>
-    </section>
+    {if $showDescription and $Site->getAttribute('short')}
+        <section class="blog-entry-short">
+            <p class="text-lead">{$Site->getAttribute('short')}</p>
+        </section>
     {/if}
 
     {if $Site->getAttribute('content')}

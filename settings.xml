@@ -35,6 +35,12 @@
                         <type><![CDATA[boolean]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
+                    <conf name="showTitle">
+                        <type><![CDATA[boolean]]></type>
+                    </conf>
+                    <conf name="showDescription">
+                        <type><![CDATA[boolean]]></type>
+                    </conf>
                 </section>
 
                 <section name="blog.settings.entries.more">
@@ -176,6 +182,18 @@
                                     <locale group="quiqqer/blog" var="blog.settings.entry.showDate.text"/>
                                 </text>
                             </input>
+                            <input conf="blog.settings.entry.showTitle" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entry.showTitle.text"/>
+                                </text>
+                            </input>
+
+                            <input conf="blog.settings.entry.showDescription" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/blog" var="blog.settings.entry.showDescription.text"/>
+                                </text>
+                            </input>
+
                         </settings>
 
                         <!-- more entries -->

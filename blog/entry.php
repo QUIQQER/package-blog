@@ -154,5 +154,7 @@ $Engine->assign([
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
     'MetaList'             => $MetaList,
-    'author'               => $User->getName()
+    'author'               => $User->getName(),
+    'showTitle' => $Project->getConfig('blog.settings.entry.showTitle'),
+    'showDescription' => $Project->getConfig('blog.settings.entry.showDescription')
 ]);
