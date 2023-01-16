@@ -10,17 +10,15 @@
 >
     {$MetaList->create()}
 
+    {if $showTitle and $Site->getAttribute('title')}
+        <h1>{$Site->getAttribute('title')}</h1>
+    {/if}
+
     {if $enableDateAndCreator}
     <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
             {t}quiqqer/blog entry.blog.by{/t}
             <span class="blog-entry-author"  itemprop="author">{$author}</span>
-        {/if}
-
-        {if $showTitle and $Site->getAttribute('title')}
-        <section class="blog-entry-short">
-            <p class="text-lead">{$Site->getAttribute('title')}</p>
-        </section>
         {/if}
 
         {if $showDate}
@@ -36,9 +34,9 @@
     {/if}
 
     {if $showDescription and $Site->getAttribute('short')}
-        <section class="blog-entry-short">
+        <div class="blog-entry-short">
             <p class="text-lead">{$Site->getAttribute('short')}</p>
-        </section>
+        </div>
     {/if}
 
     {if $Site->getAttribute('content')}
