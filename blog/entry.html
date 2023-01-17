@@ -34,9 +34,7 @@
     {/if}
 
     {if $showDescription and $Site->getAttribute('short')}
-        <div class="blog-entry-short">
-            <p class="text-lead">{$Site->getAttribute('short')}</p>
-        </div>
+        <p class="blog-entry-short text-lead">{$Site->getAttribute('short')}</p>
     {/if}
 
     {if $Site->getAttribute('content')}

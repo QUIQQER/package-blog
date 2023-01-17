@@ -5,6 +5,10 @@
     width: 100%;
 }
 
+.blog-entry-short {
+    font-size: var(--qui-text-lead, 1.25rem);
+}
+
 .blog-entry-next,
 .blog-entry-prev {
     padding: 10px 20px;
@@ -19,7 +23,6 @@
     margin-bottom: 20px;
 }
 
-
 .blog-entry aside {
     clear: both;
     float: left;
@@ -31,9 +34,6 @@
     font-size: 12px;
     display: block;
 }
-
-
-
 
 .blog-entry-nav {
     margin-top: 48px;
