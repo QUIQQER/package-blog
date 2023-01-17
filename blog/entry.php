@@ -20,6 +20,10 @@ if ($Project->getConfig('blog.settings.entry.showDate')) {
 }
 
 switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
+    case 'showAll':
+        $showCreator = true;
+        $showDate    = true;
+        break;
     case 'showCreator':
         // hide date
         $showCreator = true;
@@ -149,5 +153,8 @@ $Engine->assign([
     'moreEntriesShowTime'  => $moreEntriesShowTime,
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
-    'MetaList'             => $MetaList
+    'MetaList'             => $MetaList,
+    'author'               => $User->getName(),
+    'showTitle'            => $Project->getConfig('blog.settings.entry.showTitle'),
+    'showDescription'      => $Project->getConfig('blog.settings.entry.showDescription')
 ]);

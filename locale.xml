@@ -422,6 +422,14 @@
             <de><![CDATA[Datum anzeigen]]></de>
             <en><![CDATA[Show date]]></en>
         </locale>
+        <locale name="blog.settings.entry.showTitle.text">
+            <de><![CDATA[Titel anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+        </locale>
+        <locale name="blog.settings.entry.showDescription.text">
+            <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
+            <en><![CDATA[Show description]]></en>
+        </locale>
 
         <locale name="blog.settings.entries.more.amount.text">
             <de><![CDATA[Anzahl weiteren Blog-Einträgen]]></de>
