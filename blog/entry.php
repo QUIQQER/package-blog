@@ -101,7 +101,7 @@ try {
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
     $MetaList->add('author', $User->getName());
     $Engine->assign('author', $User->getName());
-}catch (QUI\Exception $Exception) {
+} catch (QUI\Exception $Exception) {
     QUI\System\Log::writeException($Exception);
     $Engine->assign('author', null);
 }

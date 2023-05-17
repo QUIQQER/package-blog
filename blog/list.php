@@ -17,7 +17,7 @@ if (isset($_REQUEST['sheet'])
 
 $showPageContent = true;
 if (isset($_REQUEST['sheet']) &&
-    $Site->getAttribute('quiqqer.settings.blog.hidePageContentIfPaginationActive') ) {
+    $Site->getAttribute('quiqqer.settings.blog.hidePageContentIfPaginationActive')) {
     $showPageContent = false;
 }
 
