@@ -3,7 +3,7 @@
     "type": "quiqqer-module",
     "description": "Create your own online diary. With the provided page types, managing and creating your own blog is no longer a problem.",
     "license": "GPL-3.0+",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "authors": [
         {
             "name": "Henning Leutz",
