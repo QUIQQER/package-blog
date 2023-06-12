@@ -83,8 +83,13 @@ $ChildrenList->addEvent('onMetaList', function (
     }
 
     if (MediaUtils::isMediaUrl($image)) {
-        $Image = MediaUtils::getImageByUrl($image);
-        $image = $Image->getSizeCacheUrl();
+        try {
+            $Image = MediaUtils::getImageByUrl($image);
+            $image = $Image->getSizeCacheUrl();
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeException($Exception);
+            $image = '';
+        }
     }
 
     // use default
