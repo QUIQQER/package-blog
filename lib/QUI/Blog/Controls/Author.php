@@ -26,11 +26,11 @@ class Author extends QUI\Control
     {
         // default options
         $this->setAttributes([
-            'class'    => 'quiqqer-blog-control-author',
+            'class' => 'quiqqer-blog-control-author',
             'template' => 'largeImageTop' // template
         ]);
 
-        $this->addCSSFile(dirname(__FILE__).'/Author.css');
+        $this->addCSSFile(dirname(__FILE__) . '/Author.css');
 
         parent::__construct($attributes);
     }
@@ -43,7 +43,7 @@ class Author extends QUI\Control
     public function getBody()
     {
         $Engine = QUI::getTemplateManager()->getEngine();
-        $Site   = $this->getSite();
+        $Site = $this->getSite();
 
         if ($Site->getAttribute("type") !== 'quiqqer/blog:blog/entry') {
             return '';
@@ -70,21 +70,21 @@ class Author extends QUI\Control
             QUI\System\Log::addInfo($Exception->getMessage());
 
             $authorData = [
-                'name'     => false,
+                'name' => false,
                 'imageUrl' => false
             ];
         }
 
         $Engine->assign([
-            'this'           => $this,
-            'authorName'     => $authorData['name'],
+            'this' => $this,
+            'authorName' => $authorData['name'],
             'authorImageUrl' => $authorData['imageUrl'],
-            'shortDesc'      => false // todo implement user short description
+            'shortDesc' => false // todo implement user short description
         ]);
 
-        $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__).$html));
+        $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__) . $html));
 
-        return $Engine->fetch(dirname(__FILE__).'/Author.html');
+        return $Engine->fetch(dirname(__FILE__) . '/Author.html');
     }
 
     /**
@@ -111,10 +111,10 @@ class Author extends QUI\Control
 
         $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
         $name = $User->getName();
-        $url  = $User->getAvatar()->getAttribute("url");
+        $url = $User->getAvatar()->getAttribute("url");
 
         return [
-            'name'     => $name,
+            'name' => $name,
             'imageUrl' => $url
         ];
     }
@@ -139,7 +139,7 @@ class Author extends QUI\Control
 
             try {
                 return [
-                    'name'     => $QuiqqerUser->getName(),
+                    'name' => $QuiqqerUser->getName(),
                     'imageUrl' => $QuiqqerUser->getAvatar()->getAttribute("url")
                 ];
             } catch (Exception $Exception) {
@@ -148,14 +148,14 @@ class Author extends QUI\Control
         }
 
         $name = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
-        $src  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
+        $src = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
 
         if (!$name) {
             return false;
         }
 
         return [
-            'name'     => $name,
+            'name' => $name,
             'imageUrl' => $src
         ];
     }

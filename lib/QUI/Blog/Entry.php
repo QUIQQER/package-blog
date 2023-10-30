@@ -8,5 +8,4 @@ namespace QUI\Blog;
  */
 class Entry
 {
-
 }
