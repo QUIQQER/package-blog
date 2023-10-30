@@ -1,10 +1,10 @@
 <?php
 
-use QUI\Projects\Media\Utils as MediaUtils;
-
 /**
  * Blog List
  */
+
+use QUI\Projects\Media\Utils as MediaUtils;
 
 if (
     isset($_REQUEST['sheet'])

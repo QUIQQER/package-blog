@@ -1,10 +1,10 @@
 <?php
 
-use QUI\Projects\Media\Utils as MediaUtils;
-
 /**
  * autor and date
  */
+
+use QUI\Projects\Media\Utils as MediaUtils;
 
 // default
 $enableDateAndCreator = true;
