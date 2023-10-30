@@ -272,7 +272,7 @@
         </locale>
         <locale name="quiqqer.settings.blog.entry.comments">
             <de><![CDATA[Kommentare]]></de>
-            <en><![CDATA[Disable]]></en>
+            <en><![CDATA[Comments]]></en>
         </locale>
         <locale name="quiqqer.settings.blog.entry.comments.enable">
             <de><![CDATA[Einschalten]]></de>

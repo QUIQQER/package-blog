@@ -1,15 +1,15 @@
 <?php
 
-use QUI\Projects\Media\Utils as MediaUtils;
-
 /**
  * autor and date
  */
 
+use QUI\Projects\Media\Utils as MediaUtils;
+
 // default
 $enableDateAndCreator = true;
-$showCreator          = false;
-$showDate             = false;
+$showCreator = false;
+$showDate = false;
 
 if ($Project->getConfig('blog.settings.entry.showCreator')) {
     $showCreator = $Project->getConfig('blog.settings.entry.showCreator');
@@ -22,16 +22,16 @@ if ($Project->getConfig('blog.settings.entry.showDate')) {
 switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
     case 'showAll':
         $showCreator = true;
-        $showDate    = true;
+        $showDate = true;
         break;
     case 'showCreator':
         // hide date
         $showCreator = true;
-        $showDate    = false;
+        $showDate = false;
         break;
     case 'showDate':
         // hide author
-        $showDate    = true;
+        $showDate = true;
         $showCreator = false;
         break;
     case 'hide':
@@ -48,14 +48,14 @@ if (!$showCreator && !$showDate) {
  * comments
  */
 $Request = QUI::getRequest();
-$baseUrl = $Request->getScheme().'://'.$Request->getHttpHost().$Request->getBasePath();
-$url     = $baseUrl.$_SERVER['REQUEST_URI'];
+$baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
+$url = $baseUrl . $_SERVER['REQUEST_URI'];
 
-$fbLangParam = $Site->getProject()->getLang().'_';
+$fbLangParam = $Site->getProject()->getLang() . '_';
 $fbLangParam .= strtoupper($Site->getProject()->getLang());
 
-$pageIdentifier = $Site->getProject()->getName().'-';
-$pageIdentifier .= $Site->getProject()->getLang().'-';
+$pageIdentifier = $Site->getProject()->getName() . '-';
+$pageIdentifier .= $Site->getProject()->getLang() . '-';
 $pageIdentifier .= $Site->getId();
 
 // disable comments on one page
@@ -84,7 +84,7 @@ $moreEntriesShowDate = $Project->getConfig('blog.settings.entries.more.show_date
 $moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time');
 
 $previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
-$nextSiblings     = $Site->nextSiblings($amountOfSiblings);
+$nextSiblings = $Site->nextSiblings($amountOfSiblings);
 
 $Project->getConfig();
 
@@ -143,22 +143,22 @@ $MetaList->add('image', $image);
 
 $Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
-    'showCreator'          => $showCreator,
-    'showDate'             => $showDate,
-    'comments'             => $comments,
-    'type'                 => $type,
-    'url'                  => $url,
-    'pageIdentifier'       => $pageIdentifier,
-    'disqusLink'           => $Project->getConfig('blog.settings.disqus.link').'/embed.js',
-    'fbLangParam'          => $fbLangParam,
-    'numberOfPosts'        => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
-    'apiVer'               => $Project->getConfig('blog.settings.facebook.apiVer'),
-    'appId'                => $Project->getConfig('blog.settings.facebook.appId'),
-    'moreEntriesShowDate'  => $moreEntriesShowDate,
-    'moreEntriesShowTime'  => $moreEntriesShowTime,
-    'previousSiblings'     => $previousSiblings,
-    'nextSiblings'         => $nextSiblings,
-    'MetaList'             => $MetaList,
-    'showTitle'            => $Project->getConfig('blog.settings.entry.showTitle'),
-    'showDescription'      => $Project->getConfig('blog.settings.entry.showDescription')
+    'showCreator' => $showCreator,
+    'showDate' => $showDate,
+    'comments' => $comments,
+    'type' => $type,
+    'url' => $url,
+    'pageIdentifier' => $pageIdentifier,
+    'disqusLink' => $Project->getConfig('blog.settings.disqus.link') . '/embed.js',
+    'fbLangParam' => $fbLangParam,
+    'numberOfPosts' => $Project->getConfig('blog.settings.facebook.numberOfPosts'),
+    'apiVer' => $Project->getConfig('blog.settings.facebook.apiVer'),
+    'appId' => $Project->getConfig('blog.settings.facebook.appId'),
+    'moreEntriesShowDate' => $moreEntriesShowDate,
+    'moreEntriesShowTime' => $moreEntriesShowTime,
+    'previousSiblings' => $previousSiblings,
+    'nextSiblings' => $nextSiblings,
+    'MetaList' => $MetaList,
+    'showTitle' => $Project->getConfig('blog.settings.entry.showTitle'),
+    'showDescription' => $Project->getConfig('blog.settings.entry.showDescription')
 ]);

@@ -1,12 +1,13 @@
 <?php
 
-use QUI\Projects\Media\Utils as MediaUtils;
-
 /**
  * Blog List
  */
 
-if (isset($_REQUEST['sheet'])
+use QUI\Projects\Media\Utils as MediaUtils;
+
+if (
+    isset($_REQUEST['sheet'])
     && \is_numeric($_REQUEST['sheet'])
     && (int)$_REQUEST['sheet'] > 1
 
@@ -16,8 +17,11 @@ if (isset($_REQUEST['sheet'])
 }
 
 $showPageContent = true;
-if (isset($_REQUEST['sheet']) &&
-    $Site->getAttribute('quiqqer.settings.blog.hidePageContentIfPaginationActive')) {
+
+if (
+    isset($_REQUEST['sheet']) &&
+    $Site->getAttribute('quiqqer.settings.blog.hidePageContentIfPaginationActive')
+) {
     $showPageContent = false;
 }
 
@@ -33,23 +37,23 @@ if ($Site->getAttribute('quiqqer.settings.blog.sitesToDisplay') == 'all') {
 }
 
 $ChildrenList = new QUI\Controls\ChildrenList([
-    'showContent'    => false,
-    'showImages'     => $Site->getAttribute('quiqqer.settings.blog.showImages'),
-    'showHeader'     => $Site->getAttribute('quiqqer.settings.blog.showHeader'),
-    'showShort'      => $Site->getAttribute('quiqqer.settings.blog.showShort'),
-    'showCreator'    => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
-    'showTime'       => $Site->getAttribute('quiqqer.settings.blog.showTime'),
-    'showDate'       => $Site->getAttribute('quiqqer.settings.blog.showDate'),
-    'Site'           => $Site,
-    'byType'         => $byType,
-    'where'          => [
+    'showContent' => false,
+    'showImages' => $Site->getAttribute('quiqqer.settings.blog.showImages'),
+    'showHeader' => $Site->getAttribute('quiqqer.settings.blog.showHeader'),
+    'showShort' => $Site->getAttribute('quiqqer.settings.blog.showShort'),
+    'showCreator' => $Site->getAttribute('quiqqer.settings.blog.showCreator'),
+    'showTime' => $Site->getAttribute('quiqqer.settings.blog.showTime'),
+    'showDate' => $Site->getAttribute('quiqqer.settings.blog.showDate'),
+    'Site' => $Site,
+    'byType' => $byType,
+    'where' => [
         'type' => 'quiqqer/blog:blog/entry'
     ],
-    'limit'          => $Site->getAttribute('quiqqer.settings.blog.max'),
-    'itemtype'       => 'http://schema.org/Blog',
+    'limit' => $Site->getAttribute('quiqqer.settings.blog.max'),
+    'itemtype' => 'http://schema.org/Blog',
     'child-itemtype' => 'http://schema.org/BlogPosting',
     'child-itemprop' => 'blogPost',
-    'display'        => $Site->getAttribute('quiqqer.settings.blog.template')
+    'display' => $Site->getAttribute('quiqqer.settings.blog.template')
 ]);
 
 $ChildrenList->addEvent('onMetaList', function (
@@ -108,6 +112,6 @@ $ChildrenList->addEvent('onMetaList', function (
 });
 
 $Engine->assign([
-    'ChildrenList'    => $ChildrenList,
+    'ChildrenList' => $ChildrenList,
     'showPageContent' => $showPageContent
 ]);
