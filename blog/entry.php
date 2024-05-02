@@ -4,6 +4,10 @@
  * autor and date
  */
 
+/** @var QUI\Projects\Project $Project */
+/** @var QUI\Projects\Site $Site */
+/** @var QUI\Interfaces\Template\EngineInterface $Engine */
+
 use QUI\Projects\Media\Utils as MediaUtils;
 
 // default
