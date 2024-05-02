@@ -1,13 +1,15 @@
 <?php
 
 /**
- * autor and date
+ * author and date
  */
 
 /** @var QUI\Projects\Project $Project */
 /** @var QUI\Projects\Site $Site */
+
 /** @var QUI\Interfaces\Template\EngineInterface $Engine */
 
+use QUI\Projects\Media\Image;
 use QUI\Projects\Media\Utils as MediaUtils;
 
 // default
@@ -28,16 +30,19 @@ switch ($Site->getAttribute('quiqqer.settings.blog.entry.dateAndCreator')) {
         $showCreator = true;
         $showDate = true;
         break;
+
     case 'showCreator':
         // hide date
         $showCreator = true;
         $showDate = false;
         break;
+
     case 'showDate':
         // hide author
         $showDate = true;
         $showCreator = false;
         break;
+
     case 'hide':
         // disable date and author
         $enableDateAndCreator = false;
@@ -118,7 +123,7 @@ $MetaList->add('publisher', $Publisher);
 // image
 $image = $Site->getAttribute('image_site');
 
-if (\strpos($image, 'fa-') !== false) {
+if (str_contains($image, 'fa-')) {
     $image = '';
 }
 
@@ -135,7 +140,7 @@ if (empty($image)) {
     try {
         $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
-        if ($Placeholder) {
+        if ($Placeholder instanceof Image) {
             $image = $Placeholder->getSizeCacheUrl();
         }
     } catch (QUI\Exception $Exception) {

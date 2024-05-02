@@ -6,13 +6,15 @@
 
 /** @var QUI\Projects\Project $Project */
 /** @var QUI\Projects\Site $Site */
+
 /** @var QUI\Interfaces\Template\EngineInterface $Engine */
 
+use QUI\Projects\Media\Image;
 use QUI\Projects\Media\Utils as MediaUtils;
 
 if (
     isset($_REQUEST['sheet'])
-    && \is_numeric($_REQUEST['sheet'])
+    && is_numeric($_REQUEST['sheet'])
     && (int)$_REQUEST['sheet'] > 1
 
     || isset($_REQUEST['limit'])
@@ -86,7 +88,7 @@ $ChildrenList->addEvent('onMetaList', function (
     // image
     $image = $Site->getAttribute('image_site');
 
-    if (\strpos($image, 'fa-') !== false) {
+    if (str_contains($image, 'fa-')) {
         $image = '';
     }
 
@@ -105,10 +107,10 @@ $ChildrenList->addEvent('onMetaList', function (
         try {
             $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
-            if ($Placeholder) {
+            if ($Placeholder instanceof Image) {
                 $image = $Placeholder->getSizeCacheUrl();
             }
-        } catch (QUI\Exception $Exception) {
+        } catch (QUI\Exception) {
         }
     }
 
