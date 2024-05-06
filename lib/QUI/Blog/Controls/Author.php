@@ -22,7 +22,7 @@ class Author extends QUI\Control
      *
      * @param array $attributes
      */
-    public function __construct($attributes = [])
+    public function __construct(array $attributes = [])
     {
         // default options
         $this->setAttributes([
@@ -36,11 +36,10 @@ class Author extends QUI\Control
     }
 
     /**
-     * (non-PHPdoc)
-     *
-     * @see \QUI\Control::create()
+     * @return string
+     * @throws Exception
      */
-    public function getBody()
+    public function getBody(): string
     {
         $Engine = QUI::getTemplateManager()->getEngine();
         $Site = $this->getSite();
@@ -49,20 +48,11 @@ class Author extends QUI\Control
             return '';
         }
 
-        switch ($this->getAttribute('template')) {
-            case 'largeImageLeft':
-                $html = '/Author.LargeImageLeft.html';
-                break;
-
-            case 'smallImageLeft':
-                $html = '/Author.SmallImageLeft.html';
-                break;
-
-            case 'largeImageTop':
-            default:
-                $html = '/Author.LargeImageTop.html';
-                break;
-        }
+        $html = match ($this->getAttribute('template')) {
+            'largeImageLeft' => '/Author.LargeImageLeft.html',
+            'smallImageLeft' => '/Author.SmallImageLeft.html',
+            default => '/Author.LargeImageTop.html',
+        };
 
         try {
             $authorData = $this->getAuthorData();
@@ -97,7 +87,7 @@ class Author extends QUI\Control
      * @throws Exception
      * @throws QUI\Users\Exception
      */
-    private function getAuthorData()
+    private function getAuthorData(): bool|array
     {
         $Site = $this->getSite();
 
@@ -130,7 +120,7 @@ class Author extends QUI\Control
      * @throws QUI\Exception
      * @throws QUI\Users\Exception
      */
-    protected function getGuestAuthorData()
+    protected function getGuestAuthorData(): bool|array
     {
         $Site = $this->getSite();
 
@@ -165,7 +155,7 @@ class Author extends QUI\Control
      *
      * @throws QUI\Exception
      */
-    protected function getSite()
+    protected function getSite(): mixed
     {
         if ($this->getAttribute('Site')) {
             return $this->getAttribute('Site');
