@@ -16,7 +16,7 @@
     },
     "require": {
         "quiqqer/core": "^2",
-        "quiqqer/sitetypes": "^1"
+        "quiqqer/sitetypes": "^2"
     },
     "autoload": {
         "psr-0": {
