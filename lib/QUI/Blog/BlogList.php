@@ -6,6 +6,10 @@
 
 namespace QUI\Blog;
 
+use QUI\Exception;
+use QUI\Interfaces\Projects\Site;
+use QUI\Projects\Site\Edit;
+
 /**
  * Blog list helper class
  *
@@ -17,16 +21,17 @@ class BlogList
      * event on child create
      *
      * @param integer $newId
-     * @param \QUI\Projects\Site\Edit $Parent
+     * @param Site $Parent
+     * @throws Exception
      */
-    public static function onChildCreate($newId, $Parent)
+    public static function onChildCreate(int $newId, Site $Parent): void
     {
         if ($Parent->getAttribute('type') !== 'quiqqer/blog:blog/list') {
             return;
         }
 
         $Project = $Parent->getProject();
-        $Site    = new \QUI\Projects\Site\Edit($Project, $newId);
+        $Site = new Edit($Project, $newId);
 
         $Site->setAttribute('nav_hide', 1);
         $Site->setAttribute('release_from', date('Y-m-d H:i:s'));
