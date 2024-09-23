@@ -29,7 +29,6 @@ class BlogList
         $Site    = new \QUI\Projects\Site\Edit($Project, $newId);
 
         $Site->setAttribute('nav_hide', 1);
-        $Site->setAttribute('release_from', date('Y-m-d H:i:s'));
         $Site->save();
     }
 }
