@@ -6,7 +6,6 @@
 
 /** @var QUI\Projects\Project $Project */
 /** @var QUI\Projects\Site $Site */
-
 /** @var QUI\Interfaces\Template\EngineInterface $Engine */
 
 use QUI\Projects\Media\Image;
@@ -111,7 +110,11 @@ try {
     $MetaList->add('author', $User->getName());
     $Engine->assign('author', $User->getName());
 } catch (QUI\Exception $Exception) {
-    QUI\System\Log::writeException($Exception);
+    QUI\System\Log::addInfo($Exception->getMessage(), [
+        'project' => $Project->getName(),
+        'lang' => $Project->getLang(),
+        'site' => $Site->getId()
+    ]);
     $Engine->assign('author', null);
 }
 

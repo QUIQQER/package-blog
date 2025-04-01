@@ -56,8 +56,8 @@ $ChildrenList = new QUI\Controls\ChildrenList([
         'type' => 'quiqqer/blog:blog/entry'
     ],
     'limit' => $Site->getAttribute('quiqqer.settings.blog.max'),
-    'itemtype' => 'http://schema.org/Blog',
-    'child-itemtype' => 'http://schema.org/BlogPosting',
+    'itemtype' => 'https://schema.org/Blog',
+    'child-itemtype' => 'https://schema.org/BlogPosting',
     'child-itemprop' => 'blogPost',
     'display' => $Site->getAttribute('quiqqer.settings.blog.template')
 ]);
@@ -66,7 +66,7 @@ $ChildrenList->addEvent('onMetaList', function (
     QUI\Controls\ChildrenList $ChildrenList,
     QUI\Interfaces\Projects\Site $Site,
     QUI\Controls\Utils\MetaList $MetaList
-) {
+) use ($Project) {
     $MetaList->add('headline', $Site->getAttribute('title'));
     $MetaList->add('datePublished', $Site->getAttribute('release_from'));
     $MetaList->add('dateModified', $Site->getAttribute('e_date'));
@@ -77,7 +77,11 @@ $ChildrenList->addEvent('onMetaList', function (
         $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
         $MetaList->add('author', $User->getName());
     } catch (QUI\Exception $Exception) {
-        QUI\System\Log::writeException($Exception);
+        QUI\System\Log::addInfo($Exception->getMessage(), [
+            'project' => $Project->getName(),
+            'lang' => $Project->getLang(),
+            'site' => $Site->getId()
+        ]);
     }
 
     // publisher
