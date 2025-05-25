@@ -6,6 +6,7 @@
 
 /** @var QUI\Projects\Project $Project */
 /** @var QUI\Projects\Site $Site */
+/** @var QUI\Template $Template */
 /** @var QUI\Interfaces\Template\EngineInterface $Engine */
 
 use QUI\Projects\Media\Image;
@@ -99,10 +100,12 @@ $Project->getConfig();
 
 // Meta
 $MetaList = new QUI\Controls\Utils\MetaList();
+$MetaList->add('type', 'BlogPosting');
 $MetaList->add('headline', $Site->getAttribute('title'));
+$MetaList->add('description', $Site->getAttribute('short'));
 $MetaList->add('datePublished', $Site->getAttribute('release_from'));
 $MetaList->add('dateModified', $Site->getAttribute('e_date'));
-$MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
+$MetaList->add('mainEntityOfPage', $Site->getUrlRewrittenWithHost());
 
 try {
     // author
@@ -125,6 +128,9 @@ $MetaList->add('publisher', $Publisher);
 
 // image
 $image = $Site->getAttribute('image_site');
+$imageAbsolutePath = '';
+$host = QUI::getRequest()->getHost();
+$scheme = QUI::getRequest()->getScheme();
 
 if (str_contains($image, 'fa-')) {
     $image = '';
@@ -133,25 +139,28 @@ if (str_contains($image, 'fa-')) {
 if (MediaUtils::isMediaUrl($image)) {
     try {
         $Image = MediaUtils::getImageByUrl($image);
-        $image = $Image->getSizeCacheUrl();
+        // structured data needs absolute urls for images
+        $imageAbsolutePath = $scheme . '://' . $host . $Image->getSizeCacheUrl();
     } catch (QUI\Exception $Exception) {
     }
 }
 
 // use default
-if (empty($image)) {
+if (empty($imageAbsolutePath)) {
     try {
         $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
         if ($Placeholder instanceof Image) {
-            $image = $Placeholder->getSizeCacheUrl();
+            // structured data needs absolute urls for images
+            $imageAbsolutePath = $scheme . '://' . $host . $Placeholder->getSizeCacheUrl();
         }
     } catch (QUI\Exception $Exception) {
     }
 }
 
-$MetaList->add('image', $image);
-
+if (!empty($imageAbsolutePath)) {
+    $MetaList->add('image', $imageAbsolutePath);
+}
 
 $Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
@@ -174,3 +183,10 @@ $Engine->assign([
     'showTitle' => $Project->getConfig('blog.settings.entry.showTitle'),
     'showDescription' => $Project->getConfig('blog.settings.entry.showDescription')
 ]);
+
+// json schema
+try {
+    $Template->extendHeader($MetaList->getJsonLdSchema());
+} catch (\QUI\Exception $e) {
+    QUI\System\Log::addWarning($e->getMessage());
+}

@@ -6,6 +6,7 @@
 
 namespace QUI\Blog;
 
+use QUI;
 use QUI\Exception;
 use QUI\Interfaces\Projects\Site;
 use QUI\Projects\Site\Edit;
@@ -35,5 +36,19 @@ class BlogList
 
         $Site->setAttribute('nav_hide', 1);
         $Site->save();
+    }
+
+    /**
+     * @param QUI\Projects\Site\Edit $Site
+     */
+    public static function onSiteSaveBefore(QUI\Projects\Site\Edit $Site): void
+    {
+        if ($Site->getAttribute('type') !== 'quiqqer/blog:blog/list') {
+            return;
+        }
+
+        if ($Site->getAttribute('order') === false || $Site->getAttribute('order') === '') {
+            $Site->setAttribute('order_type', 'release_from DESC');
+        }
     }
 }
