@@ -184,4 +184,8 @@ $Engine->assign([
 ]);
 
 // json schema
-$Template->extendHeader($MetaList->getJsonLdSchema());
+try {
+    $Template->extendHeader($MetaList->getJsonLdSchema());
+} catch (\QUI\Exception $e) {
+    QUI\System\Log::addWarning($e->getMessage());
+}
