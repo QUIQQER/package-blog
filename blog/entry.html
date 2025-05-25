@@ -67,7 +67,7 @@
 
                             {if $moreEntriesShowTime}
                                 <span class="blog-entry-nav-time">
-                                {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                                {$prevSibling->getAttribute('release_from')|date_format:"H:i"}:
                                 </span>
                             {/if}
 
@@ -88,7 +88,7 @@
 
                     {if $moreEntriesShowTime}
                         <span class="blog-entry-nav-time">
-                        {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
+                        {$Site->getAttribute('release_from')|date_format:"H:i"}:
                         </span>
                     {/if}
 
@@ -111,7 +111,7 @@
 
                             {if $moreEntriesShowTime}
                                 <span class="blog-entry-nav-time">
-                                {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                                {$nextSibling->getAttribute('release_from')|date_format:"H:i"}:
                                 </span>
                             {/if}
 
