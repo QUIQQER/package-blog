@@ -128,6 +128,7 @@ $MetaList->add('publisher', $Publisher);
 
 // image
 $image = $Site->getAttribute('image_site');
+$imageAbsolutePath = '';
 $host = QUI::getRequest()->getHost();
 $scheme = QUI::getRequest()->getScheme();
 
@@ -139,26 +140,26 @@ if (MediaUtils::isMediaUrl($image)) {
     try {
         $Image = MediaUtils::getImageByUrl($image);
         // structured data needs absolute urls for images
-        $image = $scheme . '://' . $host . $Image->getSizeCacheUrl();
+        $imageAbsolutePath = $scheme . '://' . $host . $Image->getSizeCacheUrl();
     } catch (QUI\Exception $Exception) {
     }
 }
 
 // use default
-if (empty($image)) {
+if (empty($imageAbsolutePath)) {
     try {
         $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
         if ($Placeholder instanceof Image) {
             // structured data needs absolute urls for images
-            $image = $scheme . '://' . $host . $Placeholder->getSizeCacheUrl();
+            $imageAbsolutePath = $scheme . '://' . $host . $Placeholder->getSizeCacheUrl();
         }
     } catch (QUI\Exception $Exception) {
     }
 }
 
-if (!empty($image)) {
-    $MetaList->add('image', $image);
+if (!empty($imageAbsolutePath)) {
+    $MetaList->add('image', $imageAbsolutePath);
 }
 
 $Engine->assign([
