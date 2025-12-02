@@ -60,7 +60,6 @@
 
                     <conf name="show_time">
                         <type><![CDATA[boolean]]></type>
-                        <defaultvalue>1</defaultvalue>
                     </conf>
                 </section>
             </config>
