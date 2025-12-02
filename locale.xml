@@ -80,31 +80,31 @@
 
         <!-- guest author -->
         <locale name="site.settings.entry.guestAuthor.title">
-            <de><![CDATA[Gastautor]]></de>
-            <en><![CDATA[Guest author]]></en>
+            <de><![CDATA[Blog: Gastautor]]></de>
+            <en><![CDATA[Blog: Guest author]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.enable">
-            <de><![CDATA[Gastautor verwenden]]></de>
-            <en><![CDATA[Use guest author]]></en>
+            <de><![CDATA[Gastautor aktivieren]]></de>
+            <en><![CDATA[Enable guest author]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.enable.description">
             <de><![CDATA[Wenn die Option aktiviert ist, wird der Gastautor als der Blogeintrag-Autor angezeigt.]]></de>
             <en><![CDATA[If the option is enabled, the guest author will be displayed as the blog entry author.]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.quiqqerUser">
-            <de><![CDATA[Benutzer (falls im System existeirt)]]></de>
-            <en><![CDATA[User (if exists in the system)]]></en>
+            <de><![CDATA[Benutzer]]></de>
+            <en><![CDATA[User)]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.quiqqerUser.description">
-            <de><![CDATA[Wenn kein Benutzer im System existeirt, dann bitte unten die Einstellungen "Name" und "Benutezrbild" korrekt setzen.]]></de>
-            <en><![CDATA[If no user exists in the system, then please set the "Name" and "User image" settings correctly below.]]></en>
+            <de><![CDATA[Falls kein Benutzer im System existiert, fülle bitte das Feld „Name“ unten aus.]]></de>
+            <en><![CDATA[If no user exists in the system, please fill in the "Name" field below.]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.name">
             <de><![CDATA[Name]]></de>
             <en><![CDATA[Name]]></en>
         </locale>
         <locale name="site.settings.entry.guestAuthor.avatar">
-            <de><![CDATA[Benutezrbild]]></de>
+            <de><![CDATA[Benutzerbild]]></de>
             <en><![CDATA[User image]]></en>
         </locale>
 
