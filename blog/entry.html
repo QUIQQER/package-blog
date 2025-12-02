@@ -5,42 +5,39 @@
     {assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
-<article itemscope itemtype="http://schema.org/BlogPosting"
-         class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent content-body"
+<article itemscope itemtype="https://schema.org/BlogPosting"
+         class="quiqqer-blog-entry content-body"
 >
     {$MetaList->create()}
 
     {if $showTitle and $Site->getAttribute('title')}
-        <h1>{$Site->getAttribute('title')}</h1>
+        <h1 class="quiqqer-blog-entry__title">{$Site->getAttribute('title')}</h1>
     {/if}
 
     {if $enableDateAndCreator}
-    <section class="blog-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
+    <section class="quiqqer-blog-entry__meta">
         {if $author && $showCreator}
             {t}quiqqer/blog entry.blog.by{/t}
-            <span class="blog-entry-author"  itemprop="author">{$author}</span>
+            <span class="quiqqer-blog-entry__author"  itemprop="author">{$author}</span>
         {/if}
 
         {if $showDate}
-            <span class="blog-entry-time">
+            <span class="quiqqer-blog-entry__date">
                 {t}quiqqer/blog entry.blog.on{/t}
                 <time datetime="{$date|date_format:'c'}">
                     {locale_date date=$date}
                 </time>
             </span>
         {/if}
-
     </section>
     {/if}
 
     {if $showDescription and $Site->getAttribute('short')}
-        <p class="blog-entry-short text-lead">{$Site->getAttribute('short')}</p>
+        <p class="quiqqer-blog-entry__short text-lead">{$Site->getAttribute('short')}</p>
     {/if}
 
     {if $Site->getAttribute('content')}
-    <section class="blog-entry-content grid-100 mobile-grid-100 grid-parent"
-             itemprop="articleBody"
-    >
+    <section class="quiqqer-blog-entry__content" itemprop="articleBody">
         {$Site->getAttribute('content')}
     </section>
     {/if}
@@ -48,75 +45,80 @@
     {if !$Site->getAttribute('quiqqer.settings.blog.entry.hideMore')}
         <hr>
 
-        <aside class="blog-entry-nav">
-            <div class="blog-entry-nav-title">
+        <aside class="quiqqer-blog-entry__more">
+            <p class="quiqqer-blog-entry__more-heading">
                 {t}quiqqer/blog blog.entries.more.nav.title{/t}
-            </div>
-            <ol class="blog-entry-nav-list">
-                {foreach from=$previousSiblings item=prevSibling}
-                    <li>
-                        <a href="{url site=$prevSibling}"
-                           title="{$prevSibling->getAttribute('title')|escape:'html'}"
+            </p>
+            <ol class="quiqqer-blog-entry__more-list">
+                {foreach from=$previousSiblings item=Child}
+                    <li class="quiqqer-blog-entry__more-item">
+                        <a href="{url site=$Child}"
+                           title="{$Child->getAttribute('title')|escape:'html'}"
+                           class="quiqqer-blog-entry__more-link link link-primary"
                         >
-                            <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                            <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
+
                             {if $moreEntriesShowDate}
-                                <span class="blog-entry-nav-date">
-                                {locale_date date=$prevSibling->getAttribute('release_from')} –
+                                <span class="quiqqer-blog-entry__more-date">
+                                {locale_date date=$Child->getAttribute('release_from')} –
                                 </span>
                             {/if}
 
                             {if $moreEntriesShowTime}
-                                <span class="blog-entry-nav-time">
-                                {$prevSibling->getAttribute('release_from')|date_format:"H:i"}:
+                                <span class="quiqqer-blog-entry__more-time">
+                                {$Child->getAttribute('release_from')|date_format:"H:i"}:
                                 </span>
                             {/if}
 
-                            <span class="blog-entry-nav-title">
-                            {$prevSibling->getAttribute('title')}
+                            <span class="quiqqer-blog-entry__more-title">
+                            {$Child->getAttribute('title')}
                             </span>
                         </a>
                     </li>
                 {/foreach}
 
-                <li class="blog-entry-nav-active">
-                    <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                <li class="quiqqer-blog-entry__more-item quiqqer-blog-entry__more-item--active">
+                    <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
+
                     {if $moreEntriesShowDate}
-                        <span class="blog-entry-nav-date">
+                        <span class="quiqqer-blog-entry__more-date">
                         {locale_date date=$Site->getAttribute('release_from')} –
                         </span>
                     {/if}
 
                     {if $moreEntriesShowTime}
-                        <span class="blog-entry-nav-time">
+                        <span class="quiqqer-blog-entry__more-time">
                         {$Site->getAttribute('release_from')|date_format:"H:i"}:
                         </span>
                     {/if}
 
-                    <span class="blog-entry-nav-title">
+                    <span class="quiqqer-blog-entry__more-title">
                         {$Site->getAttribute('title')}
                     </span>
                 </li>
 
-                {foreach from=$nextSiblings item=nextSibling}
-                    <li>
-                        <a href="{url site=$nextSibling}"
-                           title="{$nextSibling->getAttribute('title')|escape:'html'}"
+                {foreach from=$nextSiblings item=Child}
+                    <li class="quiqqer-blog-entry__more-item">
+                        <a href="{url site=$Child}"
+                           title="{$Child->getAttribute('title')|escape:'html'}"
+                           class="quiqqer-blog-entry__more-link link link-primary"
                         >
-                            <i class="fa fa-angle-right blog-entry-nav-bullet"></i>
+                            <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
+
                             {if $moreEntriesShowDate}
-                                <span class="blog-entry-nav-date">
-                                {locale_date date=$nextSibling->getAttribute('release_from')} –
+                                <span class="quiqqer-blog-entry__more-date">
+                                {locale_date date=$Child->getAttribute('release_from')} –
                                 </span>
                             {/if}
 
                             {if $moreEntriesShowTime}
-                                <span class="blog-entry-nav-time">
-                                {$nextSibling->getAttribute('release_from')|date_format:"H:i"}:
+                                <span class="quiqqer-blog-entry__more-time">
+                                {$Child->getAttribute('release_from')|date_format:"H:i"}:
                                 </span>
                             {/if}
 
-                            <span class="blog-entry-nav-title">
-                            {$nextSibling->getAttribute('title')}
+                            <span class="quiqqer-blog-entry__more-title">
+                            {$Child->getAttribute('title')}
                             </span>
                         </a>
                     </li>
