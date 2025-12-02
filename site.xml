@@ -251,12 +251,12 @@
                                 <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.name" />
                             </text>
                         </input>
-
-                        <input conf="quiqqer.settings.blog.guestAuthor.avatar" type="text" class="media-image">
-                            <text>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.avatar" />
-                            </text>
-                        </input>
+<!-- todo @michael.daniel -->
+<!--                        <input conf="quiqqer.settings.blog.guestAuthor.avatar" type="text" class="media-image">-->
+<!--                            <text>-->
+<!--                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.avatar" />-->
+<!--                            </text>-->
+<!--                        </input>-->
 
                     </settings>
                 </category>

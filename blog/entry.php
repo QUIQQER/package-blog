@@ -7,6 +7,7 @@
 /** @var QUI\Projects\Project $Project */
 /** @var QUI\Projects\Site $Site */
 /** @var QUI\Template $Template */
+
 /** @var QUI\Interfaces\Template\EngineInterface $Engine */
 
 use QUI\Projects\Media\Image;
@@ -107,19 +108,49 @@ $MetaList->add('datePublished', $Site->getAttribute('release_from'));
 $MetaList->add('dateModified', $Site->getAttribute('e_date'));
 $MetaList->add('mainEntityOfPage', $Site->getUrlRewrittenWithHost());
 
-try {
-    // author
-    $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
-    $MetaList->add('author', $User->getName());
-    $Engine->assign('author', $User->getName());
-} catch (QUI\Exception $Exception) {
-    QUI\System\Log::addInfo($Exception->getMessage(), [
-        'project' => $Project->getName(),
-        'lang' => $Project->getLang(),
-        'site' => $Site->getId()
-    ]);
-    $Engine->assign('author', null);
+/**
+ * Author
+ */
+$quiqqerUser = $Site->getAttribute('c_user');
+$userName = null;
+$userAvatar = null;
+
+// guest author enabled?
+if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.enable')) {
+    $guestUser = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser');
+    $guestName = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
+    $guestAvatar = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
+
+    if ($guestUser) {
+        $quiqqerUser = $guestUser;
+    } elseif ($guestName) {
+        $userName = $guestName;
+        $quiqqerUser = null;
+
+        if ($guestAvatar) {
+            $userAvatar = $guestAvatar;
+        }
+    }
 }
+
+if ($quiqqerUser) {
+    try {
+        $User = QUI::getUsers()->get($quiqqerUser);
+        $MetaList->add('author', $User->getName());
+        $Engine->assign('author', $User->getName());
+    } catch (QUI\Exception $Exception) {
+        QUI\System\Log::addInfo($Exception->getMessage(), [
+            'project' => $Project->getName(),
+            'lang' => $Project->getLang(),
+            'site' => $Site->getId()
+        ]);
+        $Engine->assign('author', null);
+    }
+} else {
+    $MetaList->add('author', $userName);
+    $Engine->assign('author', $userName);
+}
+
 
 // publisher
 $Publisher = new QUI\Controls\Utils\MetaList\Publisher();
