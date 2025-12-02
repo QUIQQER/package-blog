@@ -96,9 +96,6 @@ $moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time
 $previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
 $nextSiblings = $Site->nextSiblings($amountOfSiblings);
 
-$Project->getConfig();
-
-
 // Meta
 $MetaList = new QUI\Controls\Utils\MetaList();
 $MetaList->add('type', 'BlogPosting');
