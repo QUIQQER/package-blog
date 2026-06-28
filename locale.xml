@@ -313,6 +313,14 @@
             <en><![CDATA[Disabled]]></en>
             <pl><![CDATA[Wyłącz]]></pl>
         </locale>
+        <locale name="quiqqer.settings.blog.pinned">
+            <de><![CDATA[Angeheftet]]></de>
+            <en><![CDATA[Pinned]]></en>
+        </locale>
+        <locale name="quiqqer.settings.blog.pinned.description">
+            <de><![CDATA[Angeheftete Einträge werden in Bloglisten vor normalen Einträgen angezeigt.]]></de>
+            <en><![CDATA[Pinned entries are displayed before regular entries in blog lists.]]></en>
+        </locale>
 
         <!-- project blog comment settings -->
         <locale name="blog.settings.category">

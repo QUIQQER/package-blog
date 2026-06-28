@@ -59,7 +59,9 @@ $ChildrenList = new QUI\Controls\ChildrenList([
     'itemtype' => 'https://schema.org/Blog',
     'child-itemtype' => 'https://schema.org/BlogPosting',
     'child-itemprop' => 'blogPost',
-    'display' => $Site->getAttribute('quiqqer.settings.blog.template')
+    'display' => $Site->getAttribute('quiqqer.settings.blog.template'),
+    'pinnedAttribute' => 'quiqqer.settings.blog.pinned',
+    'pinnedOrder' => 'release_from DESC'
 ]);
 
 $ChildrenList->addEvent('onMetaList', function (
