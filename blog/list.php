@@ -60,6 +60,15 @@ $ChildrenList = new QUI\Controls\ChildrenList([
     'child-itemtype' => 'https://schema.org/BlogPosting',
     'child-itemprop' => 'blogPost',
     'display' => $Site->getAttribute('quiqqer.settings.blog.template'),
+    'cardLayout' => $Site->getAttribute('quiqqer.settings.blog.cards.layout'),
+    'cardColumns' => $Site->getAttribute('quiqqer.settings.blog.cards.columns'),
+    'cardColumnsTablet' => $Site->getAttribute('quiqqer.settings.blog.cards.columnsTablet'),
+    'cardColumnsMobile' => $Site->getAttribute('quiqqer.settings.blog.cards.columnsMobile'),
+    'cardImageFit' => $Site->getAttribute('quiqqer.settings.blog.cards.imageFit'),
+    'cardAspectRatio' => $Site->getAttribute('quiqqer.settings.blog.cards.aspectRatio'),
+    'cardGap' => $Site->getAttribute('quiqqer.settings.blog.cards.gap'),
+    'mediaImagePosition' => $Site->getAttribute('quiqqer.settings.blog.media.imagePosition'),
+    'mediaImageWidth' => $Site->getAttribute('quiqqer.settings.blog.media.imageWidth'),
     'pinnedAttribute' => 'quiqqer.settings.blog.pinned',
     'pinnedOrder' => 'release_from DESC'
 ]);
