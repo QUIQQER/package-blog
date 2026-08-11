@@ -15,9 +15,9 @@
         "email": "support@pcsg.de"
     },
     "require": {
-        "quiqqer/core": "^2",
+        "quiqqer/core": "^2.30",
         "quiqqer/sitetypes": "^2",
-        "quiqqer/controls": "^2.2.0"
+        "quiqqer/controls": "^2.4"
     },
     "autoload": {
         "psr-0": {

@@ -96,14 +96,24 @@ $moreEntriesShowTime = $Project->getConfig('blog.settings.entries.more.show_time
 $previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
 $nextSiblings = $Site->nextSiblings($amountOfSiblings);
 
-// Meta
-$MetaList = new QUI\Controls\Utils\MetaList();
-$MetaList->add('type', 'BlogPosting');
-$MetaList->add('headline', $Site->getAttribute('title'));
-$MetaList->add('description', $Site->getAttribute('short'));
-$MetaList->add('datePublished', $Site->getAttribute('release_from'));
-$MetaList->add('dateModified', $Site->getAttribute('e_date'));
-$MetaList->add('mainEntityOfPage', $Site->getUrlRewrittenWithHost());
+// Structured data
+$PageJsonLd = $Template->getJsonLd();
+$BlogPosting = new QUI\Utils\JsonLd();
+$blogPostingId = $Site->getUrlRewrittenWithHost() . '#blogposting';
+$webPageId = $PageJsonLd->get('@id');
+
+$BlogPosting->set('type', 'BlogPosting');
+$BlogPosting->set('@id', $blogPostingId);
+$BlogPosting->set('headline', $Site->getAttribute('title'));
+$BlogPosting->set('description', $Site->getAttribute('short'));
+$BlogPosting->set('datePublished', $Site->getAttribute('release_from'));
+$BlogPosting->set('dateModified', $Site->getAttribute('e_date'));
+
+if (!empty($webPageId)) {
+    $BlogPosting->set('mainEntityOfPage', [
+        '@id' => $webPageId
+    ]);
+}
 
 /**
  * Author
@@ -133,8 +143,11 @@ if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.enable')) {
 if ($quiqqerUser) {
     try {
         $User = QUI::getUsers()->get($quiqqerUser);
-        $MetaList->add('author', $User->getName());
         $Engine->assign('author', $User->getName());
+
+        if ($User->getName()) {
+            $BlogPosting->set('author', $User->getName());
+        }
     } catch (QUI\Exception $Exception) {
         QUI\System\Log::addInfo($Exception->getMessage(), [
             'project' => $Project->getName(),
@@ -144,15 +157,25 @@ if ($quiqqerUser) {
         $Engine->assign('author', null);
     }
 } else {
-    $MetaList->add('author', $userName);
     $Engine->assign('author', $userName);
+
+    if ($userName) {
+        $BlogPosting->set('author', $userName);
+    }
 }
 
 
 // publisher
 $Publisher = new QUI\Controls\Utils\MetaList\Publisher();
 $Publisher->importFromProject($Site->getProject());
-$MetaList->add('publisher', $Publisher);
+$publisher = $Publisher->toArray();
+$pagePublisher = $PageJsonLd->get('publisher');
+
+if (is_array($pagePublisher) && !empty($pagePublisher['@id'])) {
+    $publisher['@id'] = $pagePublisher['@id'];
+}
+
+$BlogPosting->set('publisher', $publisher);
 
 // image
 $image = $Site->getAttribute('image_site');
@@ -187,7 +210,16 @@ if (empty($imageAbsolutePath)) {
 }
 
 if (!empty($imageAbsolutePath)) {
-    $MetaList->add('image', $imageAbsolutePath);
+    $BlogPosting->set('image', $imageAbsolutePath);
+}
+
+try {
+    $PageJsonLd->set('mainEntity', [
+        '@id' => $blogPostingId
+    ]);
+    $PageJsonLd->setJsonLdNode('blogPosting', $BlogPosting->getJsonLdData());
+} catch (QUI\Exception $Exception) {
+    QUI\System\Log::addWarning($Exception->getMessage());
 }
 
 $Engine->assign([
@@ -207,14 +239,6 @@ $Engine->assign([
     'moreEntriesShowTime' => $moreEntriesShowTime,
     'previousSiblings' => $previousSiblings,
     'nextSiblings' => $nextSiblings,
-    'MetaList' => $MetaList,
     'showTitle' => $Project->getConfig('blog.settings.entry.showTitle'),
     'showDescription' => $Project->getConfig('blog.settings.entry.showDescription')
 ]);
-
-// json schema
-try {
-    $Template->extendHeader($MetaList->getJsonLdSchema());
-} catch (\QUI\Exception $e) {
-    QUI\System\Log::addWarning($e->getMessage());
-}
