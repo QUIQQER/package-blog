@@ -107,7 +107,7 @@ $BlogPosting->set('@id', $blogPostingId);
 $BlogPosting->set('headline', $Site->getAttribute('title'));
 $BlogPosting->set('description', $Site->getAttribute('short'));
 $BlogPosting->set('datePublished', $Site->getAttribute('release_from'));
-$dateModified = QUI\Blog\StructuredData::getDateModified(
+$dateModified = QUI\Utils\StructuredData::getModificationDate(
     $Site->getAttribute('c_date'),
     $Site->getAttribute('e_date')
 );

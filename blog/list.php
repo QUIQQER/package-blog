@@ -80,7 +80,7 @@ $ChildrenList->addEvent('onMetaList', function (
 ) use ($Project) {
     $MetaList->add('headline', $Site->getAttribute('title'));
     $MetaList->add('datePublished', $Site->getAttribute('release_from'));
-    $dateModified = QUI\Blog\StructuredData::getDateModified(
+    $dateModified = QUI\Utils\StructuredData::getModificationDate(
         $Site->getAttribute('c_date'),
         $Site->getAttribute('e_date')
     );
