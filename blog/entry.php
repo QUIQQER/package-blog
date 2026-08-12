@@ -107,7 +107,14 @@ $BlogPosting->set('@id', $blogPostingId);
 $BlogPosting->set('headline', $Site->getAttribute('title'));
 $BlogPosting->set('description', $Site->getAttribute('short'));
 $BlogPosting->set('datePublished', $Site->getAttribute('release_from'));
-$BlogPosting->set('dateModified', $Site->getAttribute('e_date'));
+$dateModified = QUI\Blog\StructuredData::getDateModified(
+    $Site->getAttribute('c_date'),
+    $Site->getAttribute('e_date')
+);
+
+if ($dateModified !== null) {
+    $BlogPosting->set('dateModified', $dateModified);
+}
 
 if (!empty($webPageId)) {
     $BlogPosting->set('mainEntityOfPage', [
