@@ -20,7 +20,7 @@ class Author extends QUI\Control
     /**
      * constructor
      *
-     * @param array $attributes
+     * @param array<string, mixed> $attributes
      */
     public function __construct(array $attributes = [])
     {
@@ -80,14 +80,12 @@ class Author extends QUI\Control
     /**
      * Get author data for blog entry
      *
-     * @return array|bool
-     *  'name'     => string
-     *  'imageUrl' => string
+     * @return array{name: string, imageUrl: string|false}
      *
      * @throws Exception
      * @throws QUI\Users\Exception
      */
-    private function getAuthorData(): bool|array
+    private function getAuthorData(): array
     {
         $Site = $this->getSite();
 
@@ -101,7 +99,13 @@ class Author extends QUI\Control
 
         $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
         $name = $User->getName();
-        $url = $User->getAvatar()->getAttribute("url");
+        $Avatar = $User->getAvatar();
+        $url = false;
+
+        if ($Avatar) {
+            $avatarUrl = $Avatar->getAttribute("url");
+            $url = is_string($avatarUrl) ? $avatarUrl : false;
+        }
 
         return [
             'name' => $name,
@@ -113,9 +117,7 @@ class Author extends QUI\Control
     /**
      * Get guest author data
      *
-     * @return array|bool
-     *  'name'     => string
-     *  'imageUrl' => string
+     * @return array{name: string, imageUrl: string|false}|false
      *
      * @throws QUI\Exception
      * @throws QUI\Users\Exception
@@ -128,9 +130,17 @@ class Author extends QUI\Control
             $QuiqqerUser = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser'));
 
             try {
+                $Avatar = $QuiqqerUser->getAvatar();
+                $url = false;
+
+                if ($Avatar) {
+                    $avatarUrl = $Avatar->getAttribute("url");
+                    $url = is_string($avatarUrl) ? $avatarUrl : false;
+                }
+
                 return [
                     'name' => $QuiqqerUser->getName(),
-                    'imageUrl' => $QuiqqerUser->getAvatar()->getAttribute("url")
+                    'imageUrl' => $url
                 ];
             } catch (Exception $Exception) {
                 QUI\System\Log::addInfo($Exception->getMessage());
@@ -140,13 +150,13 @@ class Author extends QUI\Control
         $name = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
         $src = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
 
-        if (!$name) {
+        if (!is_string($name) || $name === '') {
             return false;
         }
 
         return [
             'name' => $name,
-            'imageUrl' => $src
+            'imageUrl' => is_string($src) ? $src : false
         ];
     }
 
