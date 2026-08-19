@@ -5,10 +5,7 @@
     {assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
-<article itemscope itemtype="https://schema.org/BlogPosting"
-         class="quiqqer-blog-entry content-body"
->
-    {$MetaList->create()}
+<article class="quiqqer-blog-entry content-body">
 
     {if $showTitle and $Site->getAttribute('title')}
         <h1 class="quiqqer-blog-entry__title">{$Site->getAttribute('title')}</h1>
@@ -18,7 +15,7 @@
     <section class="quiqqer-blog-entry__meta">
         {if $author && $showCreator}
             {t}quiqqer/blog entry.blog.by{/t}
-            <span class="quiqqer-blog-entry__author"  itemprop="author">{$author}</span>
+            <span class="quiqqer-blog-entry__author">{$author}</span>
         {/if}
 
         {if $showDate}
@@ -37,7 +34,7 @@
     {/if}
 
     {if $Site->getAttribute('content')}
-    <section class="quiqqer-blog-entry__content" itemprop="articleBody">
+    <section class="quiqqer-blog-entry__content">
         {$Site->getAttribute('content')}
     </section>
     {/if}

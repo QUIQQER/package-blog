@@ -2,7 +2,7 @@
     "name": "quiqqer/blog",
     "type": "quiqqer-module",
     "description": "Create your own online diary. With the provided page types, managing and creating your own blog is no longer a problem.",
-    "license": "GPL-3.0+",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Henning Leutz",
@@ -15,9 +15,10 @@
         "email": "support@pcsg.de"
     },
     "require": {
-        "quiqqer/core": "^2",
+        "php": "^8.2",
+        "quiqqer/core": "^2.30",
         "quiqqer/sitetypes": "^2",
-        "quiqqer/controls": "^2.2.0"
+        "quiqqer/controls": "^2.4"
     },
     "autoload": {
         "psr-0": {

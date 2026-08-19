@@ -80,7 +80,15 @@ $ChildrenList->addEvent('onMetaList', function (
 ) use ($Project) {
     $MetaList->add('headline', $Site->getAttribute('title'));
     $MetaList->add('datePublished', $Site->getAttribute('release_from'));
-    $MetaList->add('dateModified', $Site->getAttribute('e_date'));
+    $dateModified = QUI\Utils\StructuredData::getModificationDate(
+        $Site->getAttribute('c_date'),
+        $Site->getAttribute('e_date')
+    );
+
+    if ($dateModified !== null) {
+        $MetaList->add('dateModified', $dateModified);
+    }
+
     $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 
     try {
