@@ -8,6 +8,24 @@
             <locale group="quiqqer/blog" var="package.description"/>
         </description>
 
+        <capabilities schemaVersion="1">
+            <capability id="content.blog-publishing">
+                <title>Blog publishing</title>
+                <description>
+                    Provides blog lists and entries with configurable presentation, publication dates, pinned posts,
+                    author attribution, guest authors, article navigation, and structured BlogPosting data.
+                </description>
+            </capability>
+
+            <capability id="engagement.blog-comments">
+                <title>Blog comments</title>
+                <description>
+                    Adds configurable Disqus or Facebook comments to blog entries, with project-wide settings and
+                    per-entry activation controls.
+                </description>
+            </capability>
+        </capabilities>
+
         <image src="URL_OPT_DIR/quiqqer/blog/bin/Logo.jpg"/>
 
         <preview>
