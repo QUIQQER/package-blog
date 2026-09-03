@@ -120,7 +120,7 @@ $ChildrenList->addEvent('onMetaList', function (
             $Image = MediaUtils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
         } catch (QUI\Exception $Exception) {
-            QUI\System\Log::writeException($Exception);
+            QUI\System\Log::addInfo($Exception->getMessage());
             $image = '';
         }
     }
